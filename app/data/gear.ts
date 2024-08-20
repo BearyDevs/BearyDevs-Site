@@ -51,9 +51,4 @@ const hosting = [
     desc: "I use it to host my webapp, it's pretty awesome.",
     tags: ["Hosting"],
   },
-  {
-    name: "Render",
-    desc: "Render is a powerful cloud platform that makes it easy to deploy web apps, APIs, and static sites with minimal configuration. It’s highly flexible, with automatic scaling and seamless integration for both frontend and backend services.",
-    tags: ["Hosting"],
-  },
 ];
