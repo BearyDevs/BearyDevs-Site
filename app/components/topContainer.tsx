@@ -12,12 +12,18 @@ export const nav_routes = [
   {
     url: "/",
     name: "home",
-    lastmod: new Date().toISOString(),
   },
   {
     url: "/about",
     name: "about",
-    lastmod: new Date().toISOString(),
+  },
+  {
+    url: "/projects",
+    name: "projects",
+  },
+  {
+    url: "/myblogs",
+    name: "myblogs",
   },
 ];
 

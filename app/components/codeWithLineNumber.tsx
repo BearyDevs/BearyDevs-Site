@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Prism from "prismjs";
 import "prismjs/components/prism-typescript";
 import "../styles/prism-solarized-osaka.css";
+import { ScrollShadow } from "@nextui-org/react";
 
 export default function CodeWithLineNumbers({ code = "" }: { code?: string }) {
   const [lines, setLines] = useState<string[]>([]);
@@ -16,7 +17,7 @@ export default function CodeWithLineNumbers({ code = "" }: { code?: string }) {
   }, [code]);
 
   return (
-    <div className="relative mt-8 overflow-auto no-scrollbar">
+    <ScrollShadow className="relative mt-8 overflow-auto max-w-full max-h-[calc(100vh-300px)]">
       <div className="flex">
         {/* Line numbers */}
         <div className="sticky left-0 top-0 bg-gray-800 text-right text-gray-400 pr-4">
@@ -34,6 +35,6 @@ export default function CodeWithLineNumbers({ code = "" }: { code?: string }) {
           </pre>
         </div>
       </div>
-    </div>
+    </ScrollShadow>
   );
 }

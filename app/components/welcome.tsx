@@ -63,8 +63,7 @@ export default function Welcome() {
         Designed by Bearydevs, inspired by{" "}
         <Link
           className="font-bold text-xs hover:text-white transition-colors duration-300 text-gray-500"
-          // href="https://wiscaksono.com"
-          href="https://github.com/wiscaksono/wiscaksono-site"
+          href="https://github.com/wiscaksono"
           target="_blank"
           rel="noreferrer"
         >

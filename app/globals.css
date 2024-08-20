@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+  /* .text-balance { */
+  /*   text-wrap: balance; */
+  /* } */
 
   /* Hide scrollbar for Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
@@ -33,12 +33,12 @@
   --background-end-rgb: 0, 0, 0;
 }
 
-.grid-pattern {
-  background-size: 5vh 5vh;
-  background-image: linear-gradient(to right, #444444 2px, transparent 2px),
-    linear-gradient(to bottom, #444444 2px, transparent 2px);
-  background-position: center;
-}
+/* .grid-pattern { */
+/*   background-size: 5vh 5vh; */
+/*   background-image: linear-gradient(to right, #444444 2px, transparent 2px), */
+/*     linear-gradient(to bottom, #444444 2px, transparent 2px); */
+/*   background-position: center; */
+/* } */
 
 body {
   font-family: var(--font-sans);

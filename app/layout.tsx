@@ -7,6 +7,8 @@ import { LennyFace } from "./components/lennyFace";
 import "animate.css";
 import Providers from "./provider";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || ""),
   title: {
@@ -75,7 +77,7 @@ export default function RootLayout({
               {children}
             </MainContainer>
 
-            <footer className="absolute bottom-5 md:text-gray-600 md:hover:text-gray-300 text-gray-400 transition-colors duration-300 cursor-default pb-2 text-xs text-center">
+            <footer className="absolute bottom-0 text-gray-600 transition-colors duration-300 cursor-default pb-2 text-xs text-center">
               Teerapat Wassavanich (+6683-8982566) teerapat.tech@gmail.com
               Thailand (TOYLAB Corp.)
             </footer>

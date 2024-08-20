@@ -3,7 +3,7 @@ import { PropsWithChildren } from "react";
 import CodeWithLineNumbers from "@/app/components/codeWithLineNumber";
 import fs from "fs";
 import path from "path";
-import { aboutSelect } from "./_components/neotree";
+import { aboutSelect } from "./_components/neotree-about";
 
 // Dynamically type the slug from aboutSelect
 type AboutSlug = (typeof aboutSelect)[number]["slug"];
@@ -34,7 +34,6 @@ export default async function AboutPageSlug({ params }: Props) {
 
   return (
     <SlugContainer>
-      <h1 className="font-bold mb-2">{slug.toUpperCase()}</h1>
       <CodeWithLineNumbers code={code} />
     </SlugContainer>
   );

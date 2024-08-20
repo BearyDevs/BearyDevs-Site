@@ -29,12 +29,12 @@ export const aboutSelect = [
   },
 ] as const;
 
-export default function Neotree() {
+export default function AboutNeotree() {
   const pathname = usePathname();
   const router = useRouter();
 
   return (
-    <div className="block animate-[fadeInLeft_1s] w-[12dvw] h-full py-1 custom900:hidden sticky top-0">
+    <div className="block animate-[fadeInLeft_1s] w-[15dvw] h-full py-1 custom900:hidden sticky top-0">
       {/* Neotree title */}
       <h1 className="text-[#00b2ff] font-semibold">Neotree</h1>
 

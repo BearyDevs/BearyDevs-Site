@@ -7,7 +7,7 @@ export default function MainContainer({ children }: PropsWithChildren) {
   return (
     <section
       className={classNames({
-        "animate-[fadeInUp_0.7s] mt-[55px]": true,
+        "animate-[fadeInUp_0.7s] mt-[40px] md:mt-[55px]": true,
         "opacity-85": true,
         "flex flex-col min-w-[80%] max-w-[80%] min-h-[85%] max-h-[85%] mobilexll:min-w-[90%] mobilexll:max-w-[90%] bg-gradient-to-br from-[#0d0d0d] via-[#1a1a1a] to-[#262626] rounded-2xl relative":
           true,
@@ -19,7 +19,7 @@ export default function MainContainer({ children }: PropsWithChildren) {
       }}
     >
       <TopContainer />
-      <div className="flex-grow flex items-start justify-center mt-4 mb-[70px] p-6 overflow-y-auto no-scrollbar">
+      <div className="w-full h-full flex-grow flex items-start justify-center mt-4 mb-[70px] p-6 overflow-y-auto no-scrollbar">
         {children}
       </div>
       <FooterContainer />

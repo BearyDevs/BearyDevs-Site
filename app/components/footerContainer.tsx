@@ -8,7 +8,7 @@ import { FaReact } from "react-icons/fa";
 import { LuClock3 } from "react-icons/lu";
 import { SiTypescript } from "react-icons/si";
 import { TbBrandPagekit } from "react-icons/tb";
-import { aboutSelect } from "../about/[slug]/_components/neotree";
+import { aboutSelect } from "../about/[slug]/_components/neotree-about";
 import { FaFolderOpen } from "react-icons/fa6";
 
 export default function FooterContainer() {
