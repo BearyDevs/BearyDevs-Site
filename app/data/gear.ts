@@ -5,6 +5,16 @@ const hardware = {
       desc: "My main computer that I used to work everywhere.",
       tags: ["Laptop"],
     },
+    {
+      name: "Nuphy Air 75v2",
+      desc: "My main keyboard, It's so nice sound.",
+      tags: ["Keyboard"],
+    },
+    {
+      name: "Apple Magic Trackpad 2",
+      desc: "I love this product. It's so amazing and easy to use.",
+      tags: ["Trackpad"],
+    },
   ],
   monitors: [
     {
@@ -49,6 +59,11 @@ const hosting = [
   {
     name: "Vercel",
     desc: "I use it to host my webapp, it's pretty awesome.",
+    tags: ["Hosting"],
+  },
+  {
+    name: "Render",
+    desc: "Render is a powerful cloud platform that makes it easy to deploy web apps, APIs, and static sites with minimal configuration. It’s highly flexible, with automatic scaling and seamless integration for both frontend and backend services.",
     tags: ["Hosting"],
   },
 ];
