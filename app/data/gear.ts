@@ -5,21 +5,6 @@ const hardware = {
       desc: "My main computer that I used to work everywhere.",
       tags: ["Laptop"],
     },
-    {
-      name: "Nuphy Air 75v2",
-      desc: "My main keyboard, It's so nice sound.",
-      tags: ["Keyboard"],
-    },
-    {
-      name: "Keychron Q1 Pro",
-      desc: "I love the keyboard feeling when I use it.",
-      tags: ["Keyboard"],
-    },
-    {
-      name: "Apple Magic Trackpad 2",
-      desc: "I love this product. It's so amazing and easy to use.",
-      tags: ["Trackpad"],
-    },
   ],
   monitors: [
     {
@@ -44,18 +29,13 @@ const software = [
     tags: ["Editor"],
   },
   {
-    name: "Tmux",
+    name: "TMUX",
     desc: "I use it to manage my terminal sessions.",
     tags: ["Terminal"],
   },
   {
-    name: "Iterm2",
+    name: "iTerm2",
     desc: "My terminal emulator.",
-    tags: ["Terminal"],
-  },
-  {
-    name: "Alacritty",
-    desc: "My secondary terminal emulator so fast and simple",
     tags: ["Terminal"],
   },
   {
