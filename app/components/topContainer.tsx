@@ -3,10 +3,23 @@
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 import classNames from "classnames";
-import { FaFacebook, FaLinkedin, FaReact } from "react-icons/fa";
+import { FaFacebook, FaLinkedin } from "react-icons/fa";
 import { MdOutlineContactPhone } from "react-icons/md";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
-import { nav_routes } from "../sitemaps";
+import { LuMaximize2 } from "react-icons/lu";
+
+export const nav_routes = [
+  {
+    url: "/",
+    name: "home",
+    lastmod: new Date().toISOString(),
+  },
+  {
+    url: "/about",
+    name: "about",
+    lastmod: new Date().toISOString(),
+  },
+];
 
 export default function TopContainer() {
   const router = useRouter();
@@ -84,7 +97,13 @@ export default function TopContainer() {
               "group-hover:bg-[#2BC840]": isHovered,
             })}
             onClick={handleFullscreen}
-          />
+          >
+            {isHovered && (
+              <span className="text-[8px] text-gray-800 relative left-[3px]">
+                <LuMaximize2 />
+              </span>
+            )}
+          </button>
         </div>
         <div className="text-[#7f7f7f] font-extrabold flex items-center justify-center gap-2">
           <button
@@ -159,14 +178,13 @@ export default function TopContainer() {
             key={index}
             onClick={() => router.push(`${route.url}`)}
             className={classNames({
-              "px-3 py-1 italic transition-colors duration-300 rounded-md flex items-center justify-center gap-2":
+              "px-3 py-1 transition-colors duration-300 rounded-md flex items-center justify-center gap-2":
                 true,
               "bg-[#103f3cb5]": route.url === pathname,
               "hover:bg-[#103f3c4f]": route.url !== pathname,
             })}
           >
-            <FaReact className="text-[#008cd8]" size={"16px"} /> {route.name}
-            .tsx
+            {route.name}
           </button>
         ))}
       </div>

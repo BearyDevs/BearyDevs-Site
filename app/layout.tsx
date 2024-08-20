@@ -5,12 +5,43 @@ import { fontSans, fontThai } from "./utils/fonts";
 import MainContainer from "./components/mainContainer";
 import { LennyFace } from "./components/lennyFace";
 import "animate.css";
-import { NextUIProvider } from "@nextui-org/react";
 import Providers from "./provider";
 
 export const metadata: Metadata = {
-  title: "BearyDevs-Site",
-  description: "BearyDevs-Site (Teerapat Wassavanich)",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || ""),
+  title: {
+    default: "BearyDevs",
+    template: "%s | BearyDevs",
+  },
+  description:
+    "Get to know me!, Teerapat Wassavanich (BearyDevs), through this website! I'm a full-stack developer and founder-ceo of TOYLAB Co.,Ltd. I've poured all my skills and creativity into my work and passion for programming. If you're seeking a developer who works hard and is dedicated to your next project or simply looking for inspiration, feel free to get in touch!",
+  openGraph: {
+    title: "BearyDevs",
+    description:
+      "Get to know me!, Teerapat Wassavanich (BearyDevs), through this website! I'm a full-stack developer and founder-ceo of TOYLAB Co.,Ltd. I've poured all my skills and creativity into my work and passion for programming. If you're seeking a developer who works hard and is dedicated to your next project or simply looking for inspiration, feel free to get in touch!",
+    url: process.env.NEXT_PUBLIC_APP_URL,
+    siteName: "BearyDevs",
+    locale: "en_US",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  twitter: {
+    title: "Wiscaksono",
+    card: "summary_large_image",
+  },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+  },
 };
 
 export default function RootLayout({

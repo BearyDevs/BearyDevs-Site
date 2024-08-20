@@ -1,0 +1,96 @@
+/* Solarized-Osaka Theme for Prism.js */
+code[class*="language-"],
+pre[class*="language-"] {
+  /* color: #008dd9; */
+  /* color: #ffffff; */
+  color: #d9d9da;
+  /* color: #839496; */
+  background: transparent; /* Solarized dark background */
+  font-family: "Fira Code", Consolas, Monaco, "Andale Mono", "Ubuntu Mono",
+    monospace;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Comments */
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #586e75;
+}
+
+/* Punctuation */
+.token.punctuation {
+  color: #a6accd;
+  /* color: #93a1a1; */
+}
+
+/* Properties, tags, constants, symbols, and deleted tokens */
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #268bd2; /* Solarized blue */
+}
+
+/* Boolean, numbers */
+.token.boolean,
+.token.number {
+  color: #b58900; /* Solarized yellow */
+}
+
+/* Strings, characters, built-ins */
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #5de4c7;
+  /* color: #2aa198; */
+}
+
+/* Operators, URLs */
+.token.operator,
+.token.entity,
+.token.url {
+  color: #91b4d5;
+  /* color: #839496; */
+}
+
+/* Keywords, atrules */
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #7f9a00;
+  /* color: #859900; */
+}
+
+/* Functions, classes */
+.token.function,
+.token.class-name {
+  color: #cb4b16; /* Solarized orange */
+}
+
+/* Regular expressions, variables */
+.token.regex,
+.token.important,
+.token.variable {
+  color: #dc322f; /* Solarized red */
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}

@@ -53,9 +53,10 @@ const config: Config = {
         xl_min: "1280px",
         tabletxl: { max: "1194px" },
         tabletxl_min: "1194px",
-
         tabletlg: { max: "1155px" },
         tabletmd: { max: "1024px" },
+        custom900: { max: "900px" },
+        custom900_min: "900px",
         tabletsm: { max: "834px" },
         tabletxs: { max: "800px" },
         tabletxs_min: "800px",

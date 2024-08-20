@@ -10,7 +10,7 @@ export default function Welcome() {
   useEffect(() => {
     const interval = setInterval(() => {
       setShow(true);
-    }, 10);
+    }, 100);
 
     return () => {
       clearInterval(interval);
@@ -18,7 +18,7 @@ export default function Welcome() {
   }, []);
 
   return (
-    <div className="w-full h-full flex items-center justify-center flex-col gap-8 text-gray-400 mb-[10%]">
+    <div className="w-full h-full flex items-center justify-center flex-col self-center gap-8 text-gray-400 mb-[10%]">
       <Image
         alt="bearydevs"
         removeWrapper
@@ -40,7 +40,7 @@ export default function Welcome() {
       >
         {ascii}
       </pre>
-      <p
+      <div
         className={classNames({
           "text-center font-semibold mobilexll:text-xs transition duration-300 text-gray-400":
             true,
@@ -48,8 +48,9 @@ export default function Welcome() {
           "block animate-[fadeInDown_1.5s]": show,
         })}
       >
-        KEEP LEARNING, GROWING, AND STAY INSPIRED
-      </p>
+        <div>{`Self taught developer`.toUpperCase()}</div>
+        <div>{`keep learning, growing, and stay inspired`.toUpperCase()}</div>
+      </div>
 
       <div
         className={classNames({
