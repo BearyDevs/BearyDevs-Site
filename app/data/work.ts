@@ -4,8 +4,8 @@ const PROFESSION = "Full Stack Developer, Software Engineer, Founder CEO";
 
 let employer = [
   "TOYLAB", // full-time
-  "Yorkoon", // consultant
-  "EVFAST", // freelance
+  "EVFAST", // consultant
+  "Yorkoon", // freelance
 ];
 
 // Most important skills
