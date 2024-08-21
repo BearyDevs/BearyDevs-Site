@@ -12,3 +12,15 @@ let hobbies = [
   "Basketball",
   // 'Sleeping'
 ];
+
+let interest = [
+  "Technology",
+  "Realistics Gaming",
+  "Sports",
+  "BoardGames",
+  "Music",
+  "Guitar",
+  "Apple Inc",
+];
+
+const RESPECT = ["Steven Paul Jobs (Steve Jobs)"];

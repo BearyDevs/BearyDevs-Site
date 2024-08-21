@@ -9,7 +9,7 @@ import { LuClock3 } from "react-icons/lu";
 import { SiTypescript } from "react-icons/si";
 import { TbBrandPagekit } from "react-icons/tb";
 import { aboutSelect } from "../about/[slug]/_components/neotree-about";
-import { FaFolderOpen } from "react-icons/fa6";
+// import { FaFolderOpen } from "react-icons/fa6";
 import { Link } from "@nextui-org/react";
 
 export default function FooterContainer() {

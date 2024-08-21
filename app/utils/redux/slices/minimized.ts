@@ -4,8 +4,8 @@ const minimizedSlice = createSlice({
   name: "minimized",
   initialState: false,
   reducers: {
-    setMinimized(state, action) {
-      return (state = action.payload);
+    setMinimized(_state, action) {
+      return action.payload;
     },
   },
 });

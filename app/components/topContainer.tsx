@@ -7,8 +7,8 @@ import { FaFacebook, FaLinkedin } from "react-icons/fa";
 import { MdOutlineContactPhone } from "react-icons/md";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { LuMaximize2 } from "react-icons/lu";
-import { useDispatch, useSelector } from "react-redux";
-import { AppDispatch, ReduxState } from "../utils/redux/store";
+import { useDispatch } from "react-redux";
+import { AppDispatch } from "../utils/redux/store";
 import { setMinimized } from "../utils/redux/slices/minimized";
 
 export const nav_routes = [
@@ -33,7 +33,7 @@ export const nav_routes = [
 export default function TopContainer() {
   const router = useRouter();
   const pathname = usePathname();
-  const minimized = useSelector((state: ReduxState) => state.minimized);
+  // const minimized = useSelector((state: ReduxState) => state.minimized);
   const dispatch = useDispatch<AppDispatch>();
 
   const [isHovered, setIsHovered] = useState(false);
@@ -58,7 +58,6 @@ export default function TopContainer() {
   };
 
   const handleMinimize = () => {
-    //dispatch(setMinimized(!minimized));
     dispatch(setMinimized(true));
   };
 
