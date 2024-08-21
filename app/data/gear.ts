@@ -66,4 +66,14 @@ const hosting = [
     desc: "Render is a powerful cloud platform that makes it easy to deploy web apps, APIs, and static sites with minimal configuration. It’s highly flexible, with automatic scaling and seamless integration for both frontend and backend services.",
     tags: ["Hosting"],
   },
+  {
+    name: "Netlify",
+    desc: "Netlify is a popular platform for deploying and managing modern web applications. It offers an intuitive Git-based workflow, continuous deployment, and powerful serverless functions, making it ideal for static sites, JAMstack, and full-stack applications.",
+    tags: ["Hosting"],
+  },
+  {
+    name: "Z.com",
+    desc: "Z.com is a comprehensive platform offering domain registration, web hosting, and email hosting services. Known for its reliability and ease of use, Z.com provides a range of solutions for businesses and individuals looking to manage their online presence with minimal hassle.",
+    tags: ["Hosting", "Domain", "Email Hosting"],
+  },
 ];

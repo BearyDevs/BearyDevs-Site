@@ -10,6 +10,10 @@ pre[class*="language-"] {
     monospace;
   font-size: 16px;
   line-height: 1.5;
+
+  @media (max-width: 640px) {
+    font-size: 14px;
+  }
 }
 
 /* Comments */
@@ -19,6 +23,7 @@ pre[class*="language-"] {
 .token.doctype,
 .token.cdata {
   color: #586e75;
+  font-style: italic;
 }
 
 /* Punctuation */

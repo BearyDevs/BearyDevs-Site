@@ -10,6 +10,7 @@ import { SiTypescript } from "react-icons/si";
 import { TbBrandPagekit } from "react-icons/tb";
 import { aboutSelect } from "../about/[slug]/_components/neotree-about";
 import { FaFolderOpen } from "react-icons/fa6";
+import { Link } from "@nextui-org/react";
 
 export default function FooterContainer() {
   const pathname = usePathname();
@@ -38,11 +39,11 @@ export default function FooterContainer() {
     >
       {pathname.startsWith("/about") && (
         <div className="custom900_min:hidden flex items-center justify-start text-sm w-full flex-grow py-1 overflow-x-auto no-scrollbar animate-[fadeInUp_1s]">
-          <div className="flex items-center justify-center text-[#00b2ff] font-bold px-2 gap-2">
-            NeoTree
-          </div>
+          {/* <div className="flex items-center justify-center text-[#00b2ff] font-bold px-2 gap-2"> */}
+          {/*   NeoTree */}
+          {/* </div> */}
 
-          <FaFolderOpen className="text-[#008dd9] mx-1 ml-2" />
+          {/* <FaFolderOpen className="text-[#008dd9] mx-1 ml-2" /> */}
 
           {aboutSelect.map((item, i) => {
             return (
@@ -99,8 +100,14 @@ export default function FooterContainer() {
 
       <div className="h-max w-full bg-[#002b37] flex items-center justify-between rounded-b-2xl overflow-x-auto whitespace-nowrap gap-4 mobilexll:text-xs no-scrollbar">
         <div className="flex items-center font-bold">
-          <div className="flex items-center justify-center bg-[#00b2ff] text-[#121212] px-3 relative gap-2 pl-4 py-[2px] rounded-bl-2xl">
-            TMUX
+          <div className="flex items-center justify-center bg-[#00b2ff] px-3 relative gap-2 pl-4 py-[2px] rounded-bl-2xl">
+            <Link
+              className="text-[#121212]"
+              href="https://github.com/tmux/tmux"
+              target="_blank"
+            >
+              TMUX
+            </Link>
           </div>
 
           <div className="flex items-center bg-[#484e52] text-gray-300 px-3 relative ml-[-1px] py-[2px]">
@@ -114,13 +121,20 @@ export default function FooterContainer() {
               .toLocaleDateString("en-GB", {
                 day: "2-digit",
                 month: "short",
-                year: "2-digit",
+                // year: "2-digit",
+                year: "numeric",
               })
               .replace(/ /g, "-")}
           </div>
 
-          <div className="flex items-center justify-center bg-[#00b2ff] text-[#121212] px-3 relative gap-2 py-[2px] rounded-br-2xl whitespace-nowrap">
-            BearyDevs-Macbook-Pro-M1Max.local
+          <div className="flex items-center justify-center bg-[#00b2ff] px-3 relative gap-2 py-[2px] rounded-br-2xl whitespace-nowrap">
+            <Link
+              className="text-[#121212]"
+              href="https://www.apple.com/th/newsroom/2021/10/introducing-m1-pro-and-m1-max-the-most-powerful-chips-apple-has-ever-built/"
+              target="_blank"
+            >
+              BearyDevs-Macbook-Pro-M1Max.local
+            </Link>
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
-import Welcome from "./components/welcome";
+import RedirectHome from "./redirectHome";
 
 export default function MainPage() {
-  return <Welcome />;
+  return <RedirectHome />;
 }

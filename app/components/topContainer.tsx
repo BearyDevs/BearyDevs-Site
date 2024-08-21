@@ -7,10 +7,13 @@ import { FaFacebook, FaLinkedin } from "react-icons/fa";
 import { MdOutlineContactPhone } from "react-icons/md";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { LuMaximize2 } from "react-icons/lu";
+import { useDispatch, useSelector } from "react-redux";
+import { AppDispatch, ReduxState } from "../utils/redux/store";
+import { setMinimized } from "../utils/redux/slices/minimized";
 
 export const nav_routes = [
   {
-    url: "/",
+    url: "/home",
     name: "home",
   },
   {
@@ -30,6 +33,9 @@ export const nav_routes = [
 export default function TopContainer() {
   const router = useRouter();
   const pathname = usePathname();
+  const minimized = useSelector((state: ReduxState) => state.minimized);
+  const dispatch = useDispatch<AppDispatch>();
+
   const [isHovered, setIsHovered] = useState(false);
 
   const handleClose = () => {
@@ -52,26 +58,28 @@ export default function TopContainer() {
   };
 
   const handleMinimize = () => {
-    if (window.confirm("Are you sure you want to minimize this window?")) {
-      window.close();
-    } else {
-      router.push(`${pathname}`);
-    }
+    //dispatch(setMinimized(!minimized));
+    dispatch(setMinimized(true));
   };
 
   return (
     <div className="w-full h-max rounded-t-2xl bg-transparent flex items-start justify-center flex-col ">
       <div className="top-0 h-max w-full flex items-center justify-between px-8 mobilexll:px-4">
         <div
-          className="flex items-center rounded-t-2xl justify-start h-12 gap-[10px] group font-semibold"
+          className={classNames({
+            "flex items-center rounded-t-2xl justify-start h-12 gap-[10px] font-semibold":
+              true,
+            // "group":true
+          })}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
           <button
             className={classNames({
               "w-[13px] h-[13px] rounded-full transition-colors": true,
-              "bg-[#898989]": !isHovered,
-              "group-hover:bg-[#FF6057]": isHovered,
+              // "bg-[#898989]": !isHovered,
+              // "group-hover:bg-[#FF6057]": isHovered,
+              "bg-[#FF6057]": true,
               "flex items-center justify-center": true,
             })}
             onClick={handleClose}
@@ -85,8 +93,9 @@ export default function TopContainer() {
           <button
             className={classNames({
               "w-[13px] h-[13px] rounded-full transition-colors": true,
-              "bg-[#898989]": !isHovered,
-              "group-hover:bg-[#FEBC2D]": isHovered,
+              // "bg-[#898989]": !isHovered,
+              // "group-hover:bg-[#FEBC2D]": isHovered,
+              "bg-[#FEBC2D]": true,
             })}
             onClick={handleMinimize}
           >
@@ -99,8 +108,9 @@ export default function TopContainer() {
           <button
             className={classNames({
               "w-[13px] h-[13px] rounded-full transition-colors": true,
-              "bg-[#898989]": !isHovered,
-              "group-hover:bg-[#2BC840]": isHovered,
+              // "bg-[#898989]": !isHovered,
+              // "group-hover:bg-[#2BC840]": isHovered,
+              "bg-[#2BC840]": true,
             })}
             onClick={handleFullscreen}
           >
@@ -186,7 +196,7 @@ export default function TopContainer() {
             className={classNames({
               "px-3 py-1 transition-colors duration-300 rounded-md flex items-center justify-center gap-2":
                 true,
-              "bg-[#103f3cb5]": route.url === pathname,
+              "bg-[#103f3cb5]": pathname.startsWith(route.url),
               "hover:bg-[#103f3c4f]": route.url !== pathname,
             })}
           >

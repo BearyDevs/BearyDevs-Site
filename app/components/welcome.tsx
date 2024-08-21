@@ -49,7 +49,13 @@ export default function Welcome() {
         })}
       >
         <div>{`Self taught developer`.toUpperCase()}</div>
-        <div>{`keep learning, growing, and stay inspired`.toUpperCase()}</div>
+        <div>
+          {`love to learn new things and always looking for new challenges`.toUpperCase()}
+        </div>
+        <div className="mt-4">
+          <span className="font-bold text-teal-300">MOTTO: </span>
+          {`keep learning, growing, and stay inspired`.toUpperCase()}
+        </div>
       </div>
 
       <div
@@ -74,7 +80,7 @@ export default function Welcome() {
   );
 }
 
-const ascii = `
+export const ascii = `
 __________                            ________                     
 \\______   \\ ____ _____ _______ ___.__.\______ \\   _______  ________
  |    |  _// __ \\\\__  \\\\_  __ <   |  | |    |  \\_/ __ \\  \\/ /  ___/

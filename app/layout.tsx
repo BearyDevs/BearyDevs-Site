@@ -6,6 +6,8 @@ import MainContainer from "./components/mainContainer";
 import { LennyFace } from "./components/lennyFace";
 import "animate.css";
 import Providers from "./provider";
+import FooterContent from "./footerContent";
+import VideoBG from "./videoBG";
 
 export const dynamic = "force-dynamic";
 
@@ -61,26 +63,13 @@ export default function RootLayout({
         )}
       >
         <Providers>
-          {/* <div className="grid-pattern absolute left-0 top-0 h-full w-full opacity-25" /> */}
-
           <main className="w-[100dvw] h-[100dvh] transition-all duration-300 flex items-start justify-center">
-            <video
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-screen min-h-screen opacity-15 object-cover"
-              autoPlay={true}
-              muted
-              loop
-            >
-              <source src="/videos/vbg.mp4" type="video/mp4" />
-            </video>
+            <VideoBG />
             <MainContainer>
               <LennyFace />
               {children}
             </MainContainer>
-
-            <footer className="absolute bottom-0 text-gray-600 transition-colors duration-300 cursor-default pb-2 text-xs text-center">
-              Teerapat Wassavanich (+6683-8982566) teerapat.tech@gmail.com
-              Thailand (TOYLAB Corp.)
-            </footer>
+            <FooterContent />
           </main>
         </Providers>
       </body>
