@@ -51,7 +51,8 @@ export default function FooterContainer() {
                 key={i}
                 onClick={() => router.push(item.link)}
                 className={classNames({
-                  "px-1 mx-1 flex items-center gap-1 italic": true,
+                  "px-2 mx-1 flex items-center gap-1 relative bottom-[-3px] left-[-3px] italic":
+                    true,
                   "bg-[#969696] text-[#000000] font-bold transition-background duration-300":
                     pathname === item.link,
                 })}
@@ -102,7 +103,7 @@ export default function FooterContainer() {
         <div className="flex items-center font-bold">
           <div className="flex items-center justify-center bg-[#00b2ff] px-3 relative gap-2 pl-4 py-[2px] rounded-bl-2xl">
             <Link
-              className="text-[#121212]"
+              className="text-[#121212] mobilexll:text-xs"
               href="https://github.com/tmux/tmux"
               target="_blank"
             >
@@ -129,7 +130,7 @@ export default function FooterContainer() {
 
           <div className="flex items-center justify-center bg-[#00b2ff] px-3 relative gap-2 py-[2px] rounded-br-2xl whitespace-nowrap">
             <Link
-              className="text-[#121212]"
+              className="text-[#121212] mobilexll:text-xs"
               href="https://www.apple.com/th/newsroom/2021/10/introducing-m1-pro-and-m1-max-the-most-powerful-chips-apple-has-ever-built/"
               target="_blank"
             >

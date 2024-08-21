@@ -39,7 +39,7 @@ export const LennyFace = () => {
   return (
     <div
       // className="flex items-center absolute top-2.5 right-8 select-none not-sr-only"
-      className="flex items-center absolute top-14 right-0 -translate-x-1/2 select-none not-sr-only opacity-70"
+      className="flex items-center absolute top-20 right-0 -translate-x-1/2 select-none not-sr-only opacity-70"
       onClick={handleClick}
     >
       <div className="flex items-center space-x-1.5">
