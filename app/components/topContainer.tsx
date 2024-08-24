@@ -74,6 +74,7 @@ export default function TopContainer() {
           onMouseLeave={() => setIsHovered(false)}
         >
           <button
+            name="close-button"
             className={classNames({
               "w-[13px] h-[13px] rounded-full transition-colors": true,
               // "bg-[#898989]": !isHovered,
@@ -90,6 +91,7 @@ export default function TopContainer() {
             )}
           </button>
           <button
+            name="minimize-button"
             className={classNames({
               "w-[13px] h-[13px] rounded-full transition-colors": true,
               // "bg-[#898989]": !isHovered,
@@ -105,6 +107,7 @@ export default function TopContainer() {
             )}
           </button>
           <button
+            name="fullscreen-button"
             className={classNames({
               "w-[13px] h-[13px] rounded-full transition-colors": true,
               // "bg-[#898989]": !isHovered,
@@ -122,12 +125,14 @@ export default function TopContainer() {
         </div>
         <div className="text-[#7f7f7f] font-extrabold flex items-center justify-center gap-2">
           <button
+            name="iterm-button"
             className="hover:text-white transition-colors duration-300"
             onClick={() => window.open("https://iterm2.com", "_blank")}
           >
             iTerm{" "}
           </button>
           <button
+            name="solarized-button"
             className="hover:text-white transition-colors duration-300"
             onClick={() =>
               window.open(
@@ -142,6 +147,7 @@ export default function TopContainer() {
 
         <div className="text-[#7f7f7f] font-semibold px-1 py-0.5 flex items-center justify-center gap-3">
           <button
+            name="facebook-button"
             className="rounded-full"
             onClick={() =>
               window.open("https://www.facebook.com/bearyman", "_blank")
@@ -154,6 +160,7 @@ export default function TopContainer() {
           </button>
 
           <button
+            name="github-button"
             className="rounded-full"
             onClick={() =>
               window.open(process.env.NEXT_PUBLIC_GITHUB_URL, "_blank")
@@ -163,6 +170,7 @@ export default function TopContainer() {
           </button>
 
           <button
+            name="facebook-page-button"
             className="rounded-full flex items-center justify-center gap-3"
             onClick={() =>
               window.open(
@@ -178,6 +186,7 @@ export default function TopContainer() {
           </button>
 
           <button
+            name="linkedin-button"
             className="rounded-full"
             onClick={() =>
               window.open(process.env.NEXT_PUBLIC_LINKEDIN_URL, "_blank")
@@ -191,6 +200,7 @@ export default function TopContainer() {
         {nav_routes.map((route, index) => (
           <button
             key={index}
+            name="navigation-button"
             onClick={() => router.push(`${route.url}`)}
             className={classNames({
               "px-3 py-1 transition-colors duration-300 rounded-md flex items-center justify-center gap-2":

@@ -1,19 +1,44 @@
 /* Solarized-Osaka Theme for Prism.js */
-code[class*="language-"],
-pre[class*="language-"] {
-  /* color: #008dd9; */
-  /* color: #ffffff; */
-  color: #d9d9da;
-  /* color: #839496; */
-  background: transparent; /* Solarized dark background */
+pre[class*="language-"],
+code[class*="language-"] {
   font-family: "Fira Code", Consolas, Monaco, "Andale Mono", "Ubuntu Mono",
     monospace;
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 14px;
+  line-height: 1.5; /* Ensure consistent line-height */
+  font-weight: 600;
+  /* color: white; */
+  color: #ba8300;
+  padding-left: 0; /* Remove extra padding that could cause misalignment */
+}
 
-  @media (max-width: 640px) {
-    font-size: 14px;
-  }
+/* Line number styling */
+.line-numbers {
+  font-family: "Fira Code", Consolas, Monaco, "Andale Mono", "Ubuntu Mono",
+    monospace;
+  font-size: 14px; /* Ensure the same font-size */
+  line-height: 1.5; /* Ensure the same line-height */
+  text-align: right;
+  color: #b58900; /* Solarized yellow color for line numbers */
+  padding-right: 2px; /* Add padding to align line numbers properly */
+  user-select: none; /* Prevent selecting line numbers */
+}
+
+/* Make the line numbers background transparent */
+.line-numbers-wrapper {
+  background-color: transparent; /* Set background to transparent */
+  border-right: 1px solid #586e75; /* Optional border to separate line numbers */
+  box-shadow: inset -1px 0 0 #586e75; /* Thin line between code and line numbers */
+}
+
+/* Adjust padding for the code block to match line numbers */
+pre[class*="language-"] {
+  padding-left: 0; /* Make sure the code block is aligned with the line numbers */
+}
+
+/* ScrollShadow adjustment */
+.scroll-container {
+  display: flex;
+  align-items: flex-start; /* Aligns line numbers and code at the top */
 }
 
 /* Comments */
@@ -29,7 +54,6 @@ pre[class*="language-"] {
 /* Punctuation */
 .token.punctuation {
   color: #a6accd;
-  /* color: #93a1a1; */
 }
 
 /* Properties, tags, constants, symbols, and deleted tokens */
@@ -55,7 +79,6 @@ pre[class*="language-"] {
 .token.builtin,
 .token.inserted {
   color: #5de4c7;
-  /* color: #2aa198; */
 }
 
 /* Operators, URLs */
@@ -63,7 +86,6 @@ pre[class*="language-"] {
 .token.entity,
 .token.url {
   color: #91b4d5;
-  /* color: #839496; */
 }
 
 /* Keywords, atrules */
@@ -71,7 +93,6 @@ pre[class*="language-"] {
 .token.attr-value,
 .token.keyword {
   color: #7f9a00;
-  /* color: #859900; */
 }
 
 /* Functions, classes */

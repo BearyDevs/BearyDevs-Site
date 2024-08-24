@@ -1,5 +1,5 @@
-import RedirectHome from "./redirectHome";
+import RedirectPath from "./components/redirectPath";
 
 export default function MainPage() {
-  return <RedirectHome />;
+  return <RedirectPath path="/home" />;
 }

@@ -3,12 +3,16 @@
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 
-export default function RedirectHome() {
+interface Props {
+  path: string;
+}
+
+export default function RedirectPath({ path }: Props) {
   const router = useRouter();
 
   useEffect(() => {
-    router.push("/home");
-  }, [router]);
+    router.push(path);
+  }, [router, path]);
 
   return null;
 }

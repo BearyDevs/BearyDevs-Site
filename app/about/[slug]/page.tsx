@@ -3,7 +3,7 @@ import { PropsWithChildren } from "react";
 import CodeWithLineNumbers from "@/app/components/codeWithLineNumber";
 import fs from "fs";
 import path from "path";
-import { aboutSelect } from "./_components/neotree-about";
+import { aboutSelect } from "../data";
 
 // Dynamically type the slug from aboutSelect
 type AboutSlug = (typeof aboutSelect)[number]["slug"];

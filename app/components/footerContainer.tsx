@@ -8,9 +8,9 @@ import { FaReact } from "react-icons/fa";
 import { LuClock3 } from "react-icons/lu";
 import { SiTypescript } from "react-icons/si";
 import { TbBrandPagekit } from "react-icons/tb";
-import { aboutSelect } from "../about/[slug]/_components/neotree-about";
 // import { FaFolderOpen } from "react-icons/fa6";
 import { Link } from "@nextui-org/react";
+import { aboutSelect } from "../about/data";
 
 export default function FooterContainer() {
   const pathname = usePathname();
@@ -67,28 +67,28 @@ export default function FooterContainer() {
       <div className="h-max w-full bg-[#002b37] flex items-center justify-between overflow-x-auto whitespace-nowrap gap-10 mobilexll:text-xs no-scrollbar">
         <div className="flex items-center font-bold">
           <div className="flex items-center justify-center bg-[#0075b3] text-white px-3 relative gap-2 py-[2px]">
-            <DiVim size={"20px"} /> NORMAL
+            <DiVim size={"18px"} /> NORMAL
           </div>
 
           <div className="flex items-center bg-[#7e8f90] text-[#001115] px-3 relative ml-[-1px] py-[2px]">
-            <DiGitBranch size={"20px"} /> main
+            <DiGitBranch size={"18px"} /> main
           </div>
 
           <FaReact className="mx-4 text-[#008cd8]" size={"16px"} />
 
           <div className="pr-5 flex items-center gap-2 transition-all duration-1000">
-            <SiTypescript className="text-gray-400" />{" "}
+            <SiTypescript size={"16px"} className="text-gray-400" />{" "}
             {`app${pathname === "/" ? "/home" : pathname}.tsx`}
           </div>
         </div>
 
         <div className="flex items-center font-bold">
           <div className="flex items-center bg-[#7e8f90] text-[#001115] px-3 relative ml-[-1px] py-[2px] gap-1">
-            <TbBrandPagekit size={"20px"} />{" "}
+            <TbBrandPagekit size={"16px"} />{" "}
             {pathname === "/" ? "home" : pathname.slice(1)}.tsx
           </div>
 
-          <div className="flex items-center justify-center bg-[#0075b3] text-[#001115] px-3 relative gap-2 py-[2px]">
+          <div className="flex items-center justify-center bg-[#0079ba] text-[#001115] px-3 relative gap-2 py-[2px]">
             <LuClock3 />{" "}
             {new Date().toLocaleTimeString([], {
               hour: "2-digit",
@@ -103,7 +103,7 @@ export default function FooterContainer() {
         <div className="flex items-center font-bold">
           <div className="flex items-center justify-center bg-[#00b2ff] px-3 relative gap-2 pl-4 py-[2px] rounded-bl-2xl">
             <Link
-              className="text-[#121212] mobilexll:text-xs"
+              className="text-[#121212] text-sm mobilexll:text-xs"
               href="https://github.com/tmux/tmux"
               target="_blank"
             >
@@ -112,7 +112,7 @@ export default function FooterContainer() {
           </div>
 
           <div className="flex items-center bg-[#484e52] text-gray-300 px-3 relative ml-[-1px] py-[2px]">
-            <DiGitBranch size={"20px"} /> bearydevs
+            <DiGitBranch size={"16px"} /> bearydevs
           </div>
         </div>
 
@@ -130,7 +130,7 @@ export default function FooterContainer() {
 
           <div className="flex items-center justify-center bg-[#00b2ff] px-3 relative gap-2 py-[2px] rounded-br-2xl whitespace-nowrap">
             <Link
-              className="text-[#121212] mobilexll:text-xs"
+              className="text-[#121212] text-sm mobilexll:text-xs"
               href="https://www.apple.com/th/newsroom/2021/10/introducing-m1-pro-and-m1-max-the-most-powerful-chips-apple-has-ever-built/"
               target="_blank"
             >

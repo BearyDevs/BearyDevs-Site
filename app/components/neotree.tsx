@@ -7,30 +7,11 @@ import classNames from "classnames";
 import { usePathname, useRouter } from "next/navigation";
 import { Link } from "@nextui-org/react";
 
-export const aboutSelect = [
-  {
-    fileName: "greeting.ts",
-    link: "/about",
-    slug: "",
-  },
-  {
-    fileName: "gear.ts",
-    link: "/about/gear",
-    slug: "gear",
-  },
-  {
-    fileName: "personal.ts",
-    link: "/about/personal",
-    slug: "personal",
-  },
-  {
-    fileName: "work.ts",
-    link: "/about/work",
-    slug: "work",
-  },
-] as const;
+interface Props {
+  items: NeotreeItem[];
+}
 
-export default function AboutNeotree() {
+export default function Neotree({ items }: Props) {
   const pathname = usePathname();
   const router = useRouter();
 
@@ -51,7 +32,7 @@ export default function AboutNeotree() {
           <IoIosArrowDown /> <FaFolderOpen className="text-[#008dd9]" />
           about
         </p>
-        {aboutSelect.map((item, i) => {
+        {items.map((item, i) => {
           return (
             <button
               key={i}
