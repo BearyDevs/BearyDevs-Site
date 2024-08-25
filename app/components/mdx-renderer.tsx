@@ -2,6 +2,7 @@ import Image from "next/image";
 import remarkGfm from "remark-gfm";
 import rehypePrettyCode from "rehype-pretty-code";
 import { MDXRemote, MDXRemoteProps } from "next-mdx-remote/rsc";
+import MdxArticle from "./mdx-article";
 
 interface Props {
   source: string;
@@ -29,7 +30,7 @@ export const MDXRenderer = ({
         <Image
           src={src!}
           alt={alt!}
-          className="mx-auto my-0 object-cover object-center md:max-w-[80%] shadow-gray-600 shadow-md"
+          className="mx-auto my-0 object-cover object-center md:max-w-[80%]"
           priority
           width={820}
           height={492}
@@ -43,10 +44,8 @@ export const MDXRenderer = ({
   };
 
   return (
-    <article
-      className={`prose prose-neutral prose-invert mx-auto font-sans prose-headings:text-[#C6C6C6] prose-p:text-[#898989] prose-a:text-[#C6C6C6] prose-strong:text-[#C6C6C6] ${limitWidth ? "max-w-5xl" : "max-w-none"} animate-[fadeIn_0.5s]`}
-    >
+    <MdxArticle limitWidth={limitWidth}>
       <MDXRemote {...mdxSource} />
-    </article>
+    </MdxArticle>
   );
 };

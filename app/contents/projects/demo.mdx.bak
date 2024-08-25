@@ -11,6 +11,19 @@ technology: "React-Vite"
 
 Crypto gaming in farm theme and cryptocurrency that allow for mint your own landmark of country for farming cannabis seed and get back your rewards
 
+### Preview Video
+
+<div style={{ display: "flex", justifyContent: "center" }}>
+  <iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/8lX6Ecy5mjY"
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+  />
+</div>
+
 ### Stack
 
 - [React](https://vitejs.dev) - Vite.js is a React framework of next generation frontend tooling for client-side

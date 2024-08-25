@@ -1,5 +1,6 @@
 "use client";
 import { getFileIcon } from "@/app/libs/icons";
+import { ScrollShadow } from "@nextui-org/react";
 import classNames from "classnames";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
@@ -8,9 +9,10 @@ export const Nav = () => {
   const params = useSearchParams();
 
   return (
-    <nav
+    <ScrollShadow
+      orientation="horizontal"
       className={classNames({
-        "sticky top-0 z-50 mb-2 flex select-none items-center overflow-x-auto rounded-md":
+        "sticky top-0 z-50 mb-3 flex select-none items-center rounded-md overflow-x-auto mobilexll:pb-1 py-1":
           true,
         "bg-gradient-to-r from-[#002b3780] via-[#0a2c2c1b] to-[#103f3c00]":
           true,
@@ -32,7 +34,7 @@ export const Nav = () => {
           </Link>
         );
       })}
-    </nav>
+    </ScrollShadow>
   );
 };
 

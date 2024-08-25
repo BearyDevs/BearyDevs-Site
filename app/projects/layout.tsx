@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import { PropsWithChildren } from "react";
-import { Nav } from "./_components/nav";
 
 export const dynamic = "force-dynamic";
 
@@ -12,9 +11,8 @@ export const metadata: Metadata = {
 
 export default function ProjectLayout({ children }: PropsWithChildren) {
   return (
-    <div className="w-full min-h-full flex items-start justify-between flex-grow">
-      <div className="animate-[fadeIn_1s] flex-grow w-[100dvw] sm:w-[95dvw] h-auto max-h-screen py-1 px-0 sm:px-4 pl-6 overflow-auto custom900:pl-0">
-        <Nav />
+    <div className="w-full h-full flex items-center justify-center">
+      <div className="animate-[fadeIn_1s] w-[100dvw] sm:w-[85dvw] h-auto max-h-screen py-1 px-2 sm:px-4 pl-6 custom900:pl-0">
         {children}
       </div>
     </div>

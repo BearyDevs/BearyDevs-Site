@@ -10,6 +10,7 @@ import { ascii } from "./welcome";
 import StarFall from "./starfall";
 import { Button, ScrollShadow } from "@nextui-org/react";
 import { setMinimized } from "../libs/redux/slices/minimized";
+import { LennyFace } from "./lennyFace";
 
 export default function MainContainer({ children }: PropsWithChildren) {
   const dispatch = useDispatch<AppDispatch>();
@@ -55,19 +56,18 @@ export default function MainContainer({ children }: PropsWithChildren) {
           "transition-all duration-500": true,
           "relative bottom-[-95%] opacity-0": minimized,
           "relative bottom-0 opacity-85": !minimized,
-          "flex flex-col w-screen h-screen lg:min-w-[80%] lg:max-w-[80%] lg:min-h-[80%] lg:max-h-[80%] bg-gradient-to-br from-[#0d0d0d] via-[#1a1a1a] to-[#262626] rounded-2xl relative":
+          "flex flex-col w-[100dvw] h-[100dvh] lg:min-w-[80%] lg:max-w-[80%] lg:min-h-[80%] lg:max-h-[80%] rounded-2xl relative":
             true,
-          "shadow-[inset_0_0_10px_rgba(255,255,255,0.1),_30px_30px_60px_rgba(4,19,25,1),_0_2px_6px_rgba(255,255,255,0.05)]":
+          "lg:shadow-[inset_0_0_10px_rgba(255,255,255,0.1),_30px_30px_60px_rgba(4,19,25,1),_0_2px_6px_rgba(255,255,255,0.05)]":
             true, // solaizeOsaka shadow
+          "bg-gradient-to-br from-[#041319] via-[#041319] to-[#041319]": true, // solaizeOsaka
         })}
-        style={{
-          backgroundImage: `linear-gradient(135deg, #041319 0%, #041319 50%, #041319 100%)`, // solaizeOsaka
-        }}
       >
         <TopContainer />
-        <ScrollShadow className="w-full h-screen flex-grow flex items-start justify-center mt-4 mb-[70px] px-2 relative top-[-20px]">
+        <ScrollShadow className="flex items-center justify-center mt-4 pb-[70px] px-2 mb-6 relative top-[-20px]">
           {children}
         </ScrollShadow>
+        <LennyFace />
         <FooterContainer />
       </section>
     </>

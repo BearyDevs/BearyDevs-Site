@@ -68,12 +68,18 @@ export default function FooterContainer() {
 
         <div className="flex items-center font-bold">
           <div className="flex items-center gap-x-2 not-sr-only">
-            <p className="uppercase">-- view --</p>
-            <span>|</span>
             {pageViews && (
-              <Link href={ENV.UMAMI_URL} target="_blank">
-                {pageViews.value} Views today
-              </Link>
+              <div className="flex items-center justify-start gap-1">
+                <p className="uppercase whitespace-nowrap">-- view --</p>
+                <span>|</span>
+                <Link
+                  href={ENV.UMAMI_URL}
+                  target="_blank"
+                  className="whitespace-nowrap"
+                >
+                  {pageViews.value} Views today
+                </Link>
+              </div>
             )}
           </div>
 
@@ -113,7 +119,7 @@ export default function FooterContainer() {
               hour: "2-digit",
               minute: "2-digit",
               hour12: false,
-            })}
+            }) ?? "00:00"}
           </div>
         </div>
       </div>
@@ -170,7 +176,7 @@ export default function FooterContainer() {
         </div>
 
         <div className="flex items-center font-bold">
-          {todayData && todayData.grand_total.text}
+          {todayData && <pre>{JSON.stringify(todayData, null, 2)}</pre>}
 
           <div
             className={classNames({

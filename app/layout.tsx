@@ -3,7 +3,6 @@ import "./globals.css";
 import clsx from "clsx";
 import { fontSans, fontThai } from "./libs/fonts";
 import MainContainer from "./components/mainContainer";
-import { LennyFace } from "./components/lennyFace";
 import "animate.css";
 import Providers from "./provider";
 import VideoBG from "./videoBG";
@@ -65,10 +64,7 @@ export default async function RootLayout({
         <Providers>
           <main className="w-[100dvw] h-[100dvh] transition-all duration-300 flex items-start justify-center">
             <VideoBG />
-            <MainContainer>
-              <LennyFace />
-              {children}
-            </MainContainer>
+            <MainContainer>{children}</MainContainer>
           </main>
         </Providers>
       </body>
