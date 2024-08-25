@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
 import { getContents } from "@/app/libs/contents";
+import { Image } from "@nextui-org/react";
 
 interface Props {
   searchParams: {
@@ -27,15 +27,16 @@ export default function ProjectsPage({ searchParams }: Props) {
           >
             <figure className="group relative aspect-video">
               <Image
+                removeWrapper
                 src={project.metadata.image!}
                 alt={project.metadata.title}
-                quality={10}
-                fill
-                sizes="100%"
-                className="object-cover object-center grayscale-[50%] transition-all duration-500 group-hover:grayscale-0"
-                priority
+                // quality={10}
+                // fill
+                // sizes="100%"
+                className="object-cover object-center grayscale-[50%] transition-all duration-500 group-hover:grayscale-0 rounded-none"
+                // priority
               />
-              <div className="absolute left-0 top-0 grid h-full w-full place-items-center bg-[#080808]/90 transition-opacity duration-500 group-hover:opacity-0">
+              <div className="absolute left-0 top-0 grid h-full w-full place-items-center bg-[#080808]/90 transition-opacity duration-500 group-hover:opacity-0 z-20">
                 <p className="text-center text-3xl font-semibold uppercase">
                   {project.metadata.title}
                 </p>
