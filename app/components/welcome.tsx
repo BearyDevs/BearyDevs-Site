@@ -1,6 +1,6 @@
 "use client";
 
-import { Image, Link } from "@nextui-org/react";
+import { Image } from "@nextui-org/react";
 import classNames from "classnames";
 import { useState, useEffect } from "react";
 
