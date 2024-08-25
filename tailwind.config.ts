@@ -9,6 +9,7 @@ const config: Config = {
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   plugins: [
+    require("@tailwindcss/typography"),
     nextui({
       themes: {
         light: {
@@ -49,8 +50,7 @@ const config: Config = {
         xxl: { max: "1920px" },
         xlg: "1366px",
         xlgm: { max: "1366px" },
-        xl: { max: "1280px" },
-        xl_min: "1280px",
+        xl_max: { max: "1280px" },
         tabletxl: { max: "1194px" },
         tabletxl_min: "1194px",
         tabletlg: { max: "1155px" },
@@ -70,6 +70,7 @@ const config: Config = {
         mobilexlm: { max: "420px" },
         mobilesm: { max: "393px" },
         mobilexs: { max: "360px" },
+        mobilexxs: { max: "150px" },
       },
     },
   },

@@ -1,0 +1,23 @@
+---
+title: "Cannabis NFTs"
+summary: "Crypto gaming in farm theme and cryptocurrency that allow for mint your own landmark of country for farming cannabis seed and get back your rewards"
+image: "/projects/cannabis.webp"
+technology: "React-Vite"
+---
+
+![Cannabis NFTs Preview](/projects/cannabis.webp)
+
+## Cannabis NFTs
+
+Crypto gaming in farm theme and cryptocurrency that allow for mint your own landmark of country for farming cannabis seed and get back your rewards
+
+### Stack
+
+- [React](https://vitejs.dev) - Vite.js is a React framework of next generation frontend tooling for client-side
+- [Styled-Components](https://styled-components.com) - Styling your way with speed, strong typing, and flexibility.
+- [HardHat](https://hardhat.org) - Flexible, Extensible, Fast, Ethereum development environment for professionals
+- [Solidity](https://soliditylang.org) - A statically-typed curly-braces programming language designed for developing smart contracts that run on Ethereum.
+- [Ethereum](https://ethereum.org/en) - Ethereum is the community-run technology powering the cryptocurrency ether (ETH) and thousands of decentralized applications.
+- [Stitches](https://stitches.dev) - Style your components with confidence. CSS-in-JS with near-zero runtime, SSR, multi-variant support, and a best-in-class developer experience.
+- [Metamask](https://metamask.io) - A crypto wallet & gateway to blockchain apps. Start exploring blockchain applications in seconds. Trusted by over 100 million users worldwide.
+- [IPFS](https://ipfs.tech) - IPFS is an open system to manage data without a central server.

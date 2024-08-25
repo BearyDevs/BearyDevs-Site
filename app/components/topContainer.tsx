@@ -3,32 +3,15 @@
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 import classNames from "classnames";
-import { FaFacebook, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaLinkedin, FaReact } from "react-icons/fa";
 import { MdOutlineContactPhone } from "react-icons/md";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { LuMaximize2 } from "react-icons/lu";
 import { useDispatch } from "react-redux";
-import { AppDispatch } from "../utils/redux/store";
-import { setMinimized } from "../utils/redux/slices/minimized";
-
-export const nav_routes = [
-  {
-    url: "/home",
-    name: "home",
-  },
-  {
-    url: "/about",
-    name: "about",
-  },
-  {
-    url: "/projects",
-    name: "projects",
-  },
-  {
-    url: "/myblogs",
-    name: "myblogs",
-  },
-];
+import { AppDispatch } from "@/app/libs/redux/store";
+import { setMinimized } from "@/app/libs/redux/slices/minimized";
+import { ENV } from "@/app/libs/constants";
+import { aboutNav } from "@/app/navigation";
 
 export default function TopContainer() {
   const router = useRouter();
@@ -62,8 +45,8 @@ export default function TopContainer() {
   };
 
   return (
-    <div className="w-full h-max rounded-t-2xl bg-transparent flex items-start justify-center flex-col ">
-      <div className="top-0 h-max w-full flex items-center justify-between px-8 mobilexll:px-4">
+    <div className="w-full h-max rounded-t-2xl bg-transparent flex items-start justify-center flex-col z-20">
+      <div className="top-0 h-max w-full flex items-center justify-between px-8 mobilexll:px-4 overflow-x-auto">
         <div
           className={classNames({
             "flex items-center rounded-t-2xl justify-start h-12 gap-[10px] font-semibold":
@@ -162,9 +145,7 @@ export default function TopContainer() {
           <button
             name="github-button"
             className="rounded-full"
-            onClick={() =>
-              window.open(process.env.NEXT_PUBLIC_GITHUB_URL, "_blank")
-            }
+            onClick={() => window.open(ENV.GITHUB_URL, "_blank")}
           >
             <GitHubLogoIcon className="hover:text-white transition-colors duration-300" />
           </button>
@@ -188,31 +169,33 @@ export default function TopContainer() {
           <button
             name="linkedin-button"
             className="rounded-full"
-            onClick={() =>
-              window.open(process.env.NEXT_PUBLIC_LINKEDIN_URL, "_blank")
-            }
+            onClick={() => window.open(ENV.LINKEDIN_URL, "_blank")}
           >
             <FaLinkedin className="hover:text-white transition-colors duration-300" />
           </button>
         </div>
       </div>
-      <div className="w-full px-2 flex items-center justify-start gap-1 text-sm">
-        {nav_routes.map((route, index) => (
-          <button
-            key={index}
-            name="navigation-button"
-            onClick={() => router.push(`${route.url}`)}
-            className={classNames({
-              "px-3 py-1 transition-colors duration-300 rounded-md flex items-center justify-center gap-2":
-                true,
-              "bg-[#103f3cb5]": pathname.startsWith(route.url),
-              "hover:bg-[#103f3c4f]": route.url !== pathname,
-            })}
-          >
-            {route.name}
-          </button>
-        ))}
-      </div>
+
+      {pathname.startsWith("/about") && (
+        <div className="custom900_min:hidden flex items-center justify-start text-sm w-full flex-grow py-2 overflow-x-auto animate-[fadeInUp_1s]">
+          {aboutNav.map((item, i) => {
+            return (
+              <button
+                key={i}
+                onClick={() => router.push(item.link)}
+                className={classNames({
+                  "px-2 mx-1 flex items-center gap-1 relative bottom-[-3px] left-[-3px] italic":
+                    true,
+                  "bg-[#969696] text-[#000000] font-bold transition-background duration-300":
+                    pathname === item.link,
+                })}
+              >
+                <FaReact className="text-[#008cd8]" /> {item.fileName}
+              </button>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 }

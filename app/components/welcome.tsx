@@ -8,17 +8,21 @@ export default function Welcome() {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setShow(true);
-    }, 100);
+    if (!show) {
+      const interval = setInterval(() => {
+        setShow(!show);
+      }, 100);
 
-    return () => {
-      clearInterval(interval);
-    };
-  }, []);
+      return () => {
+        clearInterval(interval);
+      };
+    }
+
+    return () => {};
+  }, [show]);
 
   return (
-    <div className="w-full h-full flex items-center justify-center flex-col self-center gap-8 text-gray-400 mb-[10%]">
+    <div className="w-full h-full flex items-center justify-center flex-col self-center gap-8 text-gray-400 pb-[10%]">
       <Image
         alt="bearydevs"
         removeWrapper

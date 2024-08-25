@@ -1,4 +1,7 @@
 const NAME = "Teerapat Wassavanich";
+const NICKNAME = "Beary";
+
+const RESPECT_PERSON = ["Steven Paul Jobs", "Nicola Testla"];
 
 let countryLocation = "Bangkok, Thailand";
 
@@ -22,5 +25,3 @@ let interest = [
   "Guitar",
   "Apple Inc",
 ];
-
-const RESPECT = ["Steven Paul Jobs (Steve Jobs)"];

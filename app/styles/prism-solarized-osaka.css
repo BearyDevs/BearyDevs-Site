@@ -4,7 +4,7 @@ code[class*="language-"] {
   font-family: "Fira Code", Consolas, Monaco, "Andale Mono", "Ubuntu Mono",
     monospace;
   font-size: 14px;
-  line-height: 1.5; /* Ensure consistent line-height */
+  line-height: 1.7; /* Ensure consistent line-height */
   font-weight: 600;
   /* color: white; */
   color: #ba8300;
@@ -16,18 +16,19 @@ code[class*="language-"] {
   font-family: "Fira Code", Consolas, Monaco, "Andale Mono", "Ubuntu Mono",
     monospace;
   font-size: 14px; /* Ensure the same font-size */
-  line-height: 1.5; /* Ensure the same line-height */
+  line-height: 1.7; /* Ensure the same line-height */
   text-align: right;
-  color: #b58900; /* Solarized yellow color for line numbers */
+  /* color: #da4000; */
+  color: #6b4b00;
   padding-right: 2px; /* Add padding to align line numbers properly */
   user-select: none; /* Prevent selecting line numbers */
 }
 
 /* Make the line numbers background transparent */
 .line-numbers-wrapper {
-  background-color: transparent; /* Set background to transparent */
-  border-right: 1px solid #586e75; /* Optional border to separate line numbers */
-  box-shadow: inset -1px 0 0 #586e75; /* Thin line between code and line numbers */
+  background-color: transparent;
+  /* border-right: 1px solid #586e75; */
+  /* box-shadow: inset -1px 0 0 #586e75; */
 }
 
 /* Adjust padding for the code block to match line numbers */

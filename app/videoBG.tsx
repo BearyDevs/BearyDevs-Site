@@ -1,7 +1,7 @@
 "use client";
 
 import { useSelector } from "react-redux";
-import { ReduxState } from "./utils/redux/store";
+import { ReduxState } from "./libs/redux/store";
 import classNames from "classnames";
 
 export default function VideoBG() {

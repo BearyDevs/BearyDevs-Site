@@ -1,18 +1,18 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import clsx from "clsx";
-import { fontSans, fontThai } from "./utils/fonts";
+import { fontSans, fontThai } from "./libs/fonts";
 import MainContainer from "./components/mainContainer";
 import { LennyFace } from "./components/lennyFace";
 import "animate.css";
 import Providers from "./provider";
-import FooterContent from "./footerContent";
 import VideoBG from "./videoBG";
+import { ENV } from "./libs/constants";
 
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || ""),
+  metadataBase: new URL(ENV.APP_URL),
   title: {
     default: "BearyDevs",
     template: "%s | BearyDevs",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: "BearyDevs",
     description:
       "Get to know me!, Teerapat Wassavanich (BearyDevs), through this website! I'm a full-stack developer and founder-ceo of TOYLAB Co.,Ltd. I've poured all my skills and creativity into my work and passion for programming. If you're seeking a developer who works hard and is dedicated to your next project or simply looking for inspiration, feel free to get in touch!",
-    url: process.env.NEXT_PUBLIC_APP_URL,
+    url: ENV.APP_URL,
     siteName: "BearyDevs",
     locale: "en_US",
     type: "website",
@@ -40,15 +40,15 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: "Wiscaksono",
+    title: "BearyDevs",
     card: "summary_large_image",
   },
   verification: {
-    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+    google: ENV.GOOGLE_SITE_VERIFICATION,
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -69,7 +69,6 @@ export default function RootLayout({
               <LennyFace />
               {children}
             </MainContainer>
-            <FooterContent />
           </main>
         </Providers>
       </body>

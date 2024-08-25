@@ -1,11 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import minimized from "./slices/minimized";
+import { ENV } from "../constants";
 
 export const store = configureStore({
   reducer: {
     minimized,
   },
-  devTools: process.env.NODE_ENV === "development",
+  devTools: ENV.NODE_ENV === "development",
 });
 
 export type ReduxState = ReturnType<typeof store.getState>;

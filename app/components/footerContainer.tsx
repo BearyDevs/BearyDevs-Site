@@ -6,27 +6,30 @@ import { useEffect, useState } from "react";
 import { DiVim, DiGitBranch } from "react-icons/di";
 import { FaReact } from "react-icons/fa";
 import { LuClock3 } from "react-icons/lu";
-import { SiTypescript } from "react-icons/si";
-import { TbBrandPagekit } from "react-icons/tb";
-// import { FaFolderOpen } from "react-icons/fa6";
 import { Link } from "@nextui-org/react";
-import { aboutSelect } from "../about/data";
+import { main_nav_routes } from "@/app/navigation";
+import { useStats } from "@/app/libs/useStats";
+import { ENV } from "@/app/libs/constants";
 
 export default function FooterContainer() {
   const pathname = usePathname();
   const router = useRouter();
   const [show, setShow] = useState(false);
+  const { todayData, pageViews } = useStats();
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setShow(!show);
-    }, 10);
+    if (!show) {
+      const interval = setInterval(() => {
+        setShow(!show);
+      }, 100);
 
-    return () => {
-      clearInterval(interval);
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+      return () => {
+        clearInterval(interval);
+      };
+    }
+
+    return () => {};
+  }, [show]);
 
   return (
     <div
@@ -37,58 +40,74 @@ export default function FooterContainer() {
         "block animate-[fadeInUp_1s]": show,
       })}
     >
-      {pathname.startsWith("/about") && (
-        <div className="custom900_min:hidden flex items-center justify-start text-sm w-full flex-grow py-1 overflow-x-auto no-scrollbar animate-[fadeInUp_1s]">
-          {/* <div className="flex items-center justify-center text-[#00b2ff] font-bold px-2 gap-2"> */}
-          {/*   NeoTree */}
-          {/* </div> */}
-
-          {/* <FaFolderOpen className="text-[#008dd9] mx-1 ml-2" /> */}
-
-          {aboutSelect.map((item, i) => {
-            return (
-              <button
-                key={i}
-                onClick={() => router.push(item.link)}
-                className={classNames({
-                  "px-2 mx-1 flex items-center gap-1 relative bottom-[-3px] left-[-3px] italic":
-                    true,
-                  "bg-[#969696] text-[#000000] font-bold transition-background duration-300":
-                    pathname === item.link,
-                })}
-              >
-                <FaReact className="text-[#008cd8]" /> {item.fileName}
-              </button>
-            );
-          })}
-        </div>
-      )}
-
-      <div className="h-max w-full bg-[#002b37] flex items-center justify-between overflow-x-auto whitespace-nowrap gap-10 mobilexll:text-xs no-scrollbar">
+      <div
+        className={classNames({
+          "h-max w-full flex items-center justify-between pb-1 lg:pb-0 overflow-x-auto whitespace-nowrap gap-10 mobilexll:text-xs":
+            true,
+        })}
+      >
         <div className="flex items-center font-bold">
-          <div className="flex items-center justify-center bg-[#0075b3] text-white px-3 relative gap-2 py-[2px]">
-            <DiVim size={"18px"} /> NORMAL
+          <div
+            className={classNames({
+              "flex items-center justify-center px-3 relative gap-2 py-[2px] text-gray-300":
+                true,
+            })}
+          >
+            <DiVim size={"16px"} /> NORMAL
           </div>
 
-          <div className="flex items-center bg-[#7e8f90] text-[#001115] px-3 relative ml-[-1px] py-[2px]">
-            <DiGitBranch size={"18px"} /> main
-          </div>
-
-          <FaReact className="mx-4 text-[#008cd8]" size={"16px"} />
-
-          <div className="pr-5 flex items-center gap-2 transition-all duration-1000">
-            <SiTypescript size={"16px"} className="text-gray-400" />{" "}
-            {`app${pathname === "/" ? "/home" : pathname}.tsx`}
+          <div
+            className={classNames({
+              "flex items-center text-gray-300 px-[10px] relative py-[2px]":
+                true,
+            })}
+          >
+            <DiGitBranch size={"16px"} /> main
           </div>
         </div>
 
         <div className="flex items-center font-bold">
-          <div className="flex items-center bg-[#7e8f90] text-[#001115] px-3 relative ml-[-1px] py-[2px] gap-1">
-            <TbBrandPagekit size={"16px"} />{" "}
-            {pathname === "/" ? "home" : pathname.slice(1)}.tsx
+          <div className="flex items-center gap-x-2 not-sr-only">
+            <p className="uppercase">-- view --</p>
+            <span>|</span>
+            {pageViews && (
+              <Link href={ENV.UMAMI_URL} target="_blank">
+                {pageViews.value} Views today
+              </Link>
+            )}
           </div>
 
-          <div className="flex items-center justify-center bg-[#0079ba] text-[#001115] px-3 relative gap-2 py-[2px]">
+          <div
+            className={classNames({
+              "flex items-center px-3 relative ml-[-1px] py-[2px] gap-1 text-gray-300":
+                true,
+            })}
+          >
+            <FaReact className="mr-2 text-black" size={"16px"} />
+            {pathname.startsWith("/projects/") || pathname.startsWith("/blogs/")
+              ? `${pathname.slice(1)}.mdx`
+              : `app${
+                  pathname === "/"
+                    ? "/home"
+                    : pathname.startsWith("/about/") || pathname === "/about"
+                      ? pathname === "/about"
+                        ? "/about/greeting.ts"
+                        : `${pathname}.ts`
+                      : pathname.startsWith("/coding-activity/") ||
+                          pathname === "/coding-activity"
+                        ? pathname === "/coding-activity"
+                          ? "/coding-activity/languages.ts"
+                          : `${pathname}.ts`
+                        : `${pathname}.tsx`
+                }`}
+          </div>
+
+          <div
+            className={classNames({
+              "flex items-center justify-center px-3 relative gap-2 py-[2px] text-gray-300":
+                true,
+            })}
+          >
             <LuClock3 />{" "}
             {new Date().toLocaleTimeString([], {
               hour: "2-digit",
@@ -99,9 +118,20 @@ export default function FooterContainer() {
         </div>
       </div>
 
-      <div className="h-max w-full bg-[#002b37] flex items-center justify-between rounded-b-2xl overflow-x-auto whitespace-nowrap gap-4 mobilexll:text-xs no-scrollbar">
-        <div className="flex items-center font-bold">
-          <div className="flex items-center justify-center bg-[#00b2ff] px-3 relative gap-2 pl-4 py-[2px] rounded-bl-2xl">
+      <div
+        className={classNames({
+          "h-max w-full flex items-center justify-between rounded-b-2xl overflow-x-auto whitespace-nowrap gap-4 mobilexll:text-xs":
+            true,
+        })}
+      >
+        <div className="flex items-center font-bold lg:pb-0 pb-1">
+          <div
+            className={classNames({
+              "flex items-center justify-center px-3 relative gap-2 pl-4 py-[2px] rounded-bl-2xl":
+                true,
+              "bg-teal-400": true,
+            })}
+          >
             <Link
               className="text-[#121212] text-sm mobilexll:text-xs"
               href="https://github.com/tmux/tmux"
@@ -111,13 +141,43 @@ export default function FooterContainer() {
             </Link>
           </div>
 
-          <div className="flex items-center bg-[#484e52] text-gray-300 px-3 relative ml-[-1px] py-[2px]">
-            <DiGitBranch size={"16px"} /> bearydevs
+          <div
+            className={classNames({
+              "flex items-center text-gray-300 px-3 relative ml-[-1px] py-[2px]":
+                true,
+            })}
+          >
+            <DiGitBranch size={"14px"} /> bearydevs
+          </div>
+
+          <div className="w-full px-2 flex items-center justify-start gap-1 text-xs h-full whitespace-nowrap">
+            {main_nav_routes.map((route, index) => (
+              <button
+                key={index}
+                name="navigation-button"
+                onClick={() => router.push(`${route.url}`)}
+                className={classNames({
+                  "px-3 py-1 transition-colors duration-300 rounded-md flex items-center justify-center gap-2 uppercase text-gray-300":
+                    true,
+                  "bg-[#103f3cb5]": pathname.startsWith(route.url),
+                  "hover:bg-[#103f3c4f]": route.url !== pathname,
+                })}
+              >
+                {route.name}
+              </button>
+            ))}
           </div>
         </div>
 
         <div className="flex items-center font-bold">
-          <div className="flex items-center bg-[#484e52] text-gray-300 px-3 relative ml-[-1px] py-[2px] gap-1">
+          {todayData && todayData.grand_total.text}
+
+          <div
+            className={classNames({
+              "flex items-center text-gray-300 px-3 relative ml-[-1px] py-[2px] gap-1":
+                true,
+            })}
+          >
             {new Date()
               .toLocaleDateString("en-GB", {
                 day: "2-digit",
@@ -128,7 +188,13 @@ export default function FooterContainer() {
               .replace(/ /g, "-")}
           </div>
 
-          <div className="flex items-center justify-center bg-[#00b2ff] px-3 relative gap-2 py-[2px] rounded-br-2xl whitespace-nowrap">
+          <div
+            className={classNames({
+              "flex items-center justify-center px-3 relative gap-2 py-[2px] rounded-br-2xl whitespace-nowrap":
+                true,
+              "bg-teal-400": true,
+            })}
+          >
             <Link
               className="text-[#121212] text-sm mobilexll:text-xs"
               href="https://www.apple.com/th/newsroom/2021/10/introducing-m1-pro-and-m1-max-the-most-powerful-chips-apple-has-ever-built/"

@@ -3,14 +3,25 @@ import { PropsWithChildren } from "react";
 import CodeWithLineNumbers from "@/app/components/codeWithLineNumber";
 import fs from "fs";
 import path from "path";
-import { aboutSelect } from "../data";
+import { Metadata } from "next";
+import { aboutNav } from "@/app/navigation";
 
-// Dynamically type the slug from aboutSelect
-type AboutSlug = (typeof aboutSelect)[number]["slug"];
+export type AboutSlug = (typeof aboutNav)[number]["slug"];
 
 interface Props {
   params: {
     slug: AboutSlug;
+  };
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = params;
+
+  const page = aboutNav.find((item) => item.slug === slug);
+  const firstChar = page?.slug[0].toUpperCase();
+
+  return {
+    title: `${firstChar}${page?.slug.slice(1)} | BearyDevs`,
   };
 }
 
