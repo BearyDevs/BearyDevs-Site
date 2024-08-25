@@ -42,6 +42,24 @@ export default function FooterContainer() {
     >
       <div
         className={classNames({
+          "text-xs text-gray-500 pl-2 pb-1": true,
+          hidden: !show,
+          "block animate-[fadeInUp_1.5s]": show,
+        })}
+      >
+        Designed by Bearydevs, inspired by{" "}
+        <Link
+          className="font-bold text-xs hover:text-white transition-colors duration-300 text-gray-500"
+          href="https://github.com/wiscaksono"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Wiscaksono
+        </Link>
+      </div>
+
+      <div
+        className={classNames({
           "h-max w-full flex items-center justify-between pb-1 lg:pb-0 overflow-x-auto whitespace-nowrap gap-10 mobilexll:text-xs":
             true,
         })}

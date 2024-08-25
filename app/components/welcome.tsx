@@ -22,7 +22,7 @@ export default function Welcome() {
   }, [show]);
 
   return (
-    <div className="w-full h-full flex items-center justify-center flex-col self-center gap-8 text-gray-400 pb-[10%]">
+    <div className="w-full h-full flex items-center justify-center flex-col self-center gap-8 text-gray-400 pb-[10%] pt-[10%]">
       <Image
         alt="bearydevs"
         removeWrapper
@@ -60,25 +60,6 @@ export default function Welcome() {
           <span className="font-bold text-teal-300">MOTTO: </span>
           {`keep learning, growing, and stay inspired`.toUpperCase()}
         </div>
-      </div>
-
-      <div
-        className={classNames({
-          "absolute bottom-[-10px] right-3 mb-[65px] text-xs text-gray-500":
-            true,
-          hidden: !show,
-          "block animate-[fadeInUp_1.5s]": show,
-        })}
-      >
-        Designed by Bearydevs, inspired by{" "}
-        <Link
-          className="font-bold text-xs hover:text-white transition-colors duration-300 text-gray-500"
-          href="https://github.com/wiscaksono"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Wiscaksono
-        </Link>
       </div>
     </div>
   );
