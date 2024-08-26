@@ -43,3 +43,19 @@ body {
     rgb(var(--background-start-rgb));
   overflow: hidden;
 }
+
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-card {
+  opacity: 0;
+  animation-fill-mode: both;
+}

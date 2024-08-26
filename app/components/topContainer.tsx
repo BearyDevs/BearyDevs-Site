@@ -11,7 +11,7 @@ import { useDispatch } from "react-redux";
 import { AppDispatch } from "@/app/libs/redux/store";
 import { setMinimized } from "@/app/libs/redux/slices/minimized";
 import { ENV } from "@/app/libs/constants";
-import { aboutNav } from "@/app/navigation";
+import { aboutNav, codingActivityNav } from "@/app/navigation";
 import { Nav } from "../projects/_components/nav";
 
 export default function TopContainer() {
@@ -180,6 +180,27 @@ export default function TopContainer() {
         {pathname.startsWith("/about") && (
           <div className="custom900_min:hidden flex items-center justify-start text-sm w-full flex-grow py-2 overflow-x-auto animate-[fadeInUp_1s]">
             {aboutNav.map((item, i) => {
+              return (
+                <button
+                  key={i}
+                  onClick={() => router.push(item.link)}
+                  className={classNames({
+                    "p-1 mx-1 flex items-center gap-1 relative bottom-[-3px] left-[-3px] italic px-2":
+                      true,
+                    "bg-[#969696] text-[#000000] font-bold transition-background duration-300":
+                      pathname === item.link,
+                  })}
+                >
+                  <FaReact className="text-[#008cd8]" /> {item.fileName}
+                </button>
+              );
+            })}
+          </div>
+        )}
+
+        {pathname.startsWith("/coding-activity") && (
+          <div className="custom900_min:hidden flex items-center justify-start text-sm w-full flex-grow py-2 overflow-x-auto animate-[fadeInUp_1s]">
+            {codingActivityNav.map((item, i) => {
               return (
                 <button
                   key={i}

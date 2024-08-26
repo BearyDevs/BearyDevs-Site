@@ -44,25 +44,25 @@ export const aboutNav: NeotreeItem[] = [
   },
 ] as const;
 
-export const codeingActivityNav: NeotreeItem[] = [
+export const codingActivityNav: NeotreeItem[] = [
   {
     fileName: "languages.ts",
-    slug: "languages",
     link: "/coding-activity",
+    slug: "languages",
   },
   {
     fileName: "activity.ts",
-    slug: "activity",
     link: "/coding-activity/activity",
+    slug: "activity",
   },
   {
     fileName: "editor.ts",
-    slug: "editor",
     link: "/coding-activity/editor",
+    slug: "editor",
   },
   {
     fileName: "os.ts",
-    slug: "operating-systems",
     link: "/coding-activity/os",
+    slug: "operating-systems",
   },
 ];

@@ -29,7 +29,7 @@ export default function Neotree({ startPath, items }: Props) {
 
       {/* Neotree content */}
       <div className="w-full max-h-[calc(100vh-100px)] overflow-y-auto overflow-x-hidden flex items-start justify-center flex-col py-1 pl-2 pr-8 mt-2 bg-[#00171c] border-r-[2px] border-[#003641] text-[#5d7a82]">
-        <p className="flex items-center gap-1 cursor-not-allowed italic">
+        <p className="flex items-center gap-1 cursor-not-allowed italic whitespace-nowrap">
           <IoIosArrowDown /> <FaFolderOpen className="text-[#008dd9]" />
           {startPath}
         </p>

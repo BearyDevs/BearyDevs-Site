@@ -17,13 +17,16 @@ export default function ProjectsPage({ searchParams }: Props) {
     : getContents("projects");
 
   return (
-    <div className="grid gap-2 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 animate-[fadeIn_0.5s] pb-[15%] lg:pb-0 text-gray-300">
+    <div className="grid gap-2 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 pb-[15%] lg:pb-0 text-gray-300">
       {projects.length > 0 ? (
         projects.map((project) => (
           <Link
             href={`/projects/${project.slug}`}
             key={project.slug}
-            className="divide-y divide-[#898989]/20 overflow-hidden border border-[#898989]/20"
+            className="divide-y divide-[#898989]/20 overflow-hidden border border-[#898989]/20 project-card"
+            style={{
+              animation: "fadeDown 0.5s ease both",
+            }}
           >
             <figure className="group relative aspect-video">
               <Image
