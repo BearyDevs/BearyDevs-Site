@@ -56,7 +56,7 @@ export default function MainContainer({ children }: PropsWithChildren) {
           "transition-all duration-500": true,
           "relative bottom-[-95%] opacity-0": minimized,
           "relative bottom-0 opacity-85": !minimized,
-          "flex flex-col w-[100dvw] h-[100dvh] lg:min-w-[80%] lg:max-w-[80%] lg:min-h-[80%] lg:max-h-[80%] rounded-2xl relative":
+          "flex flex-col w-[100dvw] h-[100dvh] lg:min-w-[80%] lg:max-w-[80%] lg:min-h-[80%] lg:max-h-[80%] lg:rounded-2xl relative":
             true,
           "lg:shadow-[inset_0_0_10px_rgba(255,255,255,0.1),_30px_30px_60px_rgba(4,19,25,1),_0_2px_6px_rgba(255,255,255,0.05)]":
             true, // solaizeOsaka shadow
@@ -64,10 +64,12 @@ export default function MainContainer({ children }: PropsWithChildren) {
         })}
       >
         <TopContainer />
-        <ScrollShadow className="flex items-center justify-center mt-4 pb-[70px] px-2 mb-6 relative top-[-20px]">
+        <ScrollShadow className="flex w-full h-full items-center justify-center mt-4 lg:px-2 lg:py-1 mb-6 relative top-[-20px] p-4">
           {children}
         </ScrollShadow>
-        <LennyFace />
+        <div className="hidden lg:block">
+          <LennyFace />
+        </div>
         <FooterContainer />
       </section>
     </>

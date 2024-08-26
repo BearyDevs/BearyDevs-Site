@@ -22,7 +22,7 @@ export default function Welcome() {
   }, [show]);
 
   return (
-    <div className="w-full h-full flex items-center justify-center flex-col self-center gap-8 text-gray-400 pb-[10%] pt-[10%]">
+    <div className="w-full h-full flex items-center justify-center flex-col self-center gap-8 text-gray-400">
       <Image
         alt="bearydevs"
         removeWrapper

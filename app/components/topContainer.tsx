@@ -185,7 +185,7 @@ export default function TopContainer() {
                   key={i}
                   onClick={() => router.push(item.link)}
                   className={classNames({
-                    "px-2 mx-1 flex items-center gap-1 relative bottom-[-3px] left-[-3px] italic":
+                    "p-1 mx-1 flex items-center gap-1 relative bottom-[-3px] left-[-3px] italic px-2":
                       true,
                     "bg-[#969696] text-[#000000] font-bold transition-background duration-300":
                       pathname === item.link,

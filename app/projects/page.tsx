@@ -17,7 +17,7 @@ export default function ProjectsPage({ searchParams }: Props) {
     : getContents("projects");
 
   return (
-    <div className="grid gap-2 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 animate-[fadeIn_0.5s] text-gray-300">
+    <div className="grid gap-2 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 animate-[fadeIn_0.5s] pb-[15%] lg:pb-0 text-gray-300">
       {projects.length > 0 ? (
         projects.map((project) => (
           <Link

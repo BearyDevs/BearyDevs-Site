@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { DiVim, DiGitBranch } from "react-icons/di";
 import { FaReact } from "react-icons/fa";
 import { LuClock3 } from "react-icons/lu";
-import { Link } from "@nextui-org/react";
+import { Link, ScrollShadow } from "@nextui-org/react";
 import { main_nav_routes } from "@/app/navigation";
 import { useStats } from "@/app/libs/useStats";
 import { ENV } from "@/app/libs/constants";
@@ -40,27 +40,30 @@ export default function FooterContainer() {
         "block animate-[fadeInUp_1s]": show,
       })}
     >
-      <div
-        className={classNames({
-          "text-xs text-gray-500 pl-2 pb-1": true,
-          hidden: !show,
-          "block animate-[fadeInUp_1.5s]": show,
-        })}
-      >
-        Designed by Bearydevs, inspired by{" "}
-        <Link
-          className="font-bold text-xs hover:text-white transition-colors duration-300 text-gray-500"
-          href="https://github.com/wiscaksono"
-          target="_blank"
-          rel="noreferrer"
+      {pathname === "/" && (
+        <div
+          className={classNames({
+            "text-xs text-gray-500 pl-2 pb-1": true,
+            hidden: !show,
+            "block animate-[fadeInUp_1.5s]": show,
+          })}
         >
-          Wiscaksono
-        </Link>
-      </div>
+          Designed by Bearydevs, inspired by{" "}
+          <Link
+            className="font-bold text-xs hover:text-white transition-colors duration-300 text-gray-500"
+            href="https://github.com/wiscaksono"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Wiscaksono
+          </Link>
+        </div>
+      )}
 
-      <div
+      <ScrollShadow
+        orientation="horizontal"
         className={classNames({
-          "h-max w-full flex items-center justify-between pb-1 lg:pb-0 overflow-x-auto whitespace-nowrap gap-10 mobilexll:text-xs":
+          "h-max px-1 w-full flex items-center justify-between pb-2 lg:pb-0 overflow-x-auto whitespace-nowrap gap-10 mobilexll:text-xs":
             true,
         })}
       >
@@ -140,18 +143,19 @@ export default function FooterContainer() {
             }) ?? "00:00"}
           </div>
         </div>
-      </div>
+      </ScrollShadow>
 
-      <div
+      <ScrollShadow
+        orientation="horizontal"
         className={classNames({
           "h-max w-full flex items-center justify-between rounded-b-2xl overflow-x-auto whitespace-nowrap gap-4 mobilexll:text-xs":
             true,
         })}
       >
-        <div className="flex items-center font-bold lg:pb-0 pb-1">
+        <div className="flex items-center font-bold lg:pb-0 pb-2">
           <div
             className={classNames({
-              "flex items-center justify-center px-3 relative gap-2 pl-4 py-[2px] rounded-bl-2xl":
+              "flex items-center justify-center px-3 relative gap-2 pl-4 py-[2px] lg:rounded-bl-2xl":
                 true,
               "bg-teal-400": true,
             })}
@@ -214,7 +218,7 @@ export default function FooterContainer() {
 
           <div
             className={classNames({
-              "flex items-center justify-center px-3 relative gap-2 py-[2px] rounded-br-2xl whitespace-nowrap":
+              "flex items-center justify-center px-3 relative gap-2 py-[2px] lg:rounded-br-2xl whitespace-nowrap":
                 true,
               "bg-teal-400": true,
             })}
@@ -228,7 +232,7 @@ export default function FooterContainer() {
             </Link>
           </div>
         </div>
-      </div>
+      </ScrollShadow>
     </div>
   );
 }

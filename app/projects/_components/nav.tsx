@@ -27,7 +27,7 @@ export const Nav = () => {
           <Link
             key={item.title}
             href={item.href}
-            className={`flex shrink-0 text-gray-300 items-center py-1 gap-1.5 px-3 leading-none transition-all hover:bg-[#103f3c4f] ${isActive ? "bg-[#103f3cb5] text-white" : "bg-transparent"}`}
+            className={`flex shrink-0 text-gray-300 items-center lg:py-1 py-2 gap-1.5 px-3 leading-none transition-all lg:hover:bg-[#103f3c4f] ${isActive ? "bg-[#103f3cb5] text-white" : "bg-transparent"}`}
           >
             {getFileIcon(item.title)}
             {item.title}

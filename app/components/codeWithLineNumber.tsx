@@ -17,10 +17,10 @@ export default function CodeWithLineNumbers({ code = "" }: { code?: string }) {
   }, [code]);
 
   return (
-    <ScrollShadow className="relative mt-8 overflow-auto max-w-full max-h-[calc(100vh-370px)] scroll-container pt-1 pb-8">
+    <ScrollShadow className="relative lg:pt-8 overflow-auto max-w-full lg:max-h-[calc(100dvh-300px)] max-h-[calc(100dvh-200px)] scroll-container pt-1 pb-8">
       <div className="flex">
         {/* Line numbers */}
-        <div className="sticky left-0 top-0 bg-gray-800 text-right text-gray-400 pr-4 line-numbers-wrapper">
+        <div className="relative left-0 top-0 bg-gray-800 text-right text-gray-400 pr-4 line-numbers-wrapper">
           {lines.map((_, i) => (
             <div key={i} className="leading-6 line-numbers">
               {i + 1}
