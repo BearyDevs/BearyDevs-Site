@@ -13,6 +13,7 @@ import { setMinimized } from "@/app/libs/redux/slices/minimized";
 import { ENV } from "@/app/libs/constants";
 import { aboutNav, codingActivityNav } from "@/app/navigation";
 import { Nav } from "../projects/_components/nav";
+import { ScrollShadow } from "@nextui-org/react";
 
 export default function TopContainer() {
   const router = useRouter();
@@ -178,7 +179,11 @@ export default function TopContainer() {
         </div>
 
         {pathname.startsWith("/about") && (
-          <div className="custom900_min:hidden flex items-center justify-start text-sm w-full flex-grow py-2 overflow-x-auto animate-[fadeInUp_1s]">
+          <ScrollShadow
+            orientation="horizontal"
+            hideScrollBar
+            className="custom900_min:hidden flex items-center justify-start text-sm w-full flex-grow py-2 overflow-x-auto animate-[fadeInUp_1s]"
+          >
             {aboutNav.map((item, i) => {
               return (
                 <button
@@ -195,11 +200,15 @@ export default function TopContainer() {
                 </button>
               );
             })}
-          </div>
+          </ScrollShadow>
         )}
 
         {pathname.startsWith("/coding-activity") && (
-          <div className="custom900_min:hidden flex items-center justify-start text-sm w-full flex-grow py-2 overflow-x-auto animate-[fadeInUp_1s]">
+          <ScrollShadow
+            orientation="horizontal"
+            hideScrollBar
+            className="custom900_min:hidden flex items-center justify-start text-sm w-full flex-grow py-2 overflow-x-auto animate-[fadeInUp_1s]"
+          >
             {codingActivityNav.map((item, i) => {
               return (
                 <button
@@ -216,7 +225,7 @@ export default function TopContainer() {
                 </button>
               );
             })}
-          </div>
+          </ScrollShadow>
         )}
       </div>
 
