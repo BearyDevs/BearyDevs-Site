@@ -32,18 +32,13 @@ const WORK_HISTORY = [
     position: ["Full Stack Developer", "Software Engineer", "Founder CEO"],
   },
   {
-    year: "2023",
+    year: "2022-2023",
     company: "Revelopment Studio",
     position: ["Full Stack Developer"],
   },
   {
-    year: "2022",
-    company: "Revelopment Studio",
-    position: ["Junior Game Developer", "Frontend Developer"],
-  },
-  {
     year: "2020",
-    company: "68 Stdios",
+    company: "68 Studios",
     position: ["Unity AR Developer"],
   },
   {
