@@ -42,7 +42,7 @@ export async function generateStaticParams() {
   return projects.map((project) => ({ slug: project.slug.toLowerCase() }));
 }
 
-export default function BlogsPage({ params }: Props) {
+export default function BlogsSlugPage({ params }: Props) {
   const project = getContents("blogs").find(
     (project) => project.slug.toLowerCase() === params.slug.toLowerCase(),
   );

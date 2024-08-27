@@ -42,7 +42,7 @@ export async function generateStaticParams() {
   return projects.map((project) => ({ slug: project.slug }));
 }
 
-export default function ProjectPage({ params }: Props) {
+export default function ProjectSlugPage({ params }: Props) {
   const project = getContents("projects").find(
     (project) => project.slug === params.slug,
   );
