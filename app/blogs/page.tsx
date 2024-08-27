@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { getContents } from "../libs/contents";
+import { Link } from "@nextui-org/react";
+import { getContents } from "@/app/libs/contents";
 
 export default function BlogsPage() {
   const blogs = getContents("blogs");
@@ -11,15 +11,12 @@ export default function BlogsPage() {
           key={blog.slug}
           className="flex flex-col gap-y-2 border border-[#898989]/20 p-2 rounded-xl md:gap-y-2.5 lg:gap-y-5"
         >
-          {/* <Link */}
-          {/*   href={`/blogs/${blog.slug.toLowerCase()}`} */}
-          {/*   className="text-lg font-semibold text-[#C6C6C6] md:text-xl lg:text-2xl" */}
-          {/* > */}
-          {/*   {blog.metadata.title} */}
-          {/* </Link> */}
-          <figure className="text-lg font-semibold text-[#C6C6C6] md:text-xl lg:text-2xl">
+          <Link
+            href={`/blogs/${blog.slug.toLowerCase()}`}
+            className="text-lg font-bold text-[#C6C6C6] md:text-xl lg:text-2xl"
+          >
             {blog.metadata.title}
-          </figure>
+          </Link>
           <p className="line-clamp-4 flex-1 text-sm">{blog.metadata.summary}</p>
           <div className="flex flex-wrap items-center justify-between gap-2 text-sm">
             <p className="text-gray-500">
