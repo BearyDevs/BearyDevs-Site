@@ -7,7 +7,6 @@ import "animate.css";
 import Providers from "./provider";
 import VideoBG from "./videoBG";
 import { ENV } from "./libs/constants";
-import Head from "next/head";
 import Script from "next/script";
 
 export const dynamic = "force-dynamic";
