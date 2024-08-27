@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import clsx from "clsx";
 import { fontSans, fontThai } from "./libs/fonts";
@@ -48,6 +48,15 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  themeColor: "#000000",
+  width: "device-width",
+  initialScale: 1,
+  minimumScale: 1,
+  maximumScale: 1,
+  // userScalable: false,
+};
+
 export default async function RootLayout({
   children,
 }: Readonly<{
@@ -56,6 +65,7 @@ export default async function RootLayout({
   return (
     <html suppressHydrationWarning lang="en">
       <body
+        suppressHydrationWarning={true}
         className={clsx(
           "font-sans antialiased",
           fontSans.variable,

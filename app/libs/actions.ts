@@ -22,6 +22,10 @@ export const umamiStats = unstable_cache(
       cache: "no-store",
     });
 
+    if (res) {
+      console.log(res.json() as Promise<UmamiStats>);
+    }
+
     return res.json() as Promise<UmamiStats>;
   },
   ["umami-stats"],

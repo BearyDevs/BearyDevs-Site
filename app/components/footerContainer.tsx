@@ -109,9 +109,7 @@ export default function FooterContainer() {
                 target="_blank"
                 className="whitespace-nowrap text-gray-300"
               >
-                <p className="uppercase whitespace-nowrap text-xs">
-                  -- statistics --
-                </p>
+                <p className="whitespace-nowrap text-xs">-- statistics --</p>
               </Link>
             </div>
           </div>
