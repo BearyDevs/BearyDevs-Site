@@ -3,8 +3,8 @@
 import { NextUIProvider } from "@nextui-org/react";
 import { useRouter } from "next/navigation";
 import { ReactNode } from "react";
-import { Provider as ReduxProvider } from "react-redux";
-import { store } from "./libs/redux/store";
+// import { Provider as ReduxProvider } from "react-redux";
+// import { store } from "./libs/redux/store";
 
 export interface ProvidersProps {
   children: ReactNode;
@@ -13,11 +13,13 @@ export interface ProvidersProps {
 const Providers = ({ children }: ProvidersProps) => {
   const router = useRouter();
 
-  return (
-    <ReduxProvider store={store}>
-      <NextUIProvider navigate={router.push}>{children}</NextUIProvider>
-    </ReduxProvider>
-  );
+  // return (
+  //   <ReduxProvider store={store}>
+  //     <NextUIProvider navigate={router.push}>{children}</NextUIProvider>
+  //   </ReduxProvider>
+  // );
+
+  return <NextUIProvider navigate={router.push}>{children}</NextUIProvider>;
 };
 
 export default Providers;

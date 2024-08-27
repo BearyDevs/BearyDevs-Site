@@ -7,9 +7,6 @@ import { FaFacebook, FaLinkedin, FaReact } from "react-icons/fa";
 import { MdOutlineContactPhone } from "react-icons/md";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { LuMaximize2 } from "react-icons/lu";
-import { useDispatch } from "react-redux";
-import { AppDispatch } from "@/app/libs/redux/store";
-import { setMinimized } from "@/app/libs/redux/slices/minimized";
 import { ENV } from "@/app/libs/constants";
 import { aboutNav, codingActivityNav } from "@/app/navigation";
 import { Nav } from "../projects/_components/nav";
@@ -18,7 +15,6 @@ import { ScrollShadow } from "@nextui-org/react";
 export default function TopContainer() {
   const router = useRouter();
   const pathname = usePathname();
-  const dispatch = useDispatch<AppDispatch>();
 
   const [isHovered, setIsHovered] = useState(false);
 
@@ -41,10 +37,6 @@ export default function TopContainer() {
     }
   };
 
-  const handleMinimize = () => {
-    dispatch(setMinimized(true));
-  };
-
   return (
     <>
       <div className="w-full h-max rounded-t-2xl bg-transparent flex items-start justify-center flex-col z-20">
@@ -64,8 +56,6 @@ export default function TopContainer() {
               aria-label="Close window"
               className={classNames({
                 "w-[13px] h-[13px] rounded-full transition-colors": true,
-                // "bg-[#898989]": !isHovered,
-                // "group-hover:bg-[#FF6057]": isHovered,
                 "bg-[#FF6057]": true,
                 "flex items-center justify-center": true,
               })}
@@ -82,11 +72,9 @@ export default function TopContainer() {
               aria-label="Minimize window"
               className={classNames({
                 "w-[13px] h-[13px] rounded-full transition-colors": true,
-                // "bg-[#898989]": !isHovered,
-                // "group-hover:bg-[#FEBC2D]": isHovered,
                 "bg-[#FEBC2D]": true,
               })}
-              onClick={handleMinimize}
+              onClick={() => alert("Why you do that?")}
             >
               {isHovered && (
                 <span className="text-xs text-gray-800 relative top-[-12px]">
@@ -99,8 +87,6 @@ export default function TopContainer() {
               aria-label="Fullscreen window"
               className={classNames({
                 "w-[13px] h-[13px] rounded-full transition-colors": true,
-                // "bg-[#898989]": !isHovered,
-                // "group-hover:bg-[#2BC840]": isHovered,
                 "bg-[#2BC840]": true,
               })}
               onClick={handleFullscreen}
