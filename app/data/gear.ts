@@ -72,6 +72,11 @@ const hosting = [
     tags: ["Hosting"],
   },
   {
+    name: "AWS",
+    desc: "Amazon Web Services (AWS) is a comprehensive and widely adopted cloud platform, offering over 200 fully featured services from data centers globally. AWS enables businesses to host websites, store data, run serverless applications, and more with unmatched scalability, reliability, and security.",
+    tags: ["Hosting", "Cloud", "Scalability"],
+  },
+  {
     name: "PlanetScale",
     desc: "PlanetScale is built on Vitess and unlocks performance, scalability, and cost optimization for hyperscale databases through horizontal sharding.",
     tags: ["Hosting"],
