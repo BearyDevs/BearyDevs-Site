@@ -7,6 +7,7 @@ import "animate.css";
 import Providers from "./provider";
 import VideoBG from "./videoBG";
 import { ENV } from "./libs/constants";
+import Head from "next/head";
 
 export const dynamic = "force-dynamic";
 
@@ -54,6 +55,13 @@ export default async function RootLayout({
 }>) {
   return (
     <html suppressHydrationWarning lang="en">
+      <Head>
+        <script
+          defer
+          src="https://cloud.umami.is/script.js"
+          data-website-id="9cda3559-4a4c-4ace-9282-875889cf02df"
+        ></script>
+      </Head>
       <body
         className={clsx(
           "font-sans antialiased",
