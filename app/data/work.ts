@@ -20,18 +20,22 @@ let languages = [
 ];
 
 let frameworks = [
-  "Next.Js",
+  "Next.js",
   "Tailwind CSS",
   "React",
   "React-Native",
+  "Node.js",
+  "Express.js",
   "Expo",
   "Unity",
-  "Unreal",
+  "Unreal Engine",
   "Hardhat", // occasionally used for cryptocurrency
   "Solidity", // occasionally used for smart contracts
 ];
 
 let ORM = ["Prisma", "MongoDB"];
+
+let databases = ["MySQL", "PostgreSQL", "MongoDB", "Redis"];
 
 let containers = ["Docker"];
 

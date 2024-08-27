@@ -24,3 +24,41 @@ let interest = [
   "Guitar",
   "Apple Inc",
 ];
+
+const WORK_HISTORY = [
+  {
+    year: "2023 - Present",
+    company: "TOYLAB Design and Development",
+    position: ["Full Stack Developer", "Software Engineer", "Founder CEO"],
+  },
+  {
+    year: "2023",
+    company: "Revelopment Studio",
+    position: ["Full Stack Developer"],
+  },
+  {
+    year: "2022",
+    company: "Revelopment Studio",
+    position: ["Junior Game Developer", "Frontend Developer"],
+  },
+  {
+    year: "2020",
+    company: "68 Stdios",
+    position: ["Unity AR Developer"],
+  },
+  {
+    year: "2019-2020",
+    company: "Athens Comunication",
+    position: ["Unity Interactive Application Developer"],
+  },
+  {
+    year: "2017-2019",
+    company: "Clexpert Thailand",
+    position: ["IT System Support"],
+  },
+  {
+    year: "2014-2017",
+    company: "Clexpert Thailand",
+    position: ["IT Support"],
+  },
+];
