@@ -64,7 +64,7 @@ export default function FooterContainer() {
         orientation="horizontal"
         hideScrollBar
         className={classNames({
-          "h-max px-1 w-full flex items-center justify-between pb-2 lg:pb-0 overflow-x-auto whitespace-nowrap gap-10 mobilexll:text-xs":
+          "h-max mobilexll:px-2 w-full flex items-center justify-between pb-2 lg:pb-0 overflow-x-auto whitespace-nowrap gap-10 mobilexll:text-xs":
             true,
         })}
       >
@@ -147,7 +147,7 @@ export default function FooterContainer() {
       </ScrollShadow>
 
       <ScrollShadow
-        hideScrollBar
+        // hideScrollBar
         orientation="horizontal"
         className={classNames({
           "h-max w-full flex items-center justify-between rounded-b-2xl overflow-x-auto whitespace-nowrap gap-4 mobilexll:text-xs":
