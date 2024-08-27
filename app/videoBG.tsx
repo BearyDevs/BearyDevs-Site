@@ -16,6 +16,7 @@ function VideoBG() {
             true,
           "opacity-15": !minimized,
           "opacity-50": minimized,
+          "hidden lg:block": true,
         })}
         autoPlay={true}
         muted

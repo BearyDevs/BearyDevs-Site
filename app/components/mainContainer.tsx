@@ -55,7 +55,7 @@ export default function MainContainer({ children }: PropsWithChildren) {
           "lg:mt-[100px]": true,
           "transition-all duration-500": true,
           "relative bottom-[-95%] opacity-0": minimized,
-          "relative bottom-0 opacity-85": !minimized,
+          "relative bottom-0 lg:opacity-85 opacity-100": !minimized,
           "flex flex-col w-[100dvw] h-[100dvh] lg:min-w-[80%] lg:max-w-[80%] lg:min-h-[80%] lg:max-h-[80%] lg:rounded-2xl relative":
             true,
           "lg:shadow-[inset_0_0_10px_rgba(255,255,255,0.1),_30px_30px_60px_rgba(4,19,25,1),_0_2px_6px_rgba(255,255,255,0.05)]":
