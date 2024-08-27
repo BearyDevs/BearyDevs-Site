@@ -1,12 +1,20 @@
 import { notFound } from "next/navigation";
 import { PropsWithChildren } from "react";
-import CodeWithLineNumbers from "@/app/components/codeWithLineNumber";
 import fs from "fs";
 import path from "path";
 import { Metadata } from "next";
 import { aboutNav } from "@/app/navigation";
+import dynamic from "next/dynamic";
 
 export type AboutSlug = (typeof aboutNav)[number]["slug"];
+
+const CodeWithLineNumbers = dynamic(
+  () => import("@/app/components/codeWithLineNumber"),
+  {
+    ssr: false,
+    loading: () => <p>Loading...</p>,
+  },
+);
 
 interface Props {
   params: {

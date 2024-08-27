@@ -5,9 +5,9 @@ import { fontSans, fontThai } from "./libs/fonts";
 import MainContainer from "./components/mainContainer";
 import "animate.css";
 import Providers from "./provider";
-import VideoBG from "./videoBG";
 import { ENV } from "./libs/constants";
 import Script from "next/script";
+import VideoBG from "./videoBG";
 
 export const dynamic = "force-dynamic";
 
@@ -83,6 +83,7 @@ export default async function RootLayout({
             defer
             src="https://cloud.umami.is/script.js"
             data-website-id="c326da71-7833-4ec5-b70a-a0ec532091d4"
+            strategy="lazyOnload"
           />
         )}
       </body>
