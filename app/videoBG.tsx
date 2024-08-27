@@ -5,7 +5,6 @@ import React, { useCallback } from "react";
 
 const VideoRender = dynamic(() => import("./videoRender"), {
   ssr: false,
-  loading: () => <p>Loading video...</p>,
 });
 
 function VideoBG() {
