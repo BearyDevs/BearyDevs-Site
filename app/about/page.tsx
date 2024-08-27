@@ -13,7 +13,7 @@ export default function AboutPage() {
       </h1>
       <p>{`I'm a developer from Bangkok, Thailand, with ${yearsOfExperience}+ years of experience in web development.`}</p>
       <p></p>
-      <p>{`I've poured all my skills and creativity into my work and have a passion for programming. I'm always on the lookout for new challenges and eager to grow and continuously learn new things.`}</p>
+      <p>{`I've poured all my skills and creativity into my work and have a passion for programming and always on the lookout for new challenges and eager to grow and continuously learn new things.`}</p>
     </div>
   );
 }
