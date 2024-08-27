@@ -31,7 +31,7 @@ export default function Welcome() {
           "w-20 h-20 text-large object-cover rounded-full shadow-gray-600 shadow-lg":
             true,
           hidden: !show,
-          "block animate-[fadeInDown_0.5s]": show,
+          block: show,
         })}
       />
       <pre
@@ -39,7 +39,7 @@ export default function Welcome() {
           "text-[2dvw] leading-[0.9] tracking-[-0.1em] lg:text-[1.4dvh] text-teal-200 drop-shadow-glow":
             true,
           hidden: !show,
-          "block animate-[fadeInDown_1s]": show,
+          block: show,
         })}
       >
         {ascii}
@@ -49,7 +49,7 @@ export default function Welcome() {
           "text-center font-semibold mobilexll:text-xs transition duration-300 text-gray-400":
             true,
           hidden: !show,
-          "block animate-[fadeInDown_1.5s]": show,
+          block: show,
         })}
       >
         <div>{`Self taught developer`.toUpperCase()}</div>

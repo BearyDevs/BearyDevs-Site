@@ -2,8 +2,6 @@ import { PropsWithChildren } from "react";
 import Neotree from "@/app/components/neotree";
 import { aboutNav } from "@/app/navigation";
 
-export const dynamic = "force-dynamic";
-
 export async function generateMetadata() {
   return {
     title: "Greeting",

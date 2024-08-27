@@ -34,7 +34,7 @@ export default function FooterContainer() {
         "bottom-0 absolute overflow-x-auto whitespace-nowrap w-full h-max text-sm":
           true,
         hidden: !show,
-        "block animate-[fadeInUp_1s]": show,
+        block: show,
       })}
     >
       {pathname === "/" && (
@@ -42,7 +42,7 @@ export default function FooterContainer() {
           className={classNames({
             "text-xs text-gray-500 pl-2 pb-1": true,
             hidden: !show,
-            "block animate-[fadeInUp_1.5s]": show,
+            block: show,
           })}
         >
           Designed by Bearydevs, inspired by{" "}

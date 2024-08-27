@@ -25,7 +25,7 @@ export default function MainContainer({ children }: PropsWithChildren) {
           "absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-[40%]":
             true,
           "animate-[fadeOut_1s]": !minimized,
-          "animate-[fadeIn_5s]": minimized,
+          "animate-[fadeIn_1s]": minimized,
         })}
         style={{ animationFillMode: "both" }}
       >
@@ -52,7 +52,7 @@ export default function MainContainer({ children }: PropsWithChildren) {
 
       <section
         className={classNames({
-          "animate-[fadeInUp_0.7s] lg:mt-[100px]": true,
+          "lg:mt-[100px]": true,
           "transition-all duration-500": true,
           "relative bottom-[-95%] opacity-0": minimized,
           "relative bottom-0 opacity-85": !minimized,
