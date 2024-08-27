@@ -26,7 +26,7 @@ export default function Welcome() {
       <Image
         alt="bearydevs"
         removeWrapper
-        src="/bearydevs.jpg"
+        src="/bearydevs.webp"
         className={classNames({
           "w-20 h-20 text-large object-cover rounded-full shadow-gray-600 shadow-lg":
             true,
