@@ -8,7 +8,7 @@ function VideoBG() {
     return (
       <video
         className={classNames({
-          "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-screen min-h-screen object-cover transition-all duration-1000 opacity-50":
+          "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-screen min-h-screen object-cover transition-all duration-1000 opacity-15":
             true,
           "hidden lg:block": true,
         })}
