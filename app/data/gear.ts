@@ -6,6 +6,11 @@ const hardware = {
       tags: ["Laptop"],
     },
     {
+      name: "Macbook Air 15-inch M2 (Midnight)",
+      desc: "This is my secondary computer, used for customer presentations due to its lightweight and flexibility.",
+      tags: ["Laptop"],
+    },
+    {
       name: "Nuphy Air 75v2",
       desc: "My main keyboard, It's so nice sound.",
       tags: ["Keyboard"],
@@ -52,6 +57,11 @@ const software = [
     name: "Oh my zsh",
     desc: "My shell, I use it with powerlevel10k theme.",
     tags: ["Terminal"],
+  },
+  {
+    name: "VSCode-Insiders",
+    desc: "I occasionally use VSCode-Insiders for tasks that Neovim doesn't fully support, offering a backup for features or extensions that require a more integrated development environment.",
+    tags: ["Editor"],
   },
 ];
 

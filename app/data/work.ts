@@ -34,3 +34,15 @@ let frameworks = [
 let ORM = ["Prisma", "MongoDB"];
 
 let containers = ["Docker"];
+
+let tools = [
+  "Git",
+  "GitHub",
+  "Postman",
+  "Figma",
+  "Vercel",
+  "VSCode",
+  "PhotoShop",
+  "Canva",
+  "JetBrains DataGrip",
+];

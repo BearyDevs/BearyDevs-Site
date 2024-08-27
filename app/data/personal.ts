@@ -6,9 +6,8 @@ const RESPECT_PERSON = ["Steven Paul Jobs", "Nicola Testla"];
 let countryLocation = "Bangkok, Thailand";
 
 let hobbies = [
-  "Movie",
   "Programming",
-  "Technology",
+  "Movie",
   "Gaming",
   "Eating",
   "Table Tennis",
