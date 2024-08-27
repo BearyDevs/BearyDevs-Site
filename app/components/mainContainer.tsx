@@ -11,7 +11,7 @@ export default function MainContainer({ children }: PropsWithChildren) {
   return (
     <section
       className={classNames({
-        "lg:mt-[100px]": true,
+        "lg:mt-[100px] animate-[fadeInUp_1s]": true,
         "transition-all duration-500": true,
         "bottom-0 lg:opacity-85 opacity-100": true,
         "flex flex-col w-[100dvw] h-[100dvh] lg:min-w-[80%] lg:max-w-[80%] lg:min-h-[80%] lg:max-h-[80%] lg:rounded-2xl relative":
