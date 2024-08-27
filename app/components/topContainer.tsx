@@ -48,11 +48,12 @@ export default function TopContainer() {
   return (
     <>
       <div className="w-full h-max rounded-t-2xl bg-transparent flex items-start justify-center flex-col z-20">
-        <div className="top-0 h-max w-full flex items-center justify-between px-8 mobilexll:px-4 overflow-x-auto">
+        <div className="top-0 h-max w-full flex items-center justify-between px-8 mobilexll:px-4 overflow-x-auto tabletmd:pt-2">
           <div
             className={classNames({
               "flex items-center rounded-t-2xl justify-start h-12 gap-[10px] font-semibold":
                 true,
+              "hidden lg:flex": true,
               // "group":true
             })}
             onMouseEnter={() => setIsHovered(true)}
@@ -60,6 +61,7 @@ export default function TopContainer() {
           >
             <button
               name="close-button"
+              aria-label="Close window"
               className={classNames({
                 "w-[13px] h-[13px] rounded-full transition-colors": true,
                 // "bg-[#898989]": !isHovered,
@@ -77,6 +79,7 @@ export default function TopContainer() {
             </button>
             <button
               name="minimize-button"
+              aria-label="Minimize window"
               className={classNames({
                 "w-[13px] h-[13px] rounded-full transition-colors": true,
                 // "bg-[#898989]": !isHovered,
@@ -93,6 +96,7 @@ export default function TopContainer() {
             </button>
             <button
               name="fullscreen-button"
+              aria-label="Fullscreen window"
               className={classNames({
                 "w-[13px] h-[13px] rounded-full transition-colors": true,
                 // "bg-[#898989]": !isHovered,
@@ -111,14 +115,18 @@ export default function TopContainer() {
           <div className="text-[#7f7f7f] font-extrabold flex items-center justify-center gap-2">
             <button
               name="iterm-button"
+              aria-label="iterm2.com"
               className="hover:text-white transition-colors duration-300"
               onClick={() => window.open("https://iterm2.com", "_blank")}
             >
-              iTerm{" "}
+              <span className="hidden lg:inline">iTerm </span>
+
+              <span className="lg:hidden inline">BearyDevs </span>
             </button>
             <button
               name="solarized-button"
-              className="hover:text-white transition-colors duration-300"
+              aria-label="solarized-osaka.nvim"
+              className="hover:text-white transition-colors duration-300 hidden lg:block"
               onClick={() =>
                 window.open(
                   "https://github.com/craftzdog/solarized-osaka.nvim",
@@ -133,6 +141,7 @@ export default function TopContainer() {
           <div className="text-[#7f7f7f] font-semibold px-1 py-0.5 flex items-center justify-center gap-3">
             <button
               name="facebook-button"
+              aria-label="Facebook"
               className="rounded-full"
               onClick={() =>
                 window.open("https://www.facebook.com/bearyman", "_blank")
@@ -146,6 +155,7 @@ export default function TopContainer() {
 
             <button
               name="github-button"
+              aria-label="GitHub"
               className="rounded-full"
               onClick={() => window.open(ENV.GITHUB_URL, "_blank")}
             >
@@ -154,6 +164,7 @@ export default function TopContainer() {
 
             <button
               name="facebook-page-button"
+              aria-label="Facebook Page"
               className="rounded-full flex items-center justify-center gap-3"
               onClick={() =>
                 window.open(
@@ -170,6 +181,7 @@ export default function TopContainer() {
 
             <button
               name="linkedin-button"
+              aria-label="LinkedIn"
               className="rounded-full"
               onClick={() => window.open(ENV.LINKEDIN_URL, "_blank")}
             >

@@ -8,13 +8,11 @@ import { FaReact } from "react-icons/fa";
 import { LuClock3 } from "react-icons/lu";
 import { Link, ScrollShadow } from "@nextui-org/react";
 import { main_nav_routes } from "@/app/navigation";
-// import { useStats } from "@/app/libs/useStats";
 
 export default function FooterContainer() {
   const pathname = usePathname();
   const router = useRouter();
   const [show, setShow] = useState(false);
-  // const { todayData, pageViews } = useStats();
 
   useEffect(() => {
     if (!show) {
@@ -88,20 +86,6 @@ export default function FooterContainer() {
         </div>
 
         <div className="flex items-center font-bold">
-          {/* <div className="flex items-center gap-x-2 not-sr-only"> */}
-          {/*   <div className="flex items-center justify-start gap-2"> */}
-          {/*     <p className="uppercase whitespace-nowrap">-- view --</p> */}
-          {/*     <span>|</span> */}
-          {/*     <Link */}
-          {/*       href={ENV.UMAMI_SITE} */}
-          {/*       target="_blank" */}
-          {/*       className="whitespace-nowrap text-gray-300" */}
-          {/*     > */}
-          {/*       {pageViews?.value} views today */}
-          {/*     </Link> */}
-          {/*   </div> */}
-          {/* </div> */}
-
           <div className="flex items-center gap-x-2 not-sr-only">
             <div className="flex items-center justify-start gap-2">
               <Link
@@ -109,7 +93,9 @@ export default function FooterContainer() {
                 target="_blank"
                 className="whitespace-nowrap text-gray-300"
               >
-                <p className="whitespace-nowrap text-xs">-- statistics --</p>
+                <p className="whitespace-nowrap text-xs text-teal-200">
+                  -- statistics --
+                </p>
               </Link>
             </div>
           </div>
@@ -209,8 +195,6 @@ export default function FooterContainer() {
         </div>
 
         <div className="flex items-center font-bold">
-          {/* {todayData && <pre>{JSON.stringify(todayData, null, 2)}</pre>} */}
-
           <div
             className={classNames({
               "flex items-center text-gray-300 px-3 relative ml-[-1px] py-[2px] gap-1":
