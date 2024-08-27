@@ -8,14 +8,13 @@ import { FaReact } from "react-icons/fa";
 import { LuClock3 } from "react-icons/lu";
 import { Link, ScrollShadow } from "@nextui-org/react";
 import { main_nav_routes } from "@/app/navigation";
-import { useStats } from "@/app/libs/useStats";
-import { ENV } from "@/app/libs/constants";
+// import { useStats } from "@/app/libs/useStats";
 
 export default function FooterContainer() {
   const pathname = usePathname();
   const router = useRouter();
   const [show, setShow] = useState(false);
-  const { todayData, pageViews } = useStats();
+  // const { todayData, pageViews } = useStats();
 
   useEffect(() => {
     if (!show) {
@@ -89,16 +88,28 @@ export default function FooterContainer() {
         </div>
 
         <div className="flex items-center font-bold">
+          {/* <div className="flex items-center gap-x-2 not-sr-only"> */}
+          {/*   <div className="flex items-center justify-start gap-2"> */}
+          {/*     <p className="uppercase whitespace-nowrap">-- view --</p> */}
+          {/*     <span>|</span> */}
+          {/*     <Link */}
+          {/*       href={ENV.UMAMI_SITE} */}
+          {/*       target="_blank" */}
+          {/*       className="whitespace-nowrap text-gray-300" */}
+          {/*     > */}
+          {/*       {pageViews?.value} views today */}
+          {/*     </Link> */}
+          {/*   </div> */}
+          {/* </div> */}
+
           <div className="flex items-center gap-x-2 not-sr-only">
             <div className="flex items-center justify-start gap-2">
-              <p className="uppercase whitespace-nowrap">-- view --</p>
-              <span>|</span>
               <Link
-                href={ENV.UMAMI_URL}
+                href="https://cloud.umami.is/share/NcJoEW8LPSU5K0DW/bearydevs.com"
                 target="_blank"
                 className="whitespace-nowrap text-gray-300"
               >
-                {pageViews?.value} views today
+                <p className="uppercase whitespace-nowrap">-- statistics --</p>
               </Link>
             </div>
           </div>
@@ -198,7 +209,7 @@ export default function FooterContainer() {
         </div>
 
         <div className="flex items-center font-bold">
-          {todayData && <pre>{JSON.stringify(todayData, null, 2)}</pre>}
+          {/* {todayData && <pre>{JSON.stringify(todayData, null, 2)}</pre>} */}
 
           <div
             className={classNames({
