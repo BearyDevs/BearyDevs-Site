@@ -44,7 +44,7 @@ export const MDXRenderer = ({
   return (
     <article
       className={classNames({
-        "prose min-h-screen prose-neutral prose-invert mx-auto font-sans prose-headings:text-[#C6C6C6] prose-p:text-[#898989] prose-a:text-[#C6C6C6] prose-strong:text-[#C6C6C6] animate-[fadeIn_0.5s] pt-1 h-auto max-h-max tabletmd:pb-[60px]":
+        "prose min-h-max prose-neutral prose-invert mx-auto font-sans prose-headings:text-[#C6C6C6] prose-p:text-[#898989] prose-a:text-[#C6C6C6] prose-strong:text-[#C6C6C6] animate-[fadeIn_0.5s] pt-1 h-auto max-h-max pb-[20px] tabletmd:pb-[60px]":
           true,
         "max-w-5xl": limitWidth,
         "max-w-none": !limitWidth,
