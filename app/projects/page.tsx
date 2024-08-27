@@ -1,3 +1,4 @@
+import React from "react";
 import Link from "next/link";
 import { getContents } from "@/app/libs/contents";
 import { Image } from "@nextui-org/react";
@@ -8,7 +9,7 @@ interface Props {
   };
 }
 
-export default function ProjectsPage({ searchParams }: Props) {
+function ProjectsPage({ searchParams }: Props) {
   const technology = searchParams.tag;
   const projects = technology
     ? getContents("projects").filter((project) =>
@@ -62,3 +63,5 @@ export default function ProjectsPage({ searchParams }: Props) {
     </div>
   );
 }
+
+export default React.memo(ProjectsPage);

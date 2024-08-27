@@ -1,7 +1,8 @@
+import React from "react";
 import { Link } from "@nextui-org/react";
 import { getContents } from "@/app/libs/contents";
 
-export default function BlogsPage() {
+function BlogsPage() {
   const blogs = getContents("blogs");
 
   return (
@@ -34,3 +35,5 @@ export default function BlogsPage() {
     </div>
   );
 }
+
+export default React.memo(BlogsPage);
