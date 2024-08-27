@@ -7,7 +7,7 @@ export default function AboutPage() {
     (currentYear.getMonth() < startYear.getMonth() ? 1 : 0);
 
   return (
-    <div className="animate-[fadeIn_0.5s] mobilexll:text-xs transition duration-300 text-gray-400">
+    <div className="animate-[fadeIn_0.5s] mobilexll:text-xs text-base transition duration-300 text-gray-400">
       <h1 className="font-bold mb-2">
         {`Let's get to know me!`.toUpperCase()}
       </h1>
