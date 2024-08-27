@@ -6,7 +6,8 @@
     "dev": "next dev && NODE_ENV=development",
     "build": "next lint && next build",
     "start": "next start && NODE_ENV=production",
-    "lint": "next lint"
+    "lint": "next lint",
+    "production": "next lint && next build && git add . && git commit"
   },
   "dependencies": {
     "@nextui-org/react": "^2.4.6",
