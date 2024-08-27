@@ -32,11 +32,8 @@ export const MDXRenderer = ({
           src={src!}
           alt={alt!}
           className="mx-auto my-0 object-cover object-center md:max-w-[80%] rounded-none"
-          // priority
           width={820}
           height={492}
-          // quality={100}
-          // unoptimized={src?.includes(".gif")}
         />
       ),
       a: (props) => <a href={props.href} target="_blank" {...props} />,
@@ -47,7 +44,7 @@ export const MDXRenderer = ({
   return (
     <article
       className={classNames({
-        "prose min-h-screen prose-neutral prose-invert mx-auto font-sans prose-headings:text-[#C6C6C6] prose-p:text-[#898989] prose-a:text-[#C6C6C6] prose-strong:text-[#C6C6C6] animate-[fadeIn_0.5s] pt-1 lg:pb-6 tabletmd:pb-[15%]":
+        "prose min-h-screen prose-neutral prose-invert mx-auto font-sans prose-headings:text-[#C6C6C6] prose-p:text-[#898989] prose-a:text-[#C6C6C6] prose-strong:text-[#C6C6C6] animate-[fadeIn_0.5s] pt-1 h-auto max-h-max tabletmd:pb-[60px]":
           true,
         "max-w-5xl": limitWidth,
         "max-w-none": !limitWidth,

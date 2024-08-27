@@ -64,7 +64,7 @@ export default function MainContainer({ children }: PropsWithChildren) {
         })}
       >
         <TopContainer />
-        <ScrollShadow className="flex w-full h-full items-center justify-center mt-4 lg:px-2 lg:py-1 mb-6 relative top-[-20px] p-4">
+        <ScrollShadow className="flex w-full h-full items-center justify-center mt-4 lg:px-2 lg:py-1 tabletmd::mb-[50px] mb-[40px] relative top-[-20px] p-4">
           {children}
         </ScrollShadow>
         <div className="hidden lg:block">
