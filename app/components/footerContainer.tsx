@@ -90,19 +90,17 @@ export default function FooterContainer() {
 
         <div className="flex items-center font-bold">
           <div className="flex items-center gap-x-2 not-sr-only">
-            {pageViews && (
-              <div className="flex items-center justify-start gap-1">
-                <p className="uppercase whitespace-nowrap">-- view --</p>
-                <span>|</span>
-                <Link
-                  href={ENV.UMAMI_URL}
-                  target="_blank"
-                  className="whitespace-nowrap"
-                >
-                  {pageViews.value} Views today
-                </Link>
-              </div>
-            )}
+            <div className="flex items-center justify-start gap-2">
+              <p className="uppercase whitespace-nowrap">-- view --</p>
+              <span>|</span>
+              <Link
+                href={ENV.UMAMI_URL}
+                target="_blank"
+                className="whitespace-nowrap text-gray-300"
+              >
+                {pageViews?.value} views today
+              </Link>
+            </div>
           </div>
 
           <div
