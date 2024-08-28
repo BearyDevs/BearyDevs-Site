@@ -11,7 +11,7 @@ export default function VideoRender() {
       muted
       loop
     >
-      <source src="/videos/vbg.mp4" type="video/mp4" />
+      <source src="/videos/bg.mp4" type="video/mp4" />
     </video>
   );
 }
