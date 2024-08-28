@@ -1,7 +1,7 @@
 const NAME = "Teerapat Wassavanich";
 const NICKNAME = "Beary";
 
-const RESPECT_PERSON = ["Steven Paul Jobs", "Nicola Testla"];
+const RESPECT_PERSON = ["Steven Paul Jobs", "Nicola Tesla"];
 
 let countryLocation = "Bangkok, Thailand";
 
@@ -35,6 +35,11 @@ const WORK_HISTORY = [
     year: "2022-2023",
     company: "Revelopment Studio",
     position: ["Full Stack Developer"],
+  },
+  {
+    year: "2021-2022",
+    company: "Freelance",
+    position: ["Web Developer"],
   },
   {
     year: "2020",

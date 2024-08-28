@@ -1,5 +1,5 @@
 export default function AboutPage() {
-  const startYear = new Date("2019-03-01");
+  const startYear = new Date("2021-03-01");
   const currentYear = new Date();
   const yearsOfExperience =
     currentYear.getFullYear() -
