@@ -107,7 +107,8 @@ export default function FooterContainer() {
             })}
           >
             <FaReact className="mr-2 text-black" size={"16px"} />
-            {pathname.startsWith("/projects/") || pathname.startsWith("/blogs/")
+            {pathname.startsWith("/projects/") ||
+            pathname.startsWith("/articles/")
               ? `${pathname.slice(1)}.mdx`
               : `app${
                   pathname === "/"
@@ -116,10 +117,10 @@ export default function FooterContainer() {
                       ? pathname === "/about"
                         ? "/about/greeting.ts"
                         : `${pathname}.ts`
-                      : pathname.startsWith("/coding-activity/") ||
-                          pathname === "/coding-activity"
-                        ? pathname === "/coding-activity"
-                          ? "/coding-activity/languages.ts"
+                      : pathname.startsWith("/activity/") ||
+                          pathname === "/activity"
+                        ? pathname === "/activity"
+                          ? "/activity/languages.ts"
                           : `${pathname}.ts`
                         : `${pathname}.tsx`
                 }`}
