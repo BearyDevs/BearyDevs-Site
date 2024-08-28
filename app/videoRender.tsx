@@ -13,9 +13,8 @@ function VideoRender() {
       className={classNames({
         "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-screen min-h-screen object-cover transition-all duration-1000":
           true,
-        "hidden lg:block": true,
-        "opacity-15": !minimized,
-        "opacity-50": minimized,
+        hidden: !minimized,
+        "block opacity-50": minimized,
       })}
       autoPlay={true}
       muted

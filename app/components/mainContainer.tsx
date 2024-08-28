@@ -8,9 +8,9 @@ import { Button, ScrollShadow } from "@nextui-org/react";
 import { LennyFace } from "./lennyFace";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, ReduxState } from "../libs/redux/store";
-import { ascii } from "./welcome";
 import { setMinimized } from "../libs/redux/slices/minimized";
 import StarFall from "./starfall";
+import { ascii } from "../libs/logo";
 
 export default function MainContainer({ children }: PropsWithChildren) {
   const dispatch = useDispatch<AppDispatch>();
@@ -24,8 +24,8 @@ export default function MainContainer({ children }: PropsWithChildren) {
             true,
           "absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-[40%]":
             true,
-          "animate-[fadeOut_1s]": !minimized,
-          "animate-[fadeIn_1s]": minimized,
+          "animate-[fadeOut_0.5s]": !minimized,
+          "animate-[fadeIn_2s]": minimized,
         })}
         style={{ animationFillMode: "both" }}
       >
@@ -53,11 +53,11 @@ export default function MainContainer({ children }: PropsWithChildren) {
       <section
         className={classNames({
           "lg:mt-[100px] animate-[fadeInUp_1s]": true,
-          "transition-all duration-500": true,
+          "transition-all duration-700": true,
           "flex flex-col w-[100dvw] h-[100dvh] lg:min-w-[80%] lg:max-w-[80%] lg:min-h-[80%] lg:max-h-[80%] lg:rounded-2xl relative":
             true,
           "bottom-[-95%] opacity-0": minimized,
-          "bottom-0 lg:opacity-85 opacity-100": !minimized,
+          "bottom-0 opacity-100": !minimized,
           "lg:shadow-[inset_0_0_10px_rgba(255,255,255,0.1),_30px_30px_60px_rgba(4,19,25,1),_0_2px_6px_rgba(255,255,255,0.05)]":
             true, // solaizeOsaka shadow
           "bg-gradient-to-br from-[#041319] via-[#041319] to-[#041319]": true, // solaizeOsaka
