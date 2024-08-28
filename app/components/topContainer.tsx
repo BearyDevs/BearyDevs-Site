@@ -11,10 +11,14 @@ import { ENV } from "@/app/libs/constants";
 import { aboutNav, codingActivityNav } from "@/app/navigation";
 import { Nav } from "../projects/_components/nav";
 import { ScrollShadow } from "@nextui-org/react";
+import { useDispatch } from "react-redux";
+import { AppDispatch } from "@/app/libs/redux/store";
+import { setMinimized } from "../libs/redux/slices/minimized";
 
 export default function TopContainer() {
   const router = useRouter();
   const pathname = usePathname();
+  const dispatch = useDispatch<AppDispatch>();
 
   const [isHovered, setIsHovered] = useState(false);
 
@@ -35,6 +39,10 @@ export default function TopContainer() {
         document.exitFullscreen();
       }
     }
+  };
+
+  const handleMinimize = () => {
+    dispatch(setMinimized(true));
   };
 
   return (
@@ -74,7 +82,7 @@ export default function TopContainer() {
                 "w-[13px] h-[13px] rounded-full transition-colors": true,
                 "bg-[#FEBC2D]": true,
               })}
-              onClick={() => alert("Why you do that?")}
+              onClick={handleMinimize}
             >
               {isHovered && (
                 <span className="text-xs text-gray-800 relative top-[-12px]">
