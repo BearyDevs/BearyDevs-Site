@@ -166,15 +166,6 @@ export default function FooterContainer() {
             </Link>
           </div>
 
-          <div
-            className={classNames({
-              "flex items-center text-gray-300 px-3 relative ml-[-1px] py-[2px]":
-                true,
-            })}
-          >
-            <DiGitBranch size={"14px"} /> bearydevs
-          </div>
-
           <div className="w-full px-2 flex items-center justify-start gap-1 text-xs h-full whitespace-nowrap">
             {main_nav_routes.map((route, index) => (
               <button

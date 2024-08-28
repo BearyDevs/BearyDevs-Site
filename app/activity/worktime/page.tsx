@@ -2,8 +2,8 @@ import { Metadata } from "next";
 import { weeklyCodingActivity } from "@/app/libs/actions";
 
 export const metadata: Metadata = {
-  title: "Weekly Activity",
-  description: "My coding activity for this week.",
+  title: "Weekly Work Time by Day",
+  description: "A breakdown of my weekly work time by day.",
 };
 
 export default async function ActivityPage() {
@@ -18,8 +18,8 @@ export default async function ActivityPage() {
 
   return (
     <>
-      <h1 className="mb-4 text-base text-gray-200 md:text-xl">
-        Weekly Coding Activity
+      <h1 className="mb-4 text-base text-gray-200 md:text-xl font-semibold">
+        Weekly Work Time by Day
       </h1>
       <ul className="text-sm text-gray-400">
         {data.map((item) => (

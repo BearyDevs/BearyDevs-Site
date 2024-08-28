@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { weeklyCodingLanguanges } from "@/app/libs/actions";
 
 export const metadata: Metadata = {
-  title: "Coding Activity Languages",
+  title: "Activity Languages",
   description: "This week I spent my time coding in these languages.",
 };
 
@@ -11,7 +11,7 @@ export default async function CodingActivityLanguagesPage() {
 
   return (
     <>
-      <h1 className="mb-4 text-base text-gray-200 md:text-xl">
+      <h1 className="mb-4 text-base text-gray-200 md:text-xl font-semibold">
         Weekly Coding Languages
       </h1>
       <ul className="text-sm text-gray-400">

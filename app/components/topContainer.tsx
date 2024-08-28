@@ -102,13 +102,19 @@ export default function TopContainer() {
             <button
               name="iterm-button"
               aria-label="iterm2.com"
-              className="hover:text-white transition-colors duration-300"
+              className="hover:text-white transition-colors duration-300 hidden lg:inline"
               onClick={() => window.open("https://iterm2.com", "_blank")}
             >
-              <span className="hidden lg:inline">iTerm </span>
-
-              <span className="lg:hidden inline">BearyDevs </span>
+              iTerm
             </button>
+            <button
+              name="iterm-button"
+              aria-label="iterm2.com"
+              className="transition-colors duration-300 lg:hidden inline"
+            >
+              BearyDevs
+            </button>
+
             <button
               name="solarized-button"
               aria-label="solarized-osaka.nvim"
@@ -190,7 +196,7 @@ export default function TopContainer() {
                   className={classNames({
                     "p-1 mx-1 flex items-center gap-1 relative bottom-[-3px] left-[-3px] italic px-2":
                       true,
-                    "bg-[#969696] text-[#000000] font-bold transition-background duration-300":
+                    "bg-[#103f3cb5] text-gray-300 font-bold transition-background duration-300 rounded-md":
                       pathname === item.link,
                   })}
                 >
@@ -201,11 +207,11 @@ export default function TopContainer() {
           </ScrollShadow>
         )}
 
-        {pathname.startsWith("/coding-activity") && (
+        {pathname.startsWith("/activity") && (
           <ScrollShadow
             orientation="horizontal"
             hideScrollBar
-            className="custom900_min:hidden flex items-center justify-start text-sm w-full flex-grow py-2 overflow-x-auto animate-[fadeInUp_1s]"
+            className="custom900_min:pb-2 custom900:py-2 flex items-center justify-start text-sm w-full flex-grow overflow-x-auto animate-[fadeInUp_1s] px-1"
           >
             {codingActivityNav.map((item, i) => {
               return (
@@ -213,9 +219,9 @@ export default function TopContainer() {
                   key={i}
                   onClick={() => router.push(item.link)}
                   className={classNames({
-                    "p-1 mx-1 flex items-center gap-1 relative bottom-[-3px] left-[-3px] italic px-2":
+                    "p-1 mx-1 flex items-center gap-1 relative bottom-[-3px] left-[-3px] text-sm px-2":
                       true,
-                    "bg-[#969696] text-[#000000] font-bold transition-background duration-300":
+                    "bg-[#103f3cb5] text-gray-300 font-bold transition-background duration-300 rounded-md":
                       pathname === item.link,
                   })}
                 >

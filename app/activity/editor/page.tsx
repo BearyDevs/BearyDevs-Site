@@ -1,18 +1,18 @@
 import { Metadata } from "next";
-import { weeklyOperatingSystems } from "@/app/libs/actions";
+import { weeklyCodeEditor } from "@/app/libs/actions";
 
 export const metadata: Metadata = {
-  title: "Operating Systems Activity",
-  description: "This week I spent my time using these operating systems.",
+  title: "Code Editor Activity",
+  description: "This week I spent my time coding in these code editors.",
 };
 
 export default async function EditorPage() {
-  const { data } = await weeklyOperatingSystems();
+  const { data } = await weeklyCodeEditor();
 
   return (
     <>
-      <h1 className="mb-4 text-base text-gray-200 md:text-xl">
-        Weekly Operating Systems Activity
+      <h1 className="mb-4 text-base text-gray-200 md:text-xl font-semibold">
+        Weekly Code Editor Activity
       </h1>
       <ul className="text-sm text-gray-400">
         {data.map((item) => (

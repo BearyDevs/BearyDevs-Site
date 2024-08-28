@@ -12,8 +12,8 @@ export const main_nav_routes = [
     name: "projects",
   },
   {
-    url: "/coding-activity",
-    name: "coding-activity",
+    url: "/activity",
+    name: "activity",
   },
   {
     url: "/blogs",
@@ -47,22 +47,22 @@ export const aboutNav: NeotreeItem[] = [
 export const codingActivityNav: NeotreeItem[] = [
   {
     fileName: "languages.ts",
-    link: "/coding-activity",
+    link: "/activity",
     slug: "languages",
   },
   {
-    fileName: "activity.ts",
-    link: "/coding-activity/activity",
-    slug: "activity",
+    fileName: "worktime.ts",
+    link: "/activity/worktime",
+    slug: "worktime",
   },
   {
     fileName: "editor.ts",
-    link: "/coding-activity/editor",
+    link: "/activity/editor",
     slug: "editor",
   },
   {
     fileName: "os.ts",
-    link: "/coding-activity/os",
+    link: "/activity/os",
     slug: "operating-systems",
   },
 ];
