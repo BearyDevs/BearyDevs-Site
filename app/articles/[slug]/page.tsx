@@ -13,7 +13,7 @@ interface Props {
 export async function generateMetadata({
   params,
 }: Props): Promise<Metadata | undefined> {
-  let project = getContents("blogs").find(
+  let project = getContents("articles").find(
     (post) => post.slug.toLowerCase() === params.slug.toLowerCase(),
   );
   if (!project) return;
@@ -27,7 +27,7 @@ export async function generateMetadata({
       title,
       description,
       type: "article",
-      url: `${ENV.APP_URL}/blogs/${project.slug.toLowerCase()}`,
+      url: `${ENV.APP_URL}/articles/${project.slug.toLowerCase()}`,
     },
     twitter: {
       card: "summary_large_image",
@@ -38,12 +38,12 @@ export async function generateMetadata({
 }
 
 export async function generateStaticParams() {
-  const projects = getContents("blogs");
+  const projects = getContents("projects");
   return projects.map((project) => ({ slug: project.slug.toLowerCase() }));
 }
 
-export default function BlogsSlugPage({ params }: Props) {
-  const project = getContents("blogs").find(
+export default function ArticlePage({ params }: Props) {
+  const project = getContents("articles").find(
     (project) => project.slug.toLowerCase() === params.slug.toLowerCase(),
   );
   if (!project) notFound();

@@ -49,7 +49,7 @@ function getMDXData(dir: string) {
   });
 }
 
-export type ContentDir = "blogs" | "projects";
+export type ContentDir = "articles" | "projects";
 
 export function getContents(contentDir: ContentDir) {
   return getMDXData(path.join(process.cwd(), "app/contents", contentDir));

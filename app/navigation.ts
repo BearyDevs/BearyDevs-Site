@@ -16,8 +16,8 @@ export const main_nav_routes = [
     name: "activity",
   },
   {
-    url: "/blogs",
-    name: "blogs",
+    url: "/articles",
+    name: "articles",
   },
 ];
 
