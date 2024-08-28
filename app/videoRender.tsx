@@ -1,3 +1,5 @@
+"use client";
+
 import classNames from "classnames";
 import { useSelector } from "react-redux";
 import { ReduxState } from "./libs/redux/store";
