@@ -1,8 +1,12 @@
-import { MDXRenderer } from "@/app/components/mdx-renderer";
 import { ENV } from "@/app/libs/constants";
 import { getContents } from "@/app/libs/contents";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
+import dynamic from "next/dynamic";
+
+const MDXRenderer = dynamic(() => import("@/app/components/mdx-renderer"), {
+  ssr: false,
+});
 
 interface Props {
   params: {

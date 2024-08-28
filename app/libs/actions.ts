@@ -1,36 +1,5 @@
 import { unstable_cache } from "next/cache";
 import type * as Wakatime from "@/app/types/wakatime";
-import type { UmamiStats } from "@/app/types/umami";
-import { ENV } from "./constants";
-
-export const umamiStats = unstable_cache(
-  async () => {
-    const now = new Date();
-    const startOfDay = new Date(
-      now.getFullYear(),
-      now.getMonth(),
-      now.getDate(),
-    ).getTime();
-    const endAt = now.getTime();
-    const url = `${ENV.UMAMI_URL}?startAt=${startOfDay}&endAt=${endAt}`;
-
-    const res = await fetch(url, {
-      method: "GET",
-      headers: {
-        "x-umami-share-token": ENV.UMAMI_SHARE_TOKEN,
-      },
-      cache: "no-store",
-    });
-
-    if (res) {
-      console.log(res.json() as Promise<UmamiStats>);
-    }
-
-    return res.json() as Promise<UmamiStats>;
-  },
-  ["umami-stats"],
-  { revalidate: 3600 }, // 1 hours
-);
 
 export const weeklyCodingActivity = unstable_cache(
   async () => {

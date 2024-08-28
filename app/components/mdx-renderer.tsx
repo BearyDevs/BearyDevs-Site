@@ -3,6 +3,7 @@ import rehypePrettyCode from "rehype-pretty-code";
 import { MDXRemote, MDXRemoteProps } from "next-mdx-remote/rsc";
 import { Image } from "@nextui-org/react";
 import classNames from "classnames";
+import React from "react";
 
 interface Props {
   source: string;
@@ -10,11 +11,7 @@ interface Props {
   limitWidth?: boolean;
 }
 
-export const MDXRenderer = ({
-  source,
-  components,
-  limitWidth = true,
-}: Props) => {
+const MDXRenderer = ({ source, components, limitWidth = true }: Props) => {
   const mdxSource: MDXRemoteProps = {
     source,
     options: {
@@ -54,3 +51,5 @@ export const MDXRenderer = ({
     </article>
   );
 };
+
+export default React.memo(MDXRenderer);

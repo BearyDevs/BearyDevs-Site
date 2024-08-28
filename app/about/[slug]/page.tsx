@@ -38,13 +38,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-// Server component that fetches and renders the file based on the slug
 export default async function AboutPageSlug({ params }: Props) {
   const { slug } = params;
 
   let code = "";
 
-  // Adjusting the file path according to the actual structure
   if (slug) {
     const filePath = path.join(process.cwd(), "app/data", slug + ".ts");
     if (!fs.existsSync(filePath)) {

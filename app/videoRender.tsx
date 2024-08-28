@@ -1,10 +1,11 @@
 "use client";
 
+import React from "react";
 import classNames from "classnames";
 import { useSelector } from "react-redux";
 import { ReduxState } from "./libs/redux/store";
 
-export default function VideoRender() {
+function VideoRender() {
   const minimized = useSelector((state: ReduxState) => state.minimized);
 
   return (
@@ -24,3 +25,5 @@ export default function VideoRender() {
     </video>
   );
 }
+
+export default React.memo(VideoRender);
