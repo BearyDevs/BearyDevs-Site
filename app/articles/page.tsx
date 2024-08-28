@@ -23,7 +23,7 @@ export default function Articles() {
             <p>Published on {article.metadata.publishedDate}</p>
             <Link
               href={`/articles/${article.slug.toLowerCase()}`}
-              className="flex items-center justify-center gap-2 gap-x-2 bg-[#898989] px-2.5 py-0.5 text-[#131313]"
+              className="flex items-center justify-center gap-2 gap-x-2 bg-[#103f3c75] text-gray-300 px-2.5 py-0.5 rounded-md"
             >
               Read more &gt;&gt;
             </Link>
