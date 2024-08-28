@@ -57,7 +57,7 @@ export default function MainContainer({ children }: PropsWithChildren) {
           "flex flex-col w-[100dvw] h-[100dvh] lg:min-w-[80%] lg:max-w-[80%] lg:min-h-[80%] lg:max-h-[80%] lg:rounded-2xl relative":
             true,
           "bottom-[-95%] opacity-0": minimized,
-          "bottom-0 opacity-100": !minimized,
+          "bottom-0 lg:opacity-85 opacity-100": !minimized,
           "lg:shadow-[inset_0_0_10px_rgba(255,255,255,0.1),_30px_30px_60px_rgba(4,19,25,1),_0_2px_6px_rgba(255,255,255,0.05)]":
             true, // solaizeOsaka shadow
           "bg-gradient-to-br from-[#041319] via-[#041319] to-[#041319]": true, // solaizeOsaka

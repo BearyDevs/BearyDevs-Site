@@ -1,20 +1,11 @@
-"use client";
-
-import React from "react";
 import classNames from "classnames";
-import { useSelector } from "react-redux";
-import { ReduxState } from "./libs/redux/store";
 
-function VideoRender() {
-  const minimized = useSelector((state: ReduxState) => state.minimized);
-
+export default function VideoRender() {
   return (
     <video
       className={classNames({
-        "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-screen min-h-screen object-cover transition-all duration-1000":
+        "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-screen min-h-screen object-cover transition-all duration-1000 opacity-50":
           true,
-        hidden: !minimized,
-        "block opacity-50": minimized,
       })}
       autoPlay={true}
       muted
@@ -24,5 +15,3 @@ function VideoRender() {
     </video>
   );
 }
-
-export default React.memo(VideoRender);
