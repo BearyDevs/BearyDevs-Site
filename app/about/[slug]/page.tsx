@@ -5,6 +5,7 @@ import path from "path";
 import { Metadata } from "next";
 import { aboutNav } from "@/app/navigation";
 import dynamic from "next/dynamic";
+import { Spinner } from "@nextui-org/react";
 
 export type AboutSlug = (typeof aboutNav)[number]["slug"];
 
@@ -12,7 +13,11 @@ const CodeWithLineNumbers = dynamic(
   () => import("@/app/components/codeWithLineNumber"),
   {
     ssr: false,
-    loading: () => <p>Loading...</p>,
+    loading: () => (
+      <div className="min-w-full min-h-full flex items-center justify-center flex-col gap-8 text-gray-400 my-[10%] p-8">
+        <Spinner color="secondary" size="lg" />
+      </div>
+    ),
   },
 );
 
