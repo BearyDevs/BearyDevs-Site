@@ -2,6 +2,10 @@
 
 "Designed by BearyDevs, inspired by [Wiscaksono](https://github.com/wiscaksono). Creating to continuously push my limits by setting new challenges for myself."
 
+# Design Color Inspiration
+
+I’m a huge fan of the iTerm color scheme [Solarized-Osaka](https://github.com/craftzdog/solarized-osaka.nvim). I’ve used its colors to implement and customize my terminal setup in iTerm2.
+
 ## Preview
 
 ![Preview 1](./public/preview-1.png)
