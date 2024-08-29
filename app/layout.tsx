@@ -64,7 +64,6 @@ export default async function RootLayout({
   return (
     <html suppressHydrationWarning lang="en">
       <body
-        suppressHydrationWarning={true}
         className={clsx(
           "font-sans antialiased",
           fontSans.variable,
