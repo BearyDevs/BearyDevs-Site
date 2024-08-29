@@ -1,6 +1,6 @@
 # BearyDevs Homepage
 
-"Designed by BearyDevs, inspired by [Wiscaksono](https://github.com/wiscaksono). Continuously pushing my limits by setting new challenges for myself."
+"Designed by BearyDevs, inspired by [Wiscaksono](https://github.com/wiscaksono). Creating to continuously push my limits by setting new challenges for myself."
 
 ## Preview
 
