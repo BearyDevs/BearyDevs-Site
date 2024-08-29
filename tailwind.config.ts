@@ -50,6 +50,7 @@ const config: Config = {
         custom900: { max: "900px" },
         custom900_min: "900px",
         mobilexll: { max: "640px" },
+        "2k": "2000px",
       },
     },
   },
