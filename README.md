@@ -1,6 +1,6 @@
 # BearyDevs Homepage
 
-Designed by [BearyDevs](https://github.com/BearyDevs), inspired by [Wiscaksono](https://github.com/wiscaksono)
+"Designed by BearyDevs, inspired by [Wiscaksono](https://github.com/wiscaksono). Continuously pushing my limits by setting new challenges for myself."
 
 ## Preview
 
