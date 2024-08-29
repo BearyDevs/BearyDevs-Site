@@ -1,4 +1,6 @@
-const NAME = "Teerapat Wassavanich";
+const FIRSTNAME = "Teerapat";
+const LASTNAME = "Wassavanich";
+
 const NICKNAME = "Beary";
 
 const RESPECT_PERSON = ["Steven Paul Jobs", "Nicola Tesla"];
