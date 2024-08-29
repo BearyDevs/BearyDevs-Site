@@ -37,7 +37,7 @@ export default function FooterContainer() {
         block: show,
       })}
     >
-      {pathname === "/" && (
+      {pathname === "/home" && (
         <div
           className={classNames({
             "text-xs text-gray-500 pl-2 pb-1": true,
