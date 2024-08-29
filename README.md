@@ -1,5 +1,7 @@
 # BearyDevs Homepage
 
+Designed by [BearyDevs](https://github.com/BearyDevs), inspired by [Wiscaksono](https://github.com/wiscaksono)
+
 ## Preview
 
 ![Preview 1](./public/preview-1.png)
