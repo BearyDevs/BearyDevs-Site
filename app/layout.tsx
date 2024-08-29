@@ -1,13 +1,13 @@
 import type { Metadata, Viewport } from "next";
-import "./globals.css";
+import "@/app/globals.css";
 import clsx from "clsx";
-import { fontSans, fontThai } from "./libs/fonts";
-import MainContainer from "./components/mainContainer";
+import { fontSans, fontThai } from "@/app/libs/fonts";
+import MainContainer from "@/app/components/mainContainer";
 import "animate.css";
-import Providers from "./provider";
-import { ENV } from "./libs/constants";
+import Providers from "@/app/provider";
+import { ENV } from "@/app/libs/constants";
 import Script from "next/script";
-import VideoBG from "./videoBG";
+import VideoBG from "@/app/videoBG";
 
 export const dynamic = "force-dynamic";
 

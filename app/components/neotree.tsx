@@ -18,7 +18,6 @@ export default function Neotree({ startPath, items }: Props) {
 
   return (
     <div className="block animate-[fadeInLeft_1s] w-[15%] h-full py-1 pt-6 pl-1 custom900:hidden sticky top-0">
-      {/* Neotree title */}
       <Link
         href="https://github.com/nvim-neo-tree/neo-tree.nvim"
         target="_blank"
@@ -27,7 +26,6 @@ export default function Neotree({ startPath, items }: Props) {
         NeoTree
       </Link>
 
-      {/* Neotree content */}
       <div className="w-full max-h-[calc(100vh-100px)] overflow-y-auto overflow-x-hidden flex items-start justify-center flex-col py-1 pl-2 pr-8 mt-2 bg-[#00171c] border-r-[2px] border-[#003641] text-[#5d7a82]">
         <p className="flex items-center gap-1 cursor-not-allowed italic whitespace-nowrap">
           <IoIosArrowDown /> <FaFolderOpen className="text-[#008dd9]" />

@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { ascii } from "../libs/logo";
+import { ascii } from "@/app/libs/logo";
 
 export default function MainPage() {
   return (

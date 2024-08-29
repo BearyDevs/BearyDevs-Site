@@ -1,3 +1,4 @@
+import React from "react";
 import { Metadata } from "next";
 import { weeklyCodingLanguanges } from "@/app/libs/actions";
 
@@ -8,6 +9,17 @@ export const metadata: Metadata = {
 
 export default async function CodingActivityLanguagesPage() {
   const { data } = await weeklyCodingLanguanges();
+
+  if (!data) {
+    return (
+      <>
+        <h1 className="mb-4 text-base text-gray-200 md:text-xl font-semibold">
+          Weekly Coding Languages
+        </h1>
+        <h2 className="text-sm">No data</h2>
+      </>
+    );
+  }
 
   return (
     <>

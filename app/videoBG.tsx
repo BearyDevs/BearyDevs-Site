@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic";
 import React, { useCallback } from "react";
 
-const VideoRender = dynamic(() => import("./videoRender"), {
+const VideoRender = dynamic(() => import("@/app/videoRender"), {
   ssr: false,
 });
 

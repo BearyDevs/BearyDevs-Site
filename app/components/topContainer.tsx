@@ -9,11 +9,11 @@ import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { LuMaximize2 } from "react-icons/lu";
 import { ENV } from "@/app/libs/constants";
 import { aboutNav, codingActivityNav } from "@/app/navigation";
-import { Nav } from "../projects/_components/nav";
+import { Nav } from "@/app/projects/_components/nav";
 import { ScrollShadow } from "@nextui-org/react";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "@/app/libs/redux/store";
-import { setMinimized } from "../libs/redux/slices/minimized";
+import { setMinimized } from "@/app/libs/redux/slices/minimized";
 
 export default function TopContainer() {
   const router = useRouter();

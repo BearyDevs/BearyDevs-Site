@@ -16,6 +16,17 @@ export default async function ActivityPage() {
     ...data.map((entry) => entry.grand_total.total_seconds),
   );
 
+  if (!data) {
+    return (
+      <>
+        <h1 className="mb-4 text-base text-gray-200 md:text-xl font-semibold">
+          Weekly Work Time by Day
+        </h1>
+        <h2 className="text-sm">No data</h2>
+      </>
+    );
+  }
+
   return (
     <>
       <h1 className="mb-4 text-base text-gray-200 md:text-xl font-semibold">

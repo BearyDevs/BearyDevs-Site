@@ -1,16 +1,16 @@
 "use client";
 
 import { PropsWithChildren } from "react";
-import TopContainer from "./topContainer";
+import TopContainer from "@/app/components/topContainer";
 import classNames from "classnames";
-import FooterContainer from "./footerContainer";
+import FooterContainer from "@/app/components/footerContainer";
 import { Button, ScrollShadow } from "@nextui-org/react";
-import { LennyFace } from "./lennyFace";
+import { LennyFace } from "@/app/components/lennyFace";
 import { useDispatch, useSelector } from "react-redux";
-import { AppDispatch, ReduxState } from "../libs/redux/store";
-import { setMinimized } from "../libs/redux/slices/minimized";
-import StarFall from "./starfall";
-import { ascii } from "../libs/logo";
+import { AppDispatch, ReduxState } from "@/app/libs/redux/store";
+import { setMinimized } from "@/app/libs/redux/slices/minimized";
+import StarFall from "@/app/components/starfall";
+import { ascii } from "@/app/libs/logo";
 
 export default function MainContainer({ children }: PropsWithChildren) {
   const dispatch = useDispatch<AppDispatch>();

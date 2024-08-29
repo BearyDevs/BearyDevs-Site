@@ -1,50 +1,15 @@
 "use client";
 
-import "../styles/starfall.css";
+import "@/app/styles/starfall.css";
 
-export default function StarFall() {
+const FallingStar = () => <div className="falling-star"></div>;
+
+export default function StarFall({ starCount = 40 }: { starCount?: number }) {
   return (
     <div className="starfall">
-      <div className="falling-star"></div>
-      <div className="falling-star"></div>
-      <div className="falling-star"></div>
-      <div className="falling-star"></div>
-      <div className="falling-star"></div>
-      <div className="falling-star"></div>
-      <div className="falling-star"></div>
-      <div className="falling-star"></div>
-      <div className="falling-star"></div>
-      <div className="falling-star"></div>
-      <div className="falling-star"></div>
-      <div className="falling-star"></div>
-      <div className="falling-star"></div>
-      <div className="falling-star"></div>
-      <div className="falling-star"></div>
-      <div className="falling-star"></div>
-      <div className="falling-star"></div>
-      <div className="falling-star"></div>
-      <div className="falling-star"></div>
-      <div className="falling-star"></div>
-      <div className="falling-star"></div>
-      <div className="falling-star"></div>
-      <div className="falling-star"></div>
-      <div className="falling-star"></div>
-      <div className="falling-star"></div>
-      <div className="falling-star"></div>
-      <div className="falling-star"></div>
-      <div className="falling-star"></div>
-      <div className="falling-star"></div>
-      <div className="falling-star"></div>
-      <div className="falling-star"></div>
-      <div className="falling-star"></div>
-      <div className="falling-star"></div>
-      <div className="falling-star"></div>
-      <div className="falling-star"></div>
-      <div className="falling-star"></div>
-      <div className="falling-star"></div>
-      <div className="falling-star"></div>
-      <div className="falling-star"></div>
-      <div className="falling-star"></div>
+      {Array.from({ length: starCount }).map((_, index) => (
+        <FallingStar key={index} />
+      ))}
     </div>
   );
 }

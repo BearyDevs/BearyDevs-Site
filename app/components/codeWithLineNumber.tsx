@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Prism from "prismjs";
 import "prismjs/components/prism-typescript";
-import "../styles/prism-solarized-osaka.css";
+import "@/app/styles/prism-solarized-osaka.css";
 import { ScrollShadow } from "@nextui-org/react";
 
 export default function CodeWithLineNumbers({ code = "" }: { code?: string }) {

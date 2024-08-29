@@ -9,6 +9,17 @@ export const metadata: Metadata = {
 export default async function EditorPage() {
   const { data } = await weeklyCodeEditor();
 
+  if (!data) {
+    return (
+      <>
+        <h1 className="mb-4 text-base text-gray-200 md:text-xl font-semibold">
+          Weekly Code Editor Activity
+        </h1>
+        <h2 className="text-sm">No data</h2>
+      </>
+    );
+  }
+
   return (
     <>
       <h1 className="mb-4 text-base text-gray-200 md:text-xl font-semibold">

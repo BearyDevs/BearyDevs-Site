@@ -3,7 +3,7 @@
 import React from "react";
 import classNames from "classnames";
 import { useSelector } from "react-redux";
-import { ReduxState } from "./libs/redux/store";
+import { ReduxState } from "@/app/libs/redux/store";
 
 function VideoRender() {
   const minimized = useSelector((state: ReduxState) => state.minimized);

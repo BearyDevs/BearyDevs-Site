@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getContents } from "../libs/contents";
+import { getContents } from "@/app/libs/contents";
 
 export default function Articles() {
   const articles = getContents("articles");
