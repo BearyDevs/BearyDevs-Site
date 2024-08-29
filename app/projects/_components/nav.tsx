@@ -52,10 +52,10 @@ const menu = [
     title: "react",
     href: "/projects?tag=React",
   },
-  {
-    title: "node",
-    href: "/projects?tag=Node",
-  },
+  // {
+  //   title: "node",
+  //   href: "/projects?tag=Node",
+  // },
   {
     title: "react-native",
     href: "/projects?tag=React-Native",
