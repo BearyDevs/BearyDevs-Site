@@ -14,8 +14,8 @@
 
 - [NextJS 14 (App Router)](https://nextjs.org) - Next.js is a React framework for building full-stack web applications
 - [TailwindCSS](https://tailwindcss.com) - A utility-first CSS framework packed with classes that can be composed to build any design, directly in your markup.
-- [Next Auth](https://next-auth.js.org) - NextAuth.js is a complete open-source authentication solution for Next.js applications.
-- [Prisma](https://www.prisma.io) - an open-source ORM that drastically simplifies data modeling, migrations, and data access for SQL databases in Node.js and TypeScript.
+- [Prismjs](https://prismjs.com/) - Prism is a lightweight, extensible syntax highlighter, built with modern web standards in mind.
+- [Redux Toolkit](https://redux-toolkit.js.org/) - The official, opinionated toolset for efficient Redux development, providing a standardized approach to writing Redux logic.
 
 ## Running Locally
 
