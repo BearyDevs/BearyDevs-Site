@@ -45,7 +45,16 @@ export default function FooterContainer() {
             block: show,
           })}
         >
-          Designed by Bearydevs, inspired by{" "}
+          Designed by{" "}
+          <Link
+            className="font-bold text-xs hover:text-white transition-colors duration-300 text-gray-500"
+            href="https://github.com/BearyDevs"
+            target="_blank"
+            rel="noreferrer"
+          >
+            BearyDevs
+          </Link>
+          , inspired by{" "}
           <Link
             className="font-bold text-xs hover:text-white transition-colors duration-300 text-gray-500"
             href="https://github.com/wiscaksono"
