@@ -42,7 +42,7 @@ export async function generateMetadata({
 }
 
 export async function generateStaticParams() {
-  const projects = getContents("projects");
+  const projects = getContents("articles");
   return projects.map((project) => ({ slug: project.slug.toLowerCase() }));
 }
 
