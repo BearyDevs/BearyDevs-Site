@@ -5,4 +5,5 @@ export const ENV = {
   GITHUB_URL: process.env.NEXT_PUBLIC_GITHUB_URL || "",
   LINKEDIN_URL: process.env.NEXT_PUBLIC_LINKEDIN_URL || "",
   NODE_ENV: process.env.NODE_ENV || "development",
+  CV_URL: process.env.NEXT_PUBLIC_CV_URL || "",
 };
