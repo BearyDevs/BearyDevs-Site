@@ -1,7 +1,7 @@
 "use client";
 
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
-import { FaFacebook, FaLinkedin } from "react-icons/fa";
+import { FaDiscord, FaFacebook, FaLinkedin } from "react-icons/fa";
 import { GrDocumentUser } from "react-icons/gr";
 import { MdOutlineContactPhone } from "react-icons/md";
 import { ENV } from "../libs/constants";
@@ -107,6 +107,23 @@ export default function Contact() {
         </button>
         <p className="group-hover:text-white transition-colors duration-300">
           Connect on LinkedIn
+        </p>
+      </div>
+
+      {/* Discord */}
+      <div
+        className="flex items-center gap-20 group cursor-pointer"
+        onClick={() => window.open(ENV.DISCORD_URL, "_blank")}
+      >
+        <button
+          name="discord-button"
+          aria-label="Discord"
+          className="rounded-full"
+        >
+          <FaDiscord className="group-hover:text-white transition-colors duration-300 w-[36px] h-[36px]" />
+        </button>
+        <p className="group-hover:text-white transition-colors duration-300">
+          Connect on Discord
         </p>
       </div>
     </div>
