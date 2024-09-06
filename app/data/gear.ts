@@ -23,8 +23,13 @@ const hardware = {
   ],
   monitors: [
     {
+      name: "Xiaomi Mi Curved Monitor G34WQi",
+      desc: 'My main monitor, its a 34" 1440p 144hz monitor with 1500R curvature and great color gamut DCI-P3 95% monitor',
+      tags: ["Monitor"],
+    },
+    {
       name: "LG UltraGear NanoIPS 32GP850-B",
-      desc: 'My main monitor, its a 32" 2560x1440 185hz and great color gamut DCI-P3 98% monitor.',
+      desc: 'My secondary monitor in vertical mode, its a 32" 2560x1440 185hz and great color gamut DCI-P3 98% monitor.',
       tags: ["Monitor"],
     },
   ],
