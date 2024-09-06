@@ -6,19 +6,24 @@ const hardware = {
       tags: ["Laptop"],
     },
     {
-      name: "Macbook Air 15-inch M2 (Midnight)",
-      desc: "This is my secondary computer, used for customer presentations due to its lightweight and flexibility.",
-      tags: ["Laptop"],
+      name: "Macbook Mini M2 CTO",
+      desc: "This is my secondary computer. It’s very powerful and great for home use.",
+      tags: ["Mini Computer"],
     },
     {
       name: "Nuphy Air 75v2",
-      desc: "My main keyboard, It's so nice sound.",
-      tags: ["Keyboard"],
+      desc: "My main keyboard, It's so nice sound and productivity of mechanical keyboard,",
+      tags: ["Mechanical Keyboard"],
     },
     {
       name: "Apple Magic Trackpad 2",
       desc: "I love this product. It's so amazing and easy to use.",
       tags: ["Trackpad"],
+    },
+    {
+      name: "Apple Magic Keyboard with TouchID",
+      desc: "I love low-profile keyboards that are comfortable to use and allow for fast typing without causing discomfort. Apple makes excellent products.",
+      tags: ["Low Profile Keyboard"],
     },
   ],
   monitors: [
