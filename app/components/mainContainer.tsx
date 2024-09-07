@@ -54,7 +54,7 @@ export default function MainContainer({ children }: PropsWithChildren) {
         className={classNames({
           "lg:mt-[100px] animate-[fadeInUp_1s]": true,
           "transition-all duration-700": true,
-          "flex flex-col w-[100dvw] h-[100dvh] lg:min-w-[80%] lg:max-w-[80%] lg:min-h-[80%] lg:max-h-[80%] lg:rounded-2xl relative":
+          "flex flex-col w-[100dvw] h-[100dvh] lg:min-w-[80%] lg:max-w-[80%] lg:min-h-[85%] lg:max-h-[85%] lg:rounded-2xl relative":
             true,
           "bottom-[-95%] opacity-0": minimized,
           "bottom-0 lg:opacity-85 opacity-100": !minimized,
