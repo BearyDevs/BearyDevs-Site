@@ -8,6 +8,7 @@ const RESPECT_PERSON = ["Steven Paul Jobs", "Nicola Tesla"];
 let countryLocation = "Bangkok, Thailand";
 
 let hobbies = [
+  "Learning",
   "Programming",
   "Movie",
   "Gaming",
@@ -25,6 +26,7 @@ let interest = [
   "Music",
   "Guitar",
   "Apple Inc",
+  "UX/UI Design",
 ];
 
 const WORK_HISTORY = [

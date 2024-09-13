@@ -1,6 +1,6 @@
 // Work Information
 
-const PROFESSION = "Full Stack Developer, Software Engineer, Founder CEO";
+const PROFESSION = "Software Engineer, Full Stack Developer, Founder CEO";
 
 let employer = [
   "TOYLAB", // full-time

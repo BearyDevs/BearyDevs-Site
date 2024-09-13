@@ -6,7 +6,7 @@ const hardware = {
       tags: ["Laptop"],
     },
     {
-      name: "Macbook Mini M2 CTO",
+      name: "MacMini M2 CTO",
       desc: "This is my secondary computer. It’s very powerful and great for home use.",
       tags: ["Mini Computer"],
     },
