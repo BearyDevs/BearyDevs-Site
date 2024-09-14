@@ -17,7 +17,7 @@ export default function Neotree({ startPath, items }: Props) {
   const router = useRouter();
 
   return (
-    <div className="block animate-[fadeInLeft_1s] w-[15%] h-full py-1 pt-6 pl-1 custom900:hidden sticky top-0">
+    <div className="block animate-[fadeInLeft_1s] w-max h-full py-1 pt-6 pl-1 custom900:hidden sticky top-0">
       <Link
         href="https://github.com/nvim-neo-tree/neo-tree.nvim"
         target="_blank"

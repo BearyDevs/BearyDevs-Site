@@ -58,8 +58,8 @@ export default function MainContainer({ children }: PropsWithChildren) {
             true,
           "bottom-[-95%] opacity-0": minimized,
           "bottom-0 lg:opacity-85 opacity-100": !minimized,
-          "lg:shadow-[inset_0_0_10px_rgba(255,255,255,0.1),_30px_30px_60px_rgba(4,19,25,1),_0_2px_6px_rgba(255,255,255,0.05)]":
-            true, // solaizeOsaka shadow
+          "lg:shadow-[inset_0_0_5px_rgba(255,255,255,0.05),_15px_15px_30px_rgba(4,19,25,0.8),_0_1px_3px_rgba(255,255,255,0.03)]":
+            true, // SolaizeOsaka shadow
           "bg-gradient-to-br from-[#041319] via-[#041319] to-[#041319]": true, // solaizeOsaka
         })}
       >

@@ -41,10 +41,15 @@ const config: Config = {
       },
       dropShadow: {
         glow: [
+          "0 0px 10px rgba(255,255, 255, 0.2)",
+          "0 0px 30px rgba(255, 255,255, 0.4)",
+        ],
+        glower: [
           "0 0px 20px rgba(255,255, 255, 0.4)",
           "0 0px 55px rgba(255, 255,255, 0.8)",
         ],
       },
+
       screens: {
         tabletmd: { max: "1024px" },
         custom900: { max: "900px" },
