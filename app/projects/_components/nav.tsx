@@ -22,8 +22,8 @@ export const Nav = () => {
     >
       {menu.map((item) => {
         const isActive =
-          params.get("tag")?.toLowerCase() === item.title ||
-          (!params.get("tag") && item.title === "all-projects");
+          params.get("tag")?.toLowerCase() === item.title.toLowerCase() ||
+          (!params.get("tag") && item.title === "All-projects");
         return (
           <Link
             key={item.title}
@@ -41,15 +41,15 @@ export const Nav = () => {
 
 const menu = [
   {
-    title: "all-projects",
+    title: "All-projects",
     href: "/projects",
   },
   {
-    title: "next",
+    title: "Next",
     href: "/projects?tag=Next",
   },
   {
-    title: "react",
+    title: "React",
     href: "/projects?tag=React",
   },
   // {
@@ -57,15 +57,15 @@ const menu = [
   //   href: "/projects?tag=Node",
   // },
   {
-    title: "react-native",
+    title: "React-Native",
     href: "/projects?tag=React-Native",
   },
+  // {
+  //   title: "html",
+  //   href: "/projects?tag=HTML",
+  // },
   {
-    title: "html",
-    href: "/projects?tag=HTML",
-  },
-  {
-    title: "unity",
+    title: "Unity",
     href: "/projects?tag=Unity",
   },
 ];
