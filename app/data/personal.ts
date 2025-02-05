@@ -1,8 +1,6 @@
 const FIRSTNAME = "Teerapat";
 const LASTNAME = "Wassavanich";
 
-const NICKNAME = "Beary";
-
 const RESPECT_PERSON = ["Steven Paul Jobs", "Nicola Tesla"];
 
 let countryLocation = "Bangkok, Thailand";
@@ -19,7 +17,9 @@ let hobbies = [
 ];
 
 let interest = [
-  "Technology",
+  "Coding Tech",
+  "IT",
+  "Keyboard",
   "Realistics Gaming",
   "Sports",
   "BoardGames",
@@ -31,7 +31,18 @@ let interest = [
 
 const WORK_HISTORY = [
   {
-    year: "2023 - Present",
+    year: "2025 - Present",
+    company: "TechFlow Solutions Co., Ltd.",
+    position: [
+      {
+        title: "Full Stack Developer",
+        description:
+          "Developed and maintained all applications type using all modern JS frameworks like Vue.js, Nuxt.js, Nest.js, Next.js, React, Node.js, and Express. Implemented RESTful APIs and integrated third-party services. Led the high performance and structure.",
+      },
+    ],
+  },
+  {
+    year: "2023 - 2024",
     company: "TOYLAB Design and Development",
     position: [
       {

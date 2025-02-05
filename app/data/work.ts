@@ -1,12 +1,6 @@
 // Work Information
 
-const PROFESSION = "Software Engineer, Full Stack Developer, Founder CEO";
-
-let employer = [
-  "TOYLAB", // full-time
-  "EVFAST", // consultant
-  "Yorkoon", // freelance
-];
+const PROFESSION = "Software Engineer, FullStack Developer";
 
 // Most important skills
 let languages = [
@@ -14,6 +8,7 @@ let languages = [
   "JavaScript",
   "HTML",
   "CSS",
+  "SQL",
   "Unix commands",
   "Python", // still learning this...
   "C#", // sometimes to used for game development
@@ -21,11 +16,14 @@ let languages = [
 
 let frameworks = [
   "Next.js",
-  "Tailwind CSS",
+  "CSS and CSS Libs",
   "React",
   "React-Native",
   "Node.js",
   "Express.js",
+  "Vue.js",
+  "Nuxt.js",
+  "Nest.js",
   "Expo",
   "Unity",
   "Unreal Engine",
@@ -42,11 +40,23 @@ let containers = ["Docker"];
 let tools = [
   "Git",
   "GitHub",
+  "JIRA",
+  "BitBucket",
+  "MS Teams",
+  "Confluence",
   "Postman",
   "Figma",
   "Vercel",
-  "VSCode",
+  "Amazon Services",
+  "Firebase",
+  "Supabase",
+  "Clerk",
+  "Excalidraw",
+  "Inkdrop",
+  "Wakatime",
+  "VSCode-Insiders",
   "PhotoShop",
   "Canva",
   "JetBrains DataGrip",
+  "DBeaver",
 ];
