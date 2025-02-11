@@ -1,6 +1,5 @@
 // Work Information
-
-const PROFESSION = "Software Engineer, FullStack Developer";
+const PROFESSION = "FullStack Developer";
 
 // Most important skills
 let languages = [

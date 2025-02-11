@@ -106,19 +106,12 @@ export default function TopContainer() {
           </div>
           <div className="text-[#7f7f7f] font-extrabold flex items-center justify-center gap-2">
             <button
-              name="iterm-button"
-              aria-label="iterm2.com"
+              name="ghostty-button"
+              aria-label="ghostty.org"
               className="hover:text-white transition-colors duration-300 hidden lg:inline"
-              onClick={() => window.open("https://iterm2.com", "_blank")}
+              onClick={() => window.open("https://ghostty.org/", "_blank")}
             >
-              iTerm
-            </button>
-            <button
-              name="iterm-button"
-              aria-label="iterm2.com"
-              className="transition-colors duration-300 lg:hidden inline"
-            >
-              BearyDevs
+              Ghostty
             </button>
 
             <button

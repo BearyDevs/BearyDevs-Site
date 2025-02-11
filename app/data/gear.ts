@@ -6,11 +6,6 @@ const hardware = {
       tags: ["Laptop"],
     },
     {
-      name: "MacMini M2 CTO",
-      desc: "This is my secondary computer. It’s very powerful and great for home use.",
-      tags: ["Mini Computer"],
-    },
-    {
       name: "Nuphy Air 75v2",
       desc: "My main keyboard, It's so nice sound and productivity of mechanical keyboard,",
       tags: ["Mechanical Keyboard"],
@@ -19,11 +14,6 @@ const hardware = {
       name: "Apple Magic Trackpad 2",
       desc: "I love this product. It's so amazing and easy to use.",
       tags: ["Trackpad"],
-    },
-    {
-      name: "Apple Magic Keyboard with TouchID",
-      desc: "I love low-profile keyboards that are comfortable to use and allow for fast typing without causing discomfort. Apple makes excellent products.",
-      tags: ["Low Profile Keyboard"],
     },
   ],
   monitors: [
@@ -59,19 +49,14 @@ const software = [
     tags: ["Terminal"],
   },
   {
-    name: "iTerm2",
-    desc: "My terminal emulator.",
+    name: "Ghostty",
+    desc: "A lightning-fast terminal emulator, with GPU acceleration.",
     tags: ["Terminal"],
   },
   {
     name: "Oh my zsh",
-    desc: "My shell, I use it with powerlevel10k theme.",
+    desc: "My main shell, I use it with powerlevel10k theme.",
     tags: ["Terminal"],
-  },
-  {
-    name: "VSCode-Insiders",
-    desc: "I occasionally use VSCode-Insiders for tasks that Neovim doesn't fully support, offering a backup for features or extensions that require a more integrated development environment.",
-    tags: ["Editor"],
   },
 ];
 

@@ -1,7 +1,6 @@
-const FIRSTNAME = "Teerapat";
-const LASTNAME = "Wassavanich";
+const NAME = "Teerapat Wassavanich";
 
-const RESPECT_PERSON = ["Steven Paul Jobs", "Nicola Tesla"];
+const RESPECT_PERSON = ["Steven Paul Jobs", "Elon Musk", "Nicola Tesla"];
 
 let countryLocation = "Bangkok, Thailand";
 
@@ -31,7 +30,7 @@ let interest = [
 
 const WORK_HISTORY = [
   {
-    year: "2025 - Present",
+    year: "FEB 2025 - Present",
     company: "TechFlow Solutions Co., Ltd.",
     position: [
       {
@@ -42,7 +41,7 @@ const WORK_HISTORY = [
     ],
   },
   {
-    year: "2023 - 2024",
+    year: "OCT 2023 - DEC 2024",
     company: "TOYLAB Design and Development",
     position: [
       {
@@ -55,15 +54,10 @@ const WORK_HISTORY = [
         description:
           "Engineered scalable software solutions, focusing on modular design and efficient code practices. Used TypeScript, and Prisma for data modeling and API development.",
       },
-      {
-        title: "Founder CEO",
-        description:
-          "Led the strategic direction of the company, managing client relationships and overseeing all project deliveries. Focused on innovation in web and software development to provide cutting-edge solutions.",
-      },
     ],
   },
   {
-    year: "2022-2023",
+    year: "MAR 2022- JAN 2023",
     company: "Revelopment Studio",
     position: [
       {
@@ -85,18 +79,7 @@ const WORK_HISTORY = [
     ],
   },
   {
-    year: "2020",
-    company: "68 Studios",
-    position: [
-      {
-        title: "Unity AR Developer",
-        description:
-          "Developed augmented reality applications using Unity and C#. Focused on interactive experiences for educational and entertainment purposes.",
-      },
-    ],
-  },
-  {
-    year: "2019-2020",
+    year: "2019-2021",
     company: "Athens Communication",
     position: [
       {
@@ -113,13 +96,13 @@ const WORK_HISTORY = [
       {
         title: "IT System Support",
         description:
-          "Provided IT support and system administration services. Handled network configurations, troubleshooting, and maintenance of IT infrastructure.",
+          "Provided IT support and system administration services. Handled network configurations, troubleshooting, and maintenance of IT infrastructure. Onsite-services",
       },
     ],
   },
   {
     year: "2014-2017",
-    company: "Clexpert Thailand",
+    company: "Sky Cambridge Thailand",
     position: [
       {
         title: "IT Support",

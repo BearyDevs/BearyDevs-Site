@@ -64,7 +64,7 @@ export default function Contact() {
           <GitHubLogoIcon className="group-hover:text-white transition-colors duration-300 w-[36px] h-[36px]" />
         </button>
         <p className="group-hover:text-white transition-colors duration-300">
-          View my GitHub
+          Visit my GitHub
         </p>
       </div>
 
