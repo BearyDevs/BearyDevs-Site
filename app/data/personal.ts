@@ -36,7 +36,7 @@ const WORK_HISTORY = [
       {
         title: "Full Stack Developer",
         description:
-          "Developed and maintained applications using modern TypeScript/JavaScript frameworks, including Next.js, Nuxt.js, Nest.js, React, Vue, Node.js, and Express. Designed and integrated RESTful APIs with third-party services. Optimized performance and scalability while implementing CI/CD pipelines (Jenkins) and comprehensive testing strategies, including unit, integration, and end-to-end testing.",
+          "Developed and maintained applications. Designed and integrated RESTful APIs. Optimized performance and scalability.",
       },
     ],
   },
@@ -47,12 +47,12 @@ const WORK_HISTORY = [
       {
         title: "Full Stack Developer",
         description:
-          "Developed and maintained web applications using Next.js, React, Node.js, and Express. Implemented RESTful APIs and integrated third-party services. Led the frontend and backend development for several client projects, ensuring high performance and responsiveness.",
+          "Developed and maintained web applications. Implemented RESTful APIs. Led the frontend and backend development, ensuring high performance.",
       },
       {
         title: "Software Engineer",
         description:
-          "Engineered scalable software solutions, focusing on modular design and efficient code practices. Used TypeScript, and Prisma for data modeling and API development.",
+          "Engineered scalable software solutions, focusing on modular design and efficient code practices.",
       },
     ],
   },
@@ -63,7 +63,7 @@ const WORK_HISTORY = [
       {
         title: "Full Stack Developer",
         description:
-          "Built and maintained web applications with a focus on modern JavaScript frameworks like React and Node.js. Collaborated with cross-functional teams to deliver end-to-end solutions, from database design with MongoDB to frontend development with Tailwind CSS.",
+          "Built and maintained web applications with a focus on modern JavaScript frameworks. Collaborated with cross-functional teams to deliver end-to-end solutions.",
       },
     ],
   },
@@ -74,7 +74,7 @@ const WORK_HISTORY = [
       {
         title: "Web Developer",
         description:
-          "Worked independently on various web development projects, providing clients with custom solutions using HTML, CSS, JavaScript, and PHP. Managed project lifecycles from conception to deployment.",
+          "Worked independently on various web development projects, providing clients with custom solutions. Managed project lifecycles from conception to deployment.",
       },
     ],
   },
