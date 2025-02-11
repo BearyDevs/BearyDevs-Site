@@ -36,7 +36,7 @@ const WORK_HISTORY = [
       {
         title: "Full Stack Developer",
         description:
-          "Developed and maintained all applications type using all modern JS frameworks like Vue.js, Nuxt.js, Nest.js, Next.js, React, Node.js, and Express. Implemented RESTful APIs and integrated third-party services. Led the high performance and structure.",
+          "Developed and maintained applications using modern TypeScript/JavaScript frameworks, including Next.js, Nuxt.js, Nest.js, React, Vue, Node.js, and Express. Designed and integrated RESTful APIs with third-party services. Optimized performance and scalability while implementing CI/CD pipelines (Jenkins) and comprehensive testing strategies, including unit, integration, and end-to-end testing.",
       },
     ],
   },

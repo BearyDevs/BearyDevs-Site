@@ -77,7 +77,7 @@ export default function FooterContainer() {
         <div className="flex items-center font-bold">
           <div
             className={classNames({
-              "flex items-center justify-center px-3 relative gap-2 py-[2px] text-gray-300":
+              "flex items-center justify-center px-3 relative gap-2 py-2 text-gray-300":
                 true,
             })}
           >
@@ -86,7 +86,7 @@ export default function FooterContainer() {
 
           <div
             className={classNames({
-              "flex items-center text-gray-300 px-[10px] relative py-[2px]":
+              "flex items-center text-gray-300 px-[10px] relative py-2":
                 true,
             })}
           >
@@ -94,7 +94,7 @@ export default function FooterContainer() {
           </div>
         </div>
 
-        <div className="flex items-center font-bold">
+        <div className="flex items-center font-bold py-[4px]">
           <div className="flex items-center gap-x-2 not-sr-only">
             <div className="flex items-center justify-start gap-2">
               <Link
@@ -152,14 +152,14 @@ export default function FooterContainer() {
       </ScrollShadow>
 
       <ScrollShadow
-        // hideScrollBar
+        hideScrollBar
         orientation="horizontal"
         className={classNames({
           "h-max w-full flex items-center justify-between rounded-b-2xl overflow-x-auto whitespace-nowrap gap-4 mobilexll:text-xs":
             true,
         })}
       >
-        <div className="flex items-center font-bold lg:pb-0 pb-2">
+        <div className="flex items-center font-bold lg:pb-0 pb-1">
           <div
             className={classNames({
               "flex items-center justify-center px-3 relative gap-2 pl-4 py-[2px] lg:rounded-bl-2xl":

@@ -10,14 +10,14 @@ export const Nav = () => {
 
   return (
     <ScrollShadow
-      // hideScrollBar
+      hideScrollBar
       orientation="horizontal"
       className={classNames({
-        "sticky top-0 z-50 mb-3 flex select-none items-center rounded-md overflow-x-auto mobilexll:pb-1 py-1":
+        "sticky top-0 z-50 mb-3 flex select-none items-center rounded-md mobilexll:pb-1 py-1":
           true,
         "bg-gradient-to-r from-[#002b3780] via-[#0a2c2c1b] to-[#103f3c00]":
           true,
-        // "bg-transparent": true,
+        "bg-transparent": true,
       })}
     >
       {menu.map((item) => {
