@@ -20,6 +20,7 @@ I’m a huge fan of the iTerm color scheme [Solarized-Osaka](https://github.com/
 - [TailwindCSS](https://tailwindcss.com) - A utility-first CSS framework packed with classes that can be composed to build any design, directly in your markup.
 - [Prismjs](https://prismjs.com/) - Prism is a lightweight, extensible syntax highlighter, built with modern web standards in mind.
 - [Redux Toolkit](https://redux-toolkit.js.org/) - The official, opinionated toolset for efficient Redux development, providing a standardized approach to writing Redux logic.
+- [CSS Animate](https://animate.style/) - Animate.css is a library of ready-to-use, cross-browser animations for use in your web projects. Great for emphasis.
 
 ## Running Locally
 
