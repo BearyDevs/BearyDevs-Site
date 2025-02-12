@@ -25,7 +25,7 @@ export default function MainContainer({ children }: PropsWithChildren) {
           "absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-[40%]":
             true,
           "animate-[fadeOut_0.5s]": !minimized,
-          "animate-[fadeIn_1s]": minimized,
+          "animate-[fadeIn_0.5s]": minimized,
         })}
         style={{ animationFillMode: "both" }}
       >
@@ -40,7 +40,7 @@ export default function MainContainer({ children }: PropsWithChildren) {
           "absolute bottom-[5%] left-1/2 -translate-x-1/2 -translate-y-[-5%] hover:drop-shadow-glow z-20":
             true,
           "animate-[fadeOut_0.5s]": !minimized,
-          "animate-[fadeIn_1s]": minimized,
+          "animate-[fadeIn_0.5s]": minimized,
         })}
         style={{ cursor: "pointer", animationFillMode: "both" }}
         onClick={() => dispatch(setMinimized(false))}
@@ -52,7 +52,7 @@ export default function MainContainer({ children }: PropsWithChildren) {
 
       <section
         className={classNames({
-          "lg:mt-[50px] animate-[fadeInUp_1s]": true,
+          "lg:mt-[50px] animate-[fadeInUp_0.5s]": true,
           "transition-all duration-700": true,
           "flex flex-col w-[100dvw] h-[100dvh] lg:min-w-[80%] lg:max-w-[80%] lg:min-h-[90%] lg:max-h-[85%] lg:rounded-2xl relative":
             true,

@@ -142,7 +142,7 @@ export default function TopContainer() {
           <ScrollShadow
             orientation="horizontal"
             hideScrollBar
-            className="custom900_min:hidden flex items-center justify-start text-sm w-full flex-grow py-2 overflow-x-auto animate-[fadeInUp_1s]"
+            className="custom900_min:hidden flex items-center justify-start text-sm w-full flex-grow py-2 overflow-x-auto animate-[fadeInUp_0.5s]"
           >
             {aboutNav.map((item, i) => {
               return (
@@ -167,7 +167,7 @@ export default function TopContainer() {
           <ScrollShadow
             orientation="horizontal"
             hideScrollBar
-            className="custom900_min:pb-2 custom900:py-2 flex items-center justify-start text-sm w-full flex-grow overflow-x-auto animate-[fadeInUp_1s] px-1"
+            className="custom900_min:pb-2 custom900:py-2 flex items-center justify-start text-sm w-full flex-grow overflow-x-auto animate-[fadeInUp_0.5s] px-1"
           >
             {codingActivityNav.map((item, i) => {
               return (
