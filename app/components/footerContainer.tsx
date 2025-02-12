@@ -31,7 +31,7 @@ export default function FooterContainer() {
   return (
     <div
       className={classNames({
-        "bottom-0 absolute overflow-x-auto whitespace-nowrap w-full h-max text-sm":
+        "bottom-0 absolute overflow-x-scroll whitespace-nowrap w-full h-max text-sm":
           true,
         hidden: !show,
         block: show,
@@ -70,7 +70,7 @@ export default function FooterContainer() {
         orientation="horizontal"
         hideScrollBar
         className={classNames({
-          "h-max mobilexll:px-2 w-full flex items-center justify-between pb-2 lg:pb-0 overflow-x-auto whitespace-nowrap gap-10 mobilexll:text-xs":
+          "h-max mobilexll:px-2 w-full flex items-center justify-between lg:pb-0 overflow-x-scroll whitespace-nowrap gap-10 mobilexll:text-xs":
             true,
         })}
       >
@@ -94,7 +94,7 @@ export default function FooterContainer() {
           </div>
         </div>
 
-        <div className="flex items-center font-bold py-[4px]">
+        <div className="flex items-center font-bold py-[6px]">
           <div className="flex items-center gap-x-2 not-sr-only">
             <div className="flex items-center justify-start gap-2">
               <Link
@@ -155,14 +155,14 @@ export default function FooterContainer() {
         hideScrollBar
         orientation="horizontal"
         className={classNames({
-          "h-max w-full flex items-center justify-between rounded-b-2xl overflow-x-auto whitespace-nowrap gap-4 mobilexll:text-xs":
+          "h-max w-full flex items-center justify-between rounded-b-2xl overflow-x-scroll whitespace-nowrap gap-4 mobilexll:text-xs":
             true,
         })}
       >
-        <div className="flex items-center font-bold lg:pb-0 pb-1">
+        <div className="flex items-center font-bold lg:pb-1 pb-3">
           <div
             className={classNames({
-              "flex items-center justify-center px-3 relative gap-2 pl-4 py-[2px] lg:rounded-bl-2xl":
+              "flex items-center justify-center px-3 relative gap-2 pl-4 rounded-r-md py-[5px] lg:rounded-bl-2xl":
                 true,
               "bg-teal-400": true,
             })}
@@ -183,7 +183,7 @@ export default function FooterContainer() {
                 name="navigation-button"
                 onClick={() => router.push(`${route.url}`)}
                 className={classNames({
-                  "px-3 py-1 transition-colors duration-300 rounded-md flex items-center justify-center gap-2 uppercase text-gray-300":
+                  "px-3 py-[5px] transition-colors duration-300 rounded-md flex items-center justify-center gap-2 uppercase text-gray-300":
                     true,
                   "bg-[#103f3cb5]": pathname.startsWith(route.url),
                   "hover:bg-[#103f3c4f]": route.url !== pathname,
@@ -195,10 +195,10 @@ export default function FooterContainer() {
           </div>
         </div>
 
-        <div className="flex items-center font-bold">
+        <div className="flex items-center font-bold lg:pb-1 pb-3">
           <div
             className={classNames({
-              "flex items-center text-gray-300 px-3 relative ml-[-1px] py-[2px] gap-1":
+              "flex items-center text-gray-300 px-3 relative ml-[-1px] py-[5px] gap-1":
                 true,
             })}
           >
@@ -214,7 +214,7 @@ export default function FooterContainer() {
 
           <div
             className={classNames({
-              "flex items-center justify-center px-3 relative gap-2 py-[2px] lg:rounded-br-2xl whitespace-nowrap":
+              "flex items-center justify-center px-3 relative rounded-l-md gap-2 py-[5px] lg:rounded-br-2xl whitespace-nowrap":
                 true,
               "bg-teal-400": true,
             })}
