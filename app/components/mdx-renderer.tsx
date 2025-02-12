@@ -28,7 +28,7 @@ const MDXRenderer = ({ source, components, limitWidth = true }: Props) => {
           removeWrapper
           src={src!}
           alt={alt!}
-          className="mx-auto my-0 object-cover object-center md:max-w-[80%] rounded-none"
+          className="mx-auto my-0 object-cover object-center tabletmd:max-h-[220px] md:max-w-[80%] rounded-none"
           width={820}
           height={492}
         />

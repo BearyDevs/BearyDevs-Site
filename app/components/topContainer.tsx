@@ -104,7 +104,7 @@ export default function TopContainer() {
               )}
             </button>
           </div>
-          <div className="text-[#7f7f7f] font-extrabold flex items-center justify-center gap-2">
+          <div className="text-[#7f7f7f] font-extrabold flex items-center justify-center gap-2 w-full">
             <button
               name="ghostty-button"
               aria-label="ghostty.org"
@@ -112,6 +112,14 @@ export default function TopContainer() {
               onClick={() => window.open("https://ghostty.org/", "_blank")}
             >
               Ghostty
+            </button>
+            <button
+              name="beary-dev"
+              aria-label="github.com/BearyDevs"
+              className="transition-colors duration-300 text-center lg:hidden inline"
+              onClick={() => window.open("https://github.com/BearyDevs", "_blank")}
+            >
+              BearyDevs
             </button>
 
             <button
@@ -127,69 +135,6 @@ export default function TopContainer() {
             >
               <GitHubLogoIcon className="size-3" />
             </button>
-          </div>
-
-          <div className="text-[#7f7f7f] font-semibold px-1 py-0.5 flex items-center justify-center gap-4">
-            {/* <button */}
-            {/*   name="cv-button" */}
-            {/*   aria-label="cv download" */}
-            {/*   className="rounded-full" */}
-            {/*   onClick={() => window.open(ENV.CV_URL, "_blank")} */}
-            {/* > */}
-            {/*   <GrDocumentUser */}
-            {/*     className="hover:text-white transition-colors duration-300" */}
-            {/*     size={"16px"} */}
-            {/*   /> */}
-            {/* </button> */}
-            {/**/}
-            {/* <button */}
-            {/*   name="facebook-button" */}
-            {/*   aria-label="Facebook" */}
-            {/*   className="rounded-full" */}
-            {/*   onClick={() => */}
-            {/*     window.open("https://www.facebook.com/bearyman", "_blank") */}
-            {/*   } */}
-            {/* > */}
-            {/*   <FaFacebook */}
-            {/*     className="hover:text-white transition-colors duration-300" */}
-            {/*     size={"16px"} */}
-            {/*   /> */}
-            {/* </button> */}
-            {/**/}
-            {/* <button */}
-            {/*   name="github-button" */}
-            {/*   aria-label="GitHub" */}
-            {/*   className="rounded-full" */}
-            {/*   onClick={() => window.open(ENV.GITHUB_URL, "_blank")} */}
-            {/* > */}
-            {/*   <GitHubLogoIcon className="hover:text-white transition-colors duration-300" /> */}
-            {/* </button> */}
-            {/**/}
-            {/* <button */}
-            {/*   name="facebook-page-button" */}
-            {/*   aria-label="Facebook Page" */}
-            {/*   className="rounded-full flex items-center justify-center gap-3" */}
-            {/*   onClick={() => */}
-            {/*     window.open( */}
-            {/*       "https://www.facebook.com/profile.php?id=61554981140896", */}
-            {/*       "_blank", */}
-            {/*     ) */}
-            {/*   } */}
-            {/* > */}
-            {/*   <MdOutlineContactPhone */}
-            {/*     className="hover:text-white transition-colors duration-300" */}
-            {/*     size={"16px"} */}
-            {/*   /> */}
-            {/* </button> */}
-            {/**/}
-            {/* <button */}
-            {/*   name="linkedin-button" */}
-            {/*   aria-label="LinkedIn" */}
-            {/*   className="rounded-full" */}
-            {/*   onClick={() => window.open(ENV.LINKEDIN_URL, "_blank")} */}
-            {/* > */}
-            {/*   <FaLinkedin className="hover:text-white transition-colors duration-300" /> */}
-            {/* </button> */}
           </div>
         </div>
 

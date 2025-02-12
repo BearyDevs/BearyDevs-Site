@@ -13,7 +13,7 @@ export default function AboutLayout({ children }: PropsWithChildren) {
     <div className="w-full h-full flex items-start justify-center overflow-hidden">
       <Neotree startPath="about" items={aboutNav} />
 
-      <div className="animate-[fadeIn_1s] flex-grow w-[85%] max-w-screen h-auto overflow-auto py-1 px-4 pl-6 custom900:pl-0">
+      <div className="flex-grow w-[85%] max-w-screen h-auto overflow-auto py-1 px-4 pl-6 custom900:pl-0">
         {children}
       </div>
     </div>

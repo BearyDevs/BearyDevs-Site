@@ -8,16 +8,14 @@ export default function MainPage() {
         className={classNames({
           "text-[2dvw] leading-[0.9] tracking-[-0.1em] lg:text-[1.4dvh] text-teal-200 drop-shadow-glow":
             true,
-          "animate-[fadeInDown_1s]": true,
         })}
       >
         {ascii}
       </pre>
       <div
         className={classNames({
-          "text-center font-semibold mobilexll:text-xs transition duration-300 text-gray-400":
+          "block text-center font-semibold mobilexll:text-xs transition duration-300 text-gray-400":
             true,
-          "block animate-[fadeInDown_1.5s]": true,
         })}
       >
         <div>{`Self taught developer`.toUpperCase()}</div>
