@@ -4,7 +4,7 @@
 
 ## Design Color Inspiration
 
-I’m a big fan of [Takuya Matsuyama (craftzdog)](https://github.com/craftzdog) that create [Solarized-Osaka](https://github.com/craftzdog/solarized-osaka.nvim) color scheme. I’ve used its colors and customize my terminal setup like Ghostty and iTerm2.
+I’m a big fan of [Takuya Matsuyama (craftzdog)](https://github.com/craftzdog) that create [Solarized-Osaka](https://github.com/craftzdog/solarized-osaka.nvim) color scheme. I’ve used and customize my terminal setup like Ghostty, iTerm2 and it's matches about Thai sayings "Green attracts wealth 😅".
 
 ## Preview
 
@@ -38,3 +38,4 @@ Create a .env file similar to .env.example.
 ## Cloning / Forking
 
 Please remove all of my personal content.
+ 
