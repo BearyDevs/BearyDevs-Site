@@ -13,6 +13,7 @@ I’m a huge fan of the iTerm color scheme [Solarized-Osaka](https://github.com/
 ![Preview 3](./public/preview-3.png)
 ![Preview 4](./public/preview-4.png)
 ![Preview 5](./public/preview-5.png)
+![Preview 5](./public/preview-6.png)
 
 ## Stack
 
