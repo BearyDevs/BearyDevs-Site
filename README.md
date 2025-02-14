@@ -4,7 +4,7 @@
 
 ## Design Color Inspiration
 
-I’m a huge fan of the iTerm color scheme [Solarized-Osaka](https://github.com/craftzdog/solarized-osaka.nvim). I’ve used its colors to implement and customize my terminal setup in iTerm2.
+I’m a big fan of [Takuya Matsuyama (craftzdog)](https://github.com/craftzdog) who created [Solarized-Osaka](https://github.com/craftzdog/solarized-osaka.nvim) color scheme. I've used and customized my terminal setup, like Ghostty and iTerm2, and it matches the Thai saying "Green attracts wealth 😅".
 
 ## Preview
 
@@ -39,3 +39,4 @@ Create a .env file similar to .env.example.
 ## Cloning / Forking
 
 Please remove all of my personal content.
+ 
