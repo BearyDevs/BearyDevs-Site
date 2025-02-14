@@ -10,7 +10,7 @@ I’m a big fan of [Takuya Matsuyama (craftzdog)](https://github.com/craftzdog) 
 
 ![Preview 1](./public/preview-1.png)
 ![Preview 2](./public/preview-2.png)
-![Preview 3](./public/preview-3.png)
+![Preview 3](./public/preview-3.jpeg)
 ![Preview 4](./public/preview-4.png)
 ![Preview 5](./public/preview-5.png)
 ![Preview 5](./public/preview-6.png)
