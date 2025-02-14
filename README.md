@@ -4,7 +4,7 @@
 
 ## Design Color Inspiration
 
-I’m a big fan of Takuya Matsuyama (craftzdog) that create [Solarized-Osaka](https://github.com/craftzdog/solarized-osaka.nvim) color scheme. I’ve used its colors and customize my terminal setup like Ghostty and iTerm2.
+I’m a big fan of [Takuya Matsuyama (craftzdog)](https://github.com/craftzdog) that create [Solarized-Osaka](https://github.com/craftzdog/solarized-osaka.nvim) color scheme. I’ve used its colors and customize my terminal setup like Ghostty and iTerm2.
 
 ## Preview
 
