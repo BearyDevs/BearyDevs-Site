@@ -19,10 +19,10 @@ export const main_nav_routes = [
     url: "/articles",
     name: "articles",
   },
-  {
-    url: "/contact",
-    name: "contact",
-  },
+  // {
+  //   url: "/contact",
+  //   name: "contact",
+  // },
 ];
 
 export const aboutNav: NeotreeItem[] = [
