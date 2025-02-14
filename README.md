@@ -25,7 +25,7 @@ I’m a big fan of [Takuya Matsuyama (craftzdog)](https://github.com/craftzdog) 
 
 ## Running Locally
 
-This application requires Node.js v20.16+.
+This application developed in Node.js version 20.16
 
 ```bash
 git clone https://github.com/BearyDevs/BearyDevs-Site.git
