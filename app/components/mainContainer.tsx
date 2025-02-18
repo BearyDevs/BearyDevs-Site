@@ -48,7 +48,8 @@ export default function MainContainer({ children }: PropsWithChildren) {
         {"restore".toUpperCase()}
       </Button>
 
-      {minimized && <StarFall />}
+      <StarFall />
+      {/*{minimized && <StarFall />}*/}
 
       <section
         className={classNames({

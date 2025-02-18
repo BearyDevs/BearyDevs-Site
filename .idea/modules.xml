@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/BearyDevs-Site.iml" filepath="$PROJECT_DIR$/.idea/BearyDevs-Site.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../nuxt-project-test/.idea/nuxt-project-test.iml" filepath="$PROJECT_DIR$/../nuxt-project-test/.idea/nuxt-project-test.iml" />
-    </modules>
-  </component>
-</project>
