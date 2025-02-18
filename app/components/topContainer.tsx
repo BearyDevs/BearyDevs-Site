@@ -31,10 +31,10 @@ export default function TopContainer() {
   const handleFullscreen = () => {
     if (!document.fullscreenElement) {
       router.push(pathname);
-      document.documentElement.requestFullscreen();
+      document.documentElement.requestFullscreen().then(() => console.log("FullScreen"));
     } else {
       if (document.exitFullscreen) {
-        document.exitFullscreen();
+        document.exitFullscreen().then(() => console.log("ExitFullScreen"));
       }
     }
   };
@@ -46,7 +46,8 @@ export default function TopContainer() {
   return (
     <>
       <div className="w-full h-max rounded-t-2xl bg-transparent flex items-start justify-center flex-col z-20">
-        <div className="top-0 h-max w-full flex items-center justify-between px-8 mobilexll:px-4 overflow-x-auto tabletmd:pt-2">
+        <div
+          className="top-0 h-max w-full flex items-center justify-between px-8 mobilexll:px-4 overflow-x-auto tabletmd:pt-2">
           <div
             className={classNames({
               "flex items-center rounded-t-2xl justify-start h-12 gap-[10px] font-semibold":
