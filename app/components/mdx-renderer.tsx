@@ -4,6 +4,7 @@ import { MDXRemote, MDXRemoteProps } from "next-mdx-remote/rsc";
 import { Image } from "@nextui-org/react";
 import classNames from "classnames";
 import React from "react";
+import Link from "next/link";
 
 interface Props {
   source: string;
@@ -33,7 +34,7 @@ const MDXRenderer = ({ source, components, limitWidth = true }: Props) => {
           height={492}
         />
       ),
-      a: (props) => <a href={props.href} target="_blank" {...props} />,
+      a: (props) => <Link href={props.href!} target="_blank" {...props} />,
       ...components,
     },
   };

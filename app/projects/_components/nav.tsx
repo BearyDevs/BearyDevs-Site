@@ -52,6 +52,14 @@ const menu = [
     title: "React",
     href: "/projects?tag=React",
   },
+  {
+    title: "Nuxt/Vue",
+    href: "/projects?tag=NuxtVue",
+  },
+  {
+    title: "Nest",
+    href: "/projects?tag=Nest",
+  },
   // {
   //   title: "node",
   //   href: "/projects?tag=Node",
