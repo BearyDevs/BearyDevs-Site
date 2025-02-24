@@ -3,7 +3,7 @@ import { ascii } from "@/app/libs/logo";
 
 export default function MainPage() {
   return (
-    <div className="w-full h-full flex items-center justify-center flex-col self-center gap-16 pb-10 text-gray-400">
+    <div className="w-full h-full flex uppercase items-center justify-center flex-col self-center gap-16 pb-10 text-gray-400">
       <pre
         className={classNames({
           "text-[2dvw] leading-[0.9] tracking-[-0.1em] lg:text-[1.4dvh] text-teal-200 drop-shadow-glow":
@@ -18,13 +18,13 @@ export default function MainPage() {
             true,
         })}
       >
-        <div>{`Self taught developer`.toUpperCase()}</div>
+        <div>Self taught developer</div>
         <div>
-          {`love to learn new things and always looking for new challenges`.toUpperCase()}
+          love to learn new things and always looking for new challenges
         </div>
         <div className="mt-4">
           <span className="font-bold text-teal-300">MOTTO: </span>
-          {`keep learning, growing, and stay inspired`.toUpperCase()}
+          keep learning, growing, and stay inspired
         </div>
       </div>
     </div>

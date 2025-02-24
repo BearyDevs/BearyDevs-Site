@@ -37,7 +37,7 @@ export default function MainContainer({ children }: PropsWithChildren) {
         variant="light"
         color="secondary"
         className={classNames({
-          "absolute bottom-[5%] left-1/2 -translate-x-1/2 -translate-y-[-5%] hover:drop-shadow-glow z-20":
+          "absolute bottom-[5%] left-1/2 -translate-x-1/2 -translate-y-[-5%] hover:drop-shadow-glow z-20 uppercase":
             true,
           "animate-[fadeOut_0.5s]": !minimized,
           "animate-[fadeIn_0.5s]": minimized,
@@ -45,7 +45,7 @@ export default function MainContainer({ children }: PropsWithChildren) {
         style={{ cursor: "pointer", animationFillMode: "both" }}
         onClick={() => dispatch(setMinimized(false))}
       >
-        {"restore".toUpperCase()}
+        restore
       </Button>
 
       <StarFall />
