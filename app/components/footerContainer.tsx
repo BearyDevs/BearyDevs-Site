@@ -1,7 +1,6 @@
 "use client";
 
 import { usePathname, useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
 import { DiVim, DiGitBranch } from "react-icons/di";
 import { FaReact } from "react-icons/fa";
 import { LuClock3 } from "react-icons/lu";
