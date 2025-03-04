@@ -1,6 +1,5 @@
 "use client";
 
-import classNames from "classnames";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { DiVim, DiGitBranch } from "react-icons/di";
@@ -8,43 +7,93 @@ import { FaReact } from "react-icons/fa";
 import { LuClock3 } from "react-icons/lu";
 import { Link, ScrollShadow } from "@nextui-org/react";
 import { main_nav_routes } from "@/app/navigation";
+import { cn } from "@/utils/cn";
+
+// Generate file path based on pathname
+const getFilePath = (pathname: string): string => {
+  if (pathname.startsWith("/projects/") || pathname.startsWith("/articles/")) {
+    return `${pathname.slice(1)}.mdx`;
+  }
+  
+  const basePath = "app";
+  
+  if (pathname === "/") return `${basePath}/home.tsx`;
+  
+  if (pathname.startsWith("/about/") || pathname === "/about") {
+    return pathname === "/about" 
+      ? `${basePath}/about/greeting.ts` 
+      : `${pathname}.ts`;
+  }
+  
+  if (pathname.startsWith("/activity/") || pathname === "/activity") {
+    return pathname === "/activity"
+      ? `${basePath}/activity/languages.ts`
+      : `${pathname}.ts`;
+  }
+  
+  return `${basePath}${pathname}.tsx`;
+};
+
+// Navigation button component
+const NavButton = ({ 
+  route, 
+  pathname, 
+  onClick 
+}: { 
+  route: { name: string; url: string }; 
+  pathname: string; 
+  onClick: () => void;
+}) => (
+  <button
+    name="navigation-button"
+    onClick={onClick}
+    className={cn(
+      "px-3 py-[5px] transition-colors duration-300 rounded-md flex items-center justify-center gap-2 uppercase text-gray-300",
+      pathname.startsWith(route.url) 
+        ? "bg-[#103f3cb5]" 
+        : "hover:bg-[#103f3c4f]"
+    )}
+  >
+    {route.name}
+  </button>
+);
 
 export default function FooterContainer() {
   const pathname = usePathname();
   const router = useRouter();
   const [show, setShow] = useState(false);
 
+  // Initialize visibility with a short delay
+  // @ts-ignore
   useEffect(() => {
     if (!show) {
-      const interval = setInterval(() => {
-        setShow(!show);
-      }, 100);
-
-      return () => {
-        clearInterval(interval);
-      };
+      const timer = setTimeout(() => setShow(true), 100);
+      return () => clearTimeout(timer);
     }
-
-    return () => {};
   }, [show]);
 
+  // Format current time
+  const currentTime = new Date().toLocaleTimeString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false,
+  });
+  
+  // Format current date
+  const currentDate = new Date()
+    .toLocaleDateString("en-GB", {
+      day: "2-digit",
+      month: "short",
+      year: "numeric",
+    })
+    .replace(/ /g, "-");
+
+  if (!show) return null;
+
   return (
-    <div
-      className={classNames({
-        "bottom-0 absolute overflow-x-scroll whitespace-nowrap w-full h-max text-sm":
-          true,
-        hidden: !show,
-        block: show,
-      })}
-    >
+    <div className="bottom-0 absolute overflow-x-scroll whitespace-nowrap w-full h-max text-sm">
       {pathname === "/home" && (
-        <div
-          className={classNames({
-            "text-xs text-gray-500 pl-2 pb-1": true,
-            hidden: !show,
-            block: show,
-          })}
-        >
+        <div className="text-xs text-gray-500 pl-2 pb-1">
           Designed by{" "}
           <Link
             className="font-bold text-xs hover:text-white transition-colors duration-300 text-gray-500"
@@ -69,84 +118,38 @@ export default function FooterContainer() {
       <ScrollShadow
         orientation="horizontal"
         hideScrollBar
-        className={classNames({
-          "h-max mobilexll:px-2 w-full flex items-center justify-between lg:pb-0 overflow-x-scroll whitespace-nowrap gap-10 mobilexll:text-xs":
-            true,
-        })}
+        className="h-max mobilexll:px-2 w-full flex items-center justify-between lg:pb-0 overflow-x-scroll whitespace-nowrap gap-10 mobilexll:text-xs"
       >
         <div className="flex items-center font-bold">
-          <div
-            className={classNames({
-              "flex items-center justify-center px-3 relative gap-2 py-2 text-gray-300":
-                true,
-            })}
-          >
-            <DiVim size={"16px"} /> NORMAL
+          <div className="flex items-center justify-center px-3 relative gap-2 py-2 text-gray-300">
+            <DiVim size={16} /> NORMAL
           </div>
 
-          <div
-            className={classNames({
-              "flex items-center text-gray-300 px-[10px] relative py-2":
-                true,
-            })}
-          >
-            <DiGitBranch size={"16px"} /> main
+          <div className="flex items-center text-gray-300 px-[10px] relative py-2">
+            <DiGitBranch size={16} /> main
           </div>
         </div>
 
         <div className="flex items-center font-bold py-[6px]">
           <div className="flex items-center gap-x-2 not-sr-only">
-            <div className="flex items-center justify-start gap-2">
-              <Link
-                href="https://cloud.umami.is/share/NcJoEW8LPSU5K0DW/bearydevs.com"
-                target="_blank"
-                className="whitespace-nowrap text-gray-300"
-              >
-                <p className="whitespace-nowrap text-xs text-teal-200">
-                  -- statistics --
-                </p>
-              </Link>
-            </div>
+            <Link
+              href="https://cloud.umami.is/share/NcJoEW8LPSU5K0DW/bearydevs.com"
+              target="_blank"
+              className="whitespace-nowrap text-gray-300"
+            >
+              <p className="whitespace-nowrap text-xs text-teal-200">
+                -- statistics --
+              </p>
+            </Link>
           </div>
 
-          <div
-            className={classNames({
-              "flex items-center px-3 relative ml-[-1px] py-[2px] gap-1 text-gray-300":
-                true,
-            })}
-          >
-            <FaReact className="mr-2 text-black" size={"16px"} />
-            {pathname.startsWith("/projects/") ||
-            pathname.startsWith("/articles/")
-              ? `${pathname.slice(1)}.mdx`
-              : `app${
-                  pathname === "/"
-                    ? "/home"
-                    : pathname.startsWith("/about/") || pathname === "/about"
-                      ? pathname === "/about"
-                        ? "/about/greeting.ts"
-                        : `${pathname}.ts`
-                      : pathname.startsWith("/activity/") ||
-                          pathname === "/activity"
-                        ? pathname === "/activity"
-                          ? "/activity/languages.ts"
-                          : `${pathname}.ts`
-                        : `${pathname}.tsx`
-                }`}
+          <div className="flex items-center px-3 relative ml-[-1px] py-[2px] gap-1 text-gray-300">
+            <FaReact className="mr-2 text-black" size={16} />
+            {getFilePath(pathname)}
           </div>
 
-          <div
-            className={classNames({
-              "flex items-center justify-center px-3 relative gap-2 py-[2px] text-gray-300":
-                true,
-            })}
-          >
-            <LuClock3 />{" "}
-            {new Date().toLocaleTimeString([], {
-              hour: "2-digit",
-              minute: "2-digit",
-              hour12: false,
-            }) ?? "00:00"}
+          <div className="flex items-center justify-center px-3 relative gap-2 py-[2px] text-gray-300">
+            <LuClock3 /> {currentTime || "00:00"}
           </div>
         </div>
       </ScrollShadow>
@@ -154,19 +157,10 @@ export default function FooterContainer() {
       <ScrollShadow
         hideScrollBar
         orientation="horizontal"
-        className={classNames({
-          "h-max w-full flex items-center justify-between rounded-b-2xl overflow-x-scroll whitespace-nowrap gap-4 mobilexll:text-xs":
-            true,
-        })}
+        className="h-max w-full flex items-center justify-between rounded-b-2xl overflow-x-scroll whitespace-nowrap gap-4 mobilexll:text-xs"
       >
         <div className="flex items-center font-bold lg:pb-1 pb-3">
-          <div
-            className={classNames({
-              "flex items-center justify-center px-3 relative gap-2 pl-4 rounded-r-md py-[5px] lg:rounded-bl-2xl":
-                true,
-              "bg-teal-400": true,
-            })}
-          >
+          <div className="flex items-center justify-center px-3 relative gap-2 pl-4 rounded-r-md py-[5px] lg:rounded-bl-2xl bg-teal-400">
             <Link
               className="text-[#121212] text-sm mobilexll:text-xs"
               href="https://github.com/tmux/tmux"
@@ -178,47 +172,22 @@ export default function FooterContainer() {
 
           <div className="w-full px-2 flex items-center justify-start gap-1 text-xs h-full whitespace-nowrap">
             {main_nav_routes.map((route, index) => (
-              <button
+              <NavButton
                 key={index}
-                name="navigation-button"
-                onClick={() => router.push(`${route.url}`)}
-                className={classNames({
-                  "px-3 py-[5px] transition-colors duration-300 rounded-md flex items-center justify-center gap-2 uppercase text-gray-300":
-                    true,
-                  "bg-[#103f3cb5]": pathname.startsWith(route.url),
-                  "hover:bg-[#103f3c4f]": route.url !== pathname,
-                })}
-              >
-                {route.name}
-              </button>
+                route={route}
+                pathname={pathname}
+                onClick={() => router.push(route.url)}
+              />
             ))}
           </div>
         </div>
 
         <div className="flex items-center font-bold lg:pb-1 pb-3">
-          <div
-            className={classNames({
-              "flex items-center text-gray-300 px-3 relative ml-[-1px] py-[5px] gap-1":
-                true,
-            })}
-          >
-            {new Date()
-              .toLocaleDateString("en-GB", {
-                day: "2-digit",
-                month: "short",
-                // year: "2-digit",
-                year: "numeric",
-              })
-              .replace(/ /g, "-")}
+          <div className="flex items-center text-gray-300 px-3 relative ml-[-1px] py-[5px] gap-1">
+            {currentDate}
           </div>
 
-          <div
-            className={classNames({
-              "flex items-center justify-center px-3 relative rounded-l-md gap-2 py-[5px] lg:rounded-br-2xl whitespace-nowrap":
-                true,
-              "bg-teal-400": true,
-            })}
-          >
+          <div className="flex items-center justify-center px-3 relative rounded-l-md gap-2 py-[5px] lg:rounded-br-2xl whitespace-nowrap bg-teal-400">
             <Link
               className="text-[#121212] text-sm mobilexll:text-xs"
               href="https://www.apple.com/th/newsroom/2021/10/introducing-m1-pro-and-m1-max-the-most-powerful-chips-apple-has-ever-built/"

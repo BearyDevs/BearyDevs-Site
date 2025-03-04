@@ -2,7 +2,6 @@
 
 import { PropsWithChildren } from "react";
 import TopContainer from "@/app/components/topContainer";
-import classNames from "classnames";
 import FooterContainer from "@/app/components/footerContainer";
 import { Button, ScrollShadow } from "@nextui-org/react";
 import { LennyFace } from "@/app/components/lennyFace";
@@ -11,23 +10,23 @@ import { AppDispatch, ReduxState } from "@/app/libs/redux/store";
 import { setMinimized } from "@/app/libs/redux/slices/minimized";
 import StarFall from "@/app/components/starfall";
 import { ascii } from "@/app/libs/logo";
+import { cn } from "@/utils/cn";
 
 export default function MainContainer({ children }: PropsWithChildren) {
   const dispatch = useDispatch<AppDispatch>();
   const minimized = useSelector((state: ReduxState) => state.minimized);
 
+  const animationStyle = { animationFillMode: "both" };
+  
   return (
     <>
       <pre
-        className={classNames({
-          "text-[2dvw] leading-[0.9] tracking-[-0.1em] lg:text-[1.4dvh] text-teal-200 drop-shadow-glow":
-            true,
-          "absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-[40%]":
-            true,
-          "animate-[fadeOut_0.5s]": !minimized,
-          "animate-[fadeIn_0.5s]": minimized,
-        })}
-        style={{ animationFillMode: "both" }}
+        className={cn(
+          "text-[2dvw] leading-[0.9] tracking-[-0.1em] lg:text-[1.4dvh] text-teal-200 drop-shadow-glow",
+          "absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-[40%]",
+          minimized ? "animate-[fadeIn_0.5s]" : "animate-[fadeOut_0.5s]"
+        )}
+        style={animationStyle}
       >
         {ascii}
       </pre>
@@ -36,35 +35,26 @@ export default function MainContainer({ children }: PropsWithChildren) {
         size="sm"
         variant="light"
         color="secondary"
-        className={classNames({
-          "absolute bottom-[5%] left-1/2 -translate-x-1/2 -translate-y-[-5%] hover:drop-shadow-glow z-20 uppercase":
-            true,
-          "animate-[fadeOut_0.5s]": !minimized,
-          "animate-[fadeIn_0.5s]": minimized,
-        })}
-        style={{ cursor: "pointer", animationFillMode: "both" }}
+        className={cn(
+          "absolute bottom-[5%] left-1/2 -translate-x-1/2 -translate-y-[-5%] hover:drop-shadow-glow z-20 uppercase",
+          minimized ? "animate-[fadeIn_0.5s]" : "animate-[fadeOut_0.5s]"
+        )}
+        style={{ cursor: "pointer", ...animationStyle }}
         onClick={() => dispatch(setMinimized(false))}
       >
         restore
       </Button>
 
       <StarFall />
-      {/*{minimized && <StarFall />}*/}
 
       <section
-        className={classNames({
-          "lg:mt-[50px] animate-[fadeInUp_0.5s]": true,
-          "transition-all duration-700": true,
-          "flex flex-col w-[100dvw] h-[100dvh] lg:min-w-[80%] lg:max-w-[80%] lg:min-h-[90%] lg:max-h-[85%] lg:rounded-2xl relative":
-            true,
-          "bottom-[-95%] opacity-0": minimized,
-          "bottom-0 lg:opacity-85 opacity-100": !minimized,
-          "lg:shadow-[inset_0_0_10px_rgba(255,255,255,0.3),_30px_30px_60px_rgba(4,19,25,1),_0_2px_6px_rgba(255,255,255,0.05)]":
-            true, // solaizeOsaka shadow
-          // "lg:shadow-[inset_0_0_5px_rgba(255,255,255,0.05),_15px_15px_30px_rgba(4,19,25,0.8),_0_1px_3px_rgba(255,255,255,0.03)]":
-          //   true, // Minimalized SolaizeOsaka shadow
-          "bg-gradient-to-br from-[#041319] via-[#041319] to-[#041319]": true, // solaizeOsaka
-        })}
+        className={cn(
+          "lg:mt-[50px] animate-[fadeInUp_0.5s] transition-all duration-700",
+          "flex flex-col w-[100dvw] h-[100dvh] lg:min-w-[80%] lg:max-w-[80%] lg:min-h-[90%] lg:max-h-[85%] lg:rounded-2xl relative",
+          minimized ? "bottom-[-95%] opacity-0" : "bottom-0 lg:opacity-85 opacity-100",
+          "lg:shadow-[inset_0_0_10px_rgba(255,255,255,0.3),_30px_30px_60px_rgba(4,19,25,1),_0_2px_6px_rgba(255,255,255,0.05)]",
+          "bg-gradient-to-br from-[#041319] via-[#041319] to-[#041319]"
+        )}
       >
         <TopContainer />
         <ScrollShadow className="flex w-full h-full items-center justify-center mt-4 lg:px-2 lg:py-1 tabletmd::mb-[50px] mb-[40px] relative top-[-20px] p-4">

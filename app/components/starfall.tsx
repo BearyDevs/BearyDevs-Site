@@ -1,15 +1,20 @@
 "use client";
 
+import { memo } from "react";
 import "@/app/styles/starfall.css";
 
-const FallingStar = () => <div className="falling-star"></div>;
+// eslint-disable-next-line react/display-name
+const FallingStar = memo(() => <div className="falling-star"></div>);
 
-export default function StarFall({ starCount = 40 }: { starCount?: number }) {
-  return (
-    <div className="starfall">
-      {Array.from({ length: starCount }).map((_, index) => (
-        <FallingStar key={index} />
-      ))}
-    </div>
-  );
+interface StarFallProps {
+  starCount?: number;
+}
+
+export default function StarFall({ starCount = 40 }: StarFallProps) {
+  // Using a stable array to avoid unnecessary re-renders
+  const stars = Array.from({ length: starCount }, (_, index) => (
+    <FallingStar key={index} />
+  ));
+  
+  return <div className="starfall">{stars}</div>;
 }
