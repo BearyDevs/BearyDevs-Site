@@ -49,9 +49,10 @@ export default function MainContainer({ children }: PropsWithChildren) {
 
       <section
         className={cn(
-          "lg:mt-[50px] animate-[fadeInUp_0.5s] transition-all duration-700",
-          "flex flex-col w-[100dvw] h-[100dvh] lg:min-w-[80%] lg:max-w-[80%] lg:min-h-[90%] lg:max-h-[85%] lg:rounded-2xl relative",
-          minimized ? "bottom-[-95%] opacity-0" : "bottom-0 lg:opacity-85 opacity-100",
+          "transition-all duration-300",
+          "flex flex-col w-[100dvw] h-[100dvh] lg:w-[1180px] lg:h-[705px] lg:rounded-2xl relative",
+          "lg:mx-auto lg:my-auto",
+          minimized ? "opacity-0" : "lg:opacity-85 opacity-100",
           "lg:shadow-[inset_0_0_10px_rgba(255,255,255,0.3),_30px_30px_60px_rgba(4,19,25,1),_0_2px_6px_rgba(255,255,255,0.05)]",
           "bg-gradient-to-br from-[#041319] via-[#041319] to-[#041319]"
         )}

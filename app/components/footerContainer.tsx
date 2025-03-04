@@ -17,7 +17,7 @@ const getFilePath = (pathname: string): string => {
   
   const basePath = "app";
   
-  if (pathname === "/") return `${basePath}/home.tsx`;
+  if (pathname === "/") return `${basePath}/page.tsx`;
   
   if (pathname.startsWith("/about/") || pathname === "/about") {
     return pathname === "/about" 
@@ -43,34 +43,31 @@ const NavButton = ({
   route: { name: string; url: string }; 
   pathname: string; 
   onClick: () => void;
-}) => (
-  <button
-    name="navigation-button"
-    onClick={onClick}
-    className={cn(
-      "px-3 py-[5px] transition-colors duration-300 rounded-md flex items-center justify-center gap-2 uppercase text-gray-300",
-      pathname.startsWith(route.url) 
-        ? "bg-[#103f3cb5]" 
-        : "hover:bg-[#103f3c4f]"
-    )}
-  >
-    {route.name}
-  </button>
-);
+}) => {
+  // Special handling for home route
+  const isActive = route.url === "/" 
+    ? pathname === "/" 
+    : pathname.startsWith(route.url);
+    
+  return (
+    <button
+      name="navigation-button"
+      onClick={onClick}
+      className={cn(
+        "px-3 py-[5px] transition-colors duration-300 rounded-md flex items-center justify-center gap-2 uppercase text-gray-300",
+        isActive 
+          ? "bg-[#103f3cb5]" 
+          : "hover:bg-[#103f3c4f]"
+      )}
+    >
+      {route.name}
+    </button>
+  );
+};
 
 export default function FooterContainer() {
   const pathname = usePathname();
   const router = useRouter();
-  const [show, setShow] = useState(false);
-
-  // Initialize visibility with a short delay
-  // @ts-ignore
-  useEffect(() => {
-    if (!show) {
-      const timer = setTimeout(() => setShow(true), 100);
-      return () => clearTimeout(timer);
-    }
-  }, [show]);
 
   // Format current time
   const currentTime = new Date().toLocaleTimeString([], {
@@ -88,11 +85,9 @@ export default function FooterContainer() {
     })
     .replace(/ /g, "-");
 
-  if (!show) return null;
-
   return (
     <div className="bottom-0 absolute overflow-x-scroll whitespace-nowrap w-full h-max text-sm">
-      {pathname === "/home" && (
+      {pathname === "/" && (
         <div className="text-xs text-gray-500 pl-2 pb-1">
           Designed by{" "}
           <Link

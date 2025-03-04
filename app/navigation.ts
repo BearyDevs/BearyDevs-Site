@@ -1,6 +1,6 @@
 export const main_nav_routes = [
   {
-    url: "/home",
+    url: "/",
     name: "home",
   },
   {

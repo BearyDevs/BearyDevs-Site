@@ -133,7 +133,7 @@ export const LennyFace = memo(() => {
 
   return (
     <div
-      className="flex items-center absolute bottom-[60px] right-0 -translate-x-1/2 select-none not-sr-only text-gray-400"
+      className="flex items-center absolute top-[12px] right-5 select-none not-sr-only text-gray-400"
       onClick={handleClick}
       aria-hidden="true"
     >

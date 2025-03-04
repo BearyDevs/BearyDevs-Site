@@ -71,7 +71,7 @@ export default async function RootLayout({
         )}
       >
         <Providers>
-          <main className="w-[100dvw] h-[100dvh] transition-all duration-300 flex items-start justify-center">
+          <main className="w-[100dvw] h-[100dvh] transition-all duration-300 flex items-center justify-center">
             <VideoBG />
             <MainContainer>{children}</MainContainer>
           </main>

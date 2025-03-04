@@ -49,8 +49,8 @@ const ControlButton = ({ name, ariaLabel, color, icon, onClick, isHovered }: Con
     name={name}
     aria-label={ariaLabel}
     className={cn(
-      "w-[13px] h-[13px] rounded-full transition-colors",
-      color,
+      "w-[13px] h-[13px] rounded-full transition-colors duration-300",
+      isHovered ? color : "bg-gray-500",
       name === "close-button" && "flex items-center justify-center"
     )}
     onClick={onClick}
@@ -91,9 +91,9 @@ export default function TopContainer() {
   return (
     <>
       <div className="w-full h-max rounded-t-2xl bg-transparent flex items-start justify-center flex-col z-20">
-        <div className="top-0 h-max w-full flex items-center justify-between px-8 mobilexll:px-4 overflow-x-auto tabletmd:pt-2">
+        <div className="top-0 h-max w-full flex items-center justify-between overflow-x-auto tabletmd:pt-2">
           <div
-            className="hidden lg:flex items-center rounded-t-2xl justify-start h-12 gap-[10px] font-semibold"
+            className="hidden lg:flex items-center rounded-t-2xl justify-start h-12 gap-[10px] font-semibold pl-4"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
@@ -125,15 +125,26 @@ export default function TopContainer() {
             />
           </div>
           
-          <div className="text-[#7f7f7f] font-extrabold flex items-center justify-center gap-2 w-full">
-            <button
-              name="ghostty-button"
-              aria-label="ghostty.org"
-              className="hover:text-white transition-colors duration-300 hidden lg:inline"
-              onClick={() => window.open("https://ghostty.org/", "_blank")}
-            >
-              Ghostty
-            </button>
+          <div className="text-[#7f7f7f] font-extrabold flex items-center justify-center w-full relative">
+            <div className="hidden lg:flex items-center justify-center absolute left-1/2 -translate-x-1/2">
+              <button
+                name="ghostty-button"
+                aria-label="ghostty.org"
+                className="hover:text-white transition-colors duration-300"
+                onClick={() => window.open("https://ghostty.org/", "_blank")}
+              >
+                Ghostty
+              </button>
+              
+              <button
+                name="solarized-button"
+                aria-label="solarized-osaka.nvim"
+                className="hover:text-white transition-colors duration-300 ml-1.5"
+                onClick={() => window.open("https://github.com/craftzdog/solarized-osaka.nvim", "_blank")}
+              >
+                <GitHubLogoIcon className="size-3" />
+              </button>
+            </div>
             
             <button
               name="beary-dev"
@@ -143,15 +154,6 @@ export default function TopContainer() {
             >
               BearyDevs
             </button>
-
-            <button
-              name="solarized-button"
-              aria-label="solarized-osaka.nvim"
-              className="hover:text-white transition-colors duration-300 hidden lg:block"
-              onClick={() => window.open("https://github.com/craftzdog/solarized-osaka.nvim", "_blank")}
-            >
-              <GitHubLogoIcon className="size-3" />
-            </button>
           </div>
         </div>
 
@@ -159,7 +161,7 @@ export default function TopContainer() {
           <ScrollShadow
             orientation="horizontal"
             hideScrollBar
-            className="custom900_min:hidden flex items-center justify-start text-sm w-full flex-grow py-2 overflow-x-auto animate-[fadeInUp_0.5s]"
+            className="custom900_min:hidden flex items-center justify-start text-sm w-full flex-grow py-2 overflow-x-auto"
           >
             {aboutNav.map((item, i) => (
               <NavItem 
@@ -176,7 +178,7 @@ export default function TopContainer() {
           <ScrollShadow
             orientation="horizontal"
             hideScrollBar
-            className="custom900_min:pb-2 custom900:py-2 flex items-center justify-start text-sm w-full flex-grow overflow-x-auto animate-[fadeInUp_0.5s] px-1"
+            className="custom900_min:pb-2 custom900:py-2 flex items-center justify-start text-sm w-full flex-grow overflow-x-auto px-1"
           >
             {codingActivityNav.map((item, i) => (
               <NavItem 
