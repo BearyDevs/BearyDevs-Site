@@ -125,8 +125,8 @@ export default function TopContainer() {
             />
           </div>
           
-          <div className="text-[#7f7f7f] font-extrabold flex items-center justify-center w-full relative">
-            <div className="hidden lg:flex items-center justify-center absolute left-1/2 -translate-x-1/2">
+          <div className="text-[#7f7f7f] font-extrabold flex items-center justify-center w-full">
+            <div className="hidden lg:flex items-center justify-center gap-1.5">
               <button
                 name="ghostty-button"
                 aria-label="ghostty.org"
@@ -139,7 +139,7 @@ export default function TopContainer() {
               <button
                 name="solarized-button"
                 aria-label="solarized-osaka.nvim"
-                className="hover:text-white transition-colors duration-300 ml-1.5"
+                className="hover:text-white transition-colors duration-300"
                 onClick={() => window.open("https://github.com/craftzdog/solarized-osaka.nvim", "_blank")}
               >
                 <GitHubLogoIcon className="size-3" />
