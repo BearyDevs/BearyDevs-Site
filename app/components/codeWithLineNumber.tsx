@@ -17,7 +17,7 @@ export default function CodeWithLineNumbers({ code = "" }: { code?: string }) {
   }, [code]);
 
   return (
-    <ScrollShadow className="relative lg:pt-8 overflow-auto max-w-full lg:max-h-[calc(100dvh-200px)] max-h-[calc(100dvh-170px)] scroll-container overflow-y-auto">
+    <ScrollShadow className="relative lg:pt-8 overflow-auto max-w-full lg:max-h-[calc(100dvh-300px)] max-h-[calc(100dvh-170px)] scroll-container overflow-y-auto">
       <div className="flex 2k:pb-[15%] lg:pb-[5%] pb-[10%]">
         {/* Line numbers */}
         <div className="relative left-0 top-0 text-right pr-4 line-numbers-wrapper">
