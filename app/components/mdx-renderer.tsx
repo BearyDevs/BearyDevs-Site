@@ -29,9 +29,10 @@ const MDXRenderer = ({ source, components, limitWidth = true }: Props) => {
           removeWrapper
           src={src!}
           alt={alt!}
-          className="mx-auto my-0 object-cover object-center tabletmd:max-h-[220px] md:max-w-[80%] rounded-none"
-          width={820}
-          height={492}
+          className="mx-auto my-0 object-cover object-center tabletmd:max-h-[220px] md:max-w-[80%] rounded-lg"
+          style={{ boxShadow: "0 8px 24px 0 rgba(38, 183, 165, 0.3)" }}
+          width={720}
+          height={392}
         />
       ),
       a: (props) => <Link href={props.href!} target="_blank" {...props} />,
