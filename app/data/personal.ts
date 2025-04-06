@@ -2,9 +2,9 @@ const NAME = "Teerapat Wassavanich";
 
 const RESPECT_PERSON = ["Steven Paul Jobs", "Elon Musk", "Nicola Tesla"];
 
-let countryLocation = "Bangkok, Thailand";
+const COUNTRYLOCATION = "Bangkok, Thailand";
 
-let hobbies = [
+const HOBBIES = [
   "Learning",
   "Programming",
   "Movie",
@@ -15,7 +15,7 @@ let hobbies = [
   // 'Sleeping'
 ];
 
-let interest = [
+const INTEREST = [
   "Coding Tech",
   "IT",
   "Keyboard",

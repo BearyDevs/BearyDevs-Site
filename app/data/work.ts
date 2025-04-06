@@ -34,7 +34,7 @@ let ORM = ["Prisma", "MongoDB"];
 
 let databases = ["MySQL", "PostgreSQL", "MongoDB", "Redis"];
 
-let containers = ["Docker"]
+let containers = ["Docker"];
 
 let tools = [
   "Git",
