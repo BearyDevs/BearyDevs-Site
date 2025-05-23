@@ -52,5 +52,5 @@ export default function ProjectSlugPage({ params }: Props) {
   );
   if (!project) notFound();
 
-  return <MDXRenderer source={project.content} />;
+  return <MDXRenderer source={project.content} title={project.metadata.title} />;
 }

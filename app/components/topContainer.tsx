@@ -85,7 +85,6 @@ export default function TopContainer() {
 
   const handleMouseEnter = useCallback(() => setIsHovered(true), []);
   const handleMouseLeave = useCallback(() => setIsHovered(false), []);
-
   const navigateTo = useCallback((url: string) => () => router.push(url), [router]);
 
   return (
@@ -105,7 +104,7 @@ export default function TopContainer() {
               isHovered={isHovered}
               icon={<span className="text-xs text-gray-800 relative top-[-1.5px]">x</span>}
             />
-            
+
             <ControlButton
               name="minimize-button"
               ariaLabel="Minimize window"
@@ -114,7 +113,7 @@ export default function TopContainer() {
               isHovered={isHovered}
               icon={<span className="text-xs text-gray-800 relative top-[-12px]">_</span>}
             />
-            
+
             <ControlButton
               name="fullscreen-button"
               ariaLabel="Fullscreen window"
@@ -124,7 +123,7 @@ export default function TopContainer() {
               icon={<span className="text-[8px] text-gray-800 relative left-[3px]"><LuMaximize2 /></span>}
             />
           </div>
-          
+
           <div className="text-[#7f7f7f] font-extrabold flex items-center justify-center w-full">
             <div className="hidden lg:flex items-center justify-center gap-1.5">
               <button
@@ -135,7 +134,7 @@ export default function TopContainer() {
               >
                 Ghostty
               </button>
-              
+
               <button
                 name="solarized-button"
                 aria-label="solarized-osaka.nvim"
@@ -145,7 +144,7 @@ export default function TopContainer() {
                 <GitHubLogoIcon className="size-3" />
               </button>
             </div>
-            
+
             <button
               name="beary-dev"
               aria-label="github.com/BearyDevs"
@@ -164,11 +163,11 @@ export default function TopContainer() {
             className="custom900_min:hidden flex items-center justify-start text-sm w-full flex-grow py-2 overflow-x-auto"
           >
             {aboutNav.map((item, i) => (
-              <NavItem 
-                key={i} 
-                item={item} 
-                pathname={pathname} 
-                onClick={navigateTo(item.link)} 
+              <NavItem
+                key={i}
+                item={item}
+                pathname={pathname}
+                onClick={navigateTo(item.link)}
               />
             ))}
           </ScrollShadow>
@@ -181,11 +180,11 @@ export default function TopContainer() {
             className="custom900_min:pb-2 custom900:py-2 flex items-center justify-start text-sm w-full flex-grow overflow-x-auto px-1"
           >
             {codingActivityNav.map((item, i) => (
-              <NavItem 
-                key={i} 
-                item={item} 
-                pathname={pathname} 
-                onClick={navigateTo(item.link)} 
+              <NavItem
+                key={i}
+                item={item}
+                pathname={pathname}
+                onClick={navigateTo(item.link)}
               />
             ))}
           </ScrollShadow>

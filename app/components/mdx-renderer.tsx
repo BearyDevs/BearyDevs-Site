@@ -8,11 +8,12 @@ import Link from "next/link";
 
 interface Props {
   source: string;
+  title: string;
   components?: MDXRemoteProps["components"];
   limitWidth?: boolean;
 }
 
-const MDXRenderer = ({ source, components, limitWidth = true }: Props) => {
+const MDXRenderer = ({ source, title, components, limitWidth = true }: Props) => {
   const mdxSource: MDXRemoteProps = {
     source,
     options: {
@@ -25,15 +26,22 @@ const MDXRenderer = ({ source, components, limitWidth = true }: Props) => {
     },
     components: {
       img: ({ src, alt }) => (
-        <Image
-          removeWrapper
-          src={src!}
-          alt={alt!}
-          className="mx-auto my-0 object-cover object-center tabletmd:max-h-[220px] md:max-w-[80%] rounded-lg"
-          style={{ boxShadow: "0 8px 24px 0 rgba(38, 183, 165, 0.3)" }}
-          width={720}
-          height={392}
-        />
+        <figure className="group relative">
+          <Image
+            removeWrapper
+            src={src!}
+            alt={alt!}
+            style={{ boxShadow: "0 8px 24px 0 rgba(38, 183, 165, 0.3)", opacity: "0.9" }}
+            className="mx-auto my-0 object-cover object-center w-full rounded-lg transition-all duration-500 group-hover:grayscale-0 tabletmd:group-hover:none"
+            width={720}
+            height={392}
+          />
+          <div className="tabletmd:hidden absolute left-1/2 top-0 transform -translate-x-1/2 grid h-full w-full place-items-center bg-[#080808]/85 transition-opacity duration-500 group-hover:opacity-0 z-20 rounded-lg">
+            <p className="text-center text-3xl font-semibold">
+              {title}
+            </p>
+          </div>
+        </figure>
       ),
       a: (props) => <Link href={props.href!} target="_blank" {...props} />,
       ...components,
