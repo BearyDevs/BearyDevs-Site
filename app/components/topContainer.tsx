@@ -132,7 +132,7 @@ export default function TopContainer() {
                 className="hover:text-white transition-colors duration-300"
                 onClick={() => window.open("https://ghostty.org/", "_blank")}
               >
-                Ghostty
+                Ghostty Terminal
               </button>
 
               <button
